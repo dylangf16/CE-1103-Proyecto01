@@ -1,13 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto1mathsocket.Tablero_Controller">
+<Pane fx:id="Casilla5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="696.0" prefWidth="1102.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto1mathsocket.Tablero_Controller">
    <children>
-      <Rectangle fx:id="Cuadro1" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="107.0" layoutX="60.0" layoutY="56.0" stroke="BLACK" strokeType="INSIDE" width="109.0" />
-      <Rectangle fx:id="Cuadro2" arcHeight="5.0" arcWidth="5.0" fill="#20ff1f" height="107.0" layoutX="408.0" layoutY="56.0" stroke="BLACK" strokeType="INSIDE" width="109.0" />
-      <Button layoutX="274.0" layoutY="274.0" mnemonicParsing="false" onMouseClicked="#CambiarPos" text="Button" />
+      <Text layoutX="443.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Math Socket">
+         <font>
+            <Font size="39.0" />
+         </font>
+      </Text>
+      <Line endX="987.0" layoutX="115.0" layoutY="554.0" startX="-115.0" />
+      <Text layoutX="33.0" layoutY="591.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Operación a Resolver">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="784.0" layoutY="591.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Validación del Resultado:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="377.0" layoutY="591.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Respuesta">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Line endX="-13.5" endY="146.0" layoutX="557.0" layoutY="550.0" startX="-13.5" startY="3.5" />
+      <Text fx:id="Operación" layoutX="108.0" layoutY="664.0" strokeType="OUTSIDE" strokeWidth="0.0" text="null">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Text>
+      <TextField fx:id="Respuesta_out" layoutX="347.0" layoutY="643.0" text="0" />
+      <Text fx:id="Respuesta_in" layoutX="618.0" layoutY="663.0" strokeType="OUTSIDE" strokeWidth="0.0" text="null">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Text>
+      <Text layoutX="592.0" layoutY="591.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Respuesta">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Button fx:id="Correcto" layoutX="784.0" layoutY="644.0" mnemonicParsing="false" text="Correcto" />
+      <Button fx:id="Incorrecto" layoutX="935.0" layoutY="643.0" mnemonicParsing="false" text="Incorrecto" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="63.0" layoutX="185.0" layoutY="129.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="63.0" layoutX="387.0" layoutY="127.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="63.0" layoutX="592.0" layoutY="129.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="63.0" layoutX="776.0" layoutY="129.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Text layoutX="970.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tira el dado!">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Button fx:id="Tirar_dado" layoutX="1005.0" layoutY="275.0" mnemonicParsing="false" text="Tirar" />
+      <Text fx:id="Resul_Dado" layoutX="1006.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="null">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="63.0" layoutX="185.0" layoutY="237.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="63.0" layoutX="387.0" layoutY="235.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="63.0" layoutX="592.0" layoutY="237.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="63.0" layoutX="776.0" layoutY="237.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="63.0" layoutX="185.0" layoutY="350.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="63.0" layoutX="387.0" layoutY="348.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="63.0" layoutX="592.0" layoutY="350.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="63.0" layoutX="776.0" layoutY="350.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="63.0" layoutX="185.0" layoutY="460.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="63.0" layoutX="387.0" layoutY="458.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="63.0" layoutX="592.0" layoutY="460.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="63.0" layoutX="776.0" layoutY="460.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
    </children>
 </Pane>

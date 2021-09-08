@@ -1,21 +1,40 @@
 package com.example.proyecto1mathsocket;
 
 import javafx.fxml.FXML;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.shape.Rectangle;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.Pane;
+import javafx.scene.text.Text;
 
 public class Tablero_Controller {
 
     @FXML
-    private Rectangle Cuadro1;
+    private Pane Casilla5;
 
     @FXML
-    private Rectangle Cuadro2;
+    private Text Operación;
 
     @FXML
-    void CambiarPos(MouseEvent event) {
-        double Pos1, Pos2;
+    private TextField Respuesta_out;
 
+    @FXML
+    private Text Respuesta_in;
+
+    @FXML
+    private Button Correcto;
+
+    @FXML
+    private Button Incorrecto;
+
+    @FXML
+    private Button Tirar_dado;
+
+    @FXML
+    private Text Resul_Dado;
+
+}
+
+/*
         Pos1 = Cuadro1.getX();
         Pos2 = Cuadro2.getLayoutX();
 
@@ -23,6 +42,4 @@ public class Tablero_Controller {
         System.out.println("Posición X del Cuadro 1: " + Pos2);
 
         Cuadro1.setX(Pos2);
-
-    }
-}
+*/
