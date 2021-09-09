@@ -48,19 +48,19 @@
             <Font size="20.0" />
          </font>
       </Text>
-      <Button fx:id="Correcto" layoutX="784.0" layoutY="644.0" mnemonicParsing="false" text="Correcto" />
-      <Button fx:id="Incorrecto" layoutX="935.0" layoutY="643.0" mnemonicParsing="false" text="Incorrecto" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="63.0" layoutX="185.0" layoutY="129.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="63.0" layoutX="387.0" layoutY="127.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="63.0" layoutX="592.0" layoutY="129.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="63.0" layoutX="776.0" layoutY="129.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Button layoutX="784.0" layoutY="644.0" mnemonicParsing="false" onMouseClicked="#Correcto" text="Correcto" />
+      <Button layoutX="935.0" layoutY="643.0" mnemonicParsing="false" onMouseClicked="#Incorrecto" text="Incorrecto" />
+      <Rectangle fx:id="Inicio" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="63.0" layoutX="185.0" layoutY="129.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Rectangle fx:id="Casilla1" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="63.0" layoutX="387.0" layoutY="127.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Rectangle fx:id="Casilla2" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="63.0" layoutX="592.0" layoutY="129.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Rectangle fx:id="Casilla3" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="63.0" layoutX="776.0" layoutY="129.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
       <Text layoutX="970.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tira el dado!">
          <font>
             <Font size="20.0" />
          </font>
       </Text>
-      <Button fx:id="Tirar_dado" layoutX="1005.0" layoutY="275.0" mnemonicParsing="false" text="Tirar" />
-      <Text fx:id="Resul_Dado" layoutX="1006.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="null">
+      <Button layoutX="1005.0" layoutY="256.0" mnemonicParsing="false" onMouseClicked="#Tirar_dado" text="Tirar" />
+      <Text fx:id="Resul_Dado" layoutX="1018.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
          <font>
             <Font size="23.0" />
          </font>
@@ -77,5 +77,6 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="63.0" layoutX="387.0" layoutY="458.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="63.0" layoutX="592.0" layoutY="460.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="63.0" layoutX="776.0" layoutY="460.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Button fx:id="Btn_Iniciar" layoutX="963.0" layoutY="511.0" mnemonicParsing="false" onMouseClicked="#Iniciar" text="Presiona para Iniciar" />
    </children>
 </Pane>

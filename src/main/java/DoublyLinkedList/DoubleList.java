@@ -48,12 +48,12 @@ public class DoubleList {
         return str;
     }
 
-    public static void main(String[] a) {
+    public String creacion () {
         DoubleList list = new DoubleList();
-        int reto = 8;
+        int reto = 7;
         int trampa = 4;
-        int tunel = 4;
-        int total = 16;
+        int tunel = 3;
+        int total = 14;
 
         while (total != 0) {
             int probabilidad = (int) (Math.random() * 3) + 1;
@@ -91,5 +91,6 @@ public class DoubleList {
             }
         }
         System.out.println(list.toString());
+        return (list.toString());
     }
 }
