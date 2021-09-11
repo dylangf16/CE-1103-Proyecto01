@@ -103,7 +103,6 @@ public class Tablero_Controller {
         System.out.println(Casilla_1.getId());
 
 
-
         //Idea para moverse por el tablero
         if (amover.equalsIgnoreCase(Posicion1)) {
             System.out.println("MoverAqui");
