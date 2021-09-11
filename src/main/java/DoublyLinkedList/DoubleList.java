@@ -3,6 +3,7 @@ package DoublyLinkedList;
 public class DoubleList {
     private DoubleNode head;
     private DoubleNode tail;
+    public DoubleList lista_completa;
 
     public DoubleList() {
         head = null;
@@ -90,7 +91,11 @@ public class DoubleList {
                 }
             }
         }
-        System.out.println(list.toString());
+        System.out.println("Lista desde su creación:" + list.toString());
+        lista_completa = list;
+        AccederLista logg = AccederLista.getInstance();
+        logg.log(list.toString());
+
         return (list.toString());
     }
 }

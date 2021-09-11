@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane fx:id="Casilla5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="696.0" prefWidth="1102.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto1mathsocket.Tablero_Controller">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="696.0" prefWidth="1102.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto1mathsocket.Tablero_Controller">
    <children>
       <Text layoutX="443.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Math Socket">
          <font>
@@ -48,18 +48,18 @@
             <Font size="20.0" />
          </font>
       </Text>
-      <Button layoutX="784.0" layoutY="644.0" mnemonicParsing="false" onMouseClicked="#Correcto" text="Correcto" />
-      <Button layoutX="935.0" layoutY="643.0" mnemonicParsing="false" onMouseClicked="#Incorrecto" text="Incorrecto" />
+      <Button fx:id="Btn_Correcto" layoutX="784.0" layoutY="644.0" mnemonicParsing="false" onMouseClicked="#Correcto" text="Correcto" visible="false" />
+      <Button fx:id="Btn_Incorrecto" layoutX="935.0" layoutY="643.0" mnemonicParsing="false" onMouseClicked="#Incorrecto" text="Incorrecto" visible="false" />
       <Rectangle fx:id="Inicio" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="63.0" layoutX="185.0" layoutY="129.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-      <Rectangle fx:id="Casilla1" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="63.0" layoutX="387.0" layoutY="127.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-      <Rectangle fx:id="Casilla2" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="63.0" layoutX="592.0" layoutY="129.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
-      <Rectangle fx:id="Casilla3" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="63.0" layoutX="776.0" layoutY="129.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Rectangle fx:id="Rectangulo_1" arcHeight="5.0" arcWidth="5.0" fill="#1f93ff" height="63.0" layoutX="387.0" layoutY="127.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="63.0" layoutX="592.0" layoutY="129.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="63.0" layoutX="776.0" layoutY="129.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
       <Text layoutX="970.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tira el dado!">
          <font>
             <Font size="20.0" />
          </font>
       </Text>
-      <Button layoutX="1005.0" layoutY="256.0" mnemonicParsing="false" onMouseClicked="#Tirar_dado" text="Tirar" />
+      <Button fx:id="Btn_Tirar" layoutX="1005.0" layoutY="256.0" mnemonicParsing="false" onMouseClicked="#Tirar_dado" text="Tirar" visible="false" />
       <Text fx:id="Resul_Dado" layoutX="1018.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
          <font>
             <Font size="23.0" />
@@ -78,5 +78,120 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="63.0" layoutX="592.0" layoutY="460.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="63.0" layoutX="776.0" layoutY="460.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
       <Button fx:id="Btn_Iniciar" layoutX="963.0" layoutY="511.0" mnemonicParsing="false" onMouseClicked="#Iniciar" text="Presiona para Iniciar" />
+      <Text fx:id="Casilla_1" layoutX="414.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <Text layoutX="196.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inicio">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="198.0" layoutY="501.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Final">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text fx:id="Casilla_2" layoutX="620.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <Text fx:id="Casilla_3" layoutX="804.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <Text fx:id="Casilla_4" layoutX="804.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <Text fx:id="Casilla_5" layoutX="620.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <Text fx:id="Casilla_6" layoutX="414.0" layoutY="276.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <Text fx:id="Casilla_7" layoutX="213.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <Text fx:id="Casilla_8" layoutX="213.0" layoutY="391.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <Text fx:id="Casilla_9" layoutX="415.0" layoutY="391.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <Text fx:id="Casilla_10" layoutX="620.0" layoutY="391.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <Text fx:id="Casilla_11" layoutX="804.0" layoutY="391.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <Text fx:id="Casilla_12" layoutX="805.0" layoutY="499.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <Text fx:id="Casilla_13" layoutX="620.0" layoutY="499.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <Text fx:id="Casilla_14" layoutX="415.0" layoutY="501.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <Line endX="42.0" endY="-14.5" layoutX="550.0" layoutY="175.0" startX="-93.0" startY="-14.5" />
+      <Line endX="38.0" endY="-14.5" layoutX="349.0" layoutY="175.0" startX="-93.0" startY="-14.5" />
+      <Line endX="20.0" endY="-13.5" layoutX="756.0" layoutY="174.0" startX="-93.0" startY="-14.5" />
+      <Line endX="45.5" endY="51.5" layoutX="766.0" layoutY="184.0" startX="45.0" startY="8.0" />
+      <Line endX="20.0" endY="-13.5" layoutX="756.0" layoutY="282.0" startX="-93.0" startY="-14.5" />
+      <Line endX="20.0" endY="-13.5" layoutX="756.0" layoutY="393.0" startX="-93.0" startY="-14.5" />
+      <Line endX="42.0" endY="-14.5" layoutX="550.0" layoutY="282.0" startX="-93.0" startY="-14.5" />
+      <Line endX="42.0" endY="-14.5" layoutX="550.0" layoutY="394.0" startX="-93.0" startY="-14.5" />
+      <Line endX="42.0" endY="-14.5" layoutX="550.0" layoutY="507.0" startX="-93.0" startY="-14.5" />
+      <Line endX="20.0" endY="-13.5" layoutX="756.0" layoutY="506.0" startX="-93.0" startY="-14.5" />
+      <Line endX="42.0" endY="-14.5" layoutX="347.0" layoutY="283.0" startX="-93.0" startY="-14.5" />
+      <Line endX="42.0" endY="-14.5" layoutX="347.0" layoutY="392.0" startX="-93.0" startY="-14.5" />
+      <Line endX="42.0" endY="-14.5" layoutX="347.0" layoutY="507.0" startX="-93.0" startY="-14.5" />
+      <Line endX="45.5" endY="51.5" layoutX="174.0" layoutY="297.0" startX="46.0" startY="3.0" />
+      <Line endX="45.5" endY="51.5" layoutX="772.0" layoutY="409.0" startX="46.0" startY="3.0" />
+      <Text layoutX="943.0" layoutY="345.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipos de Casillas:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="988.0" layoutY="381.0" strokeType="OUTSIDE" strokeWidth="0.0" text="R = Reto">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="988.0" layoutY="407.0" strokeType="OUTSIDE" strokeWidth="0.0" text="T= Trampa">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="988.0" layoutY="432.0" strokeType="OUTSIDE" strokeWidth="0.0" text="U = Túnel">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
    </children>
 </Pane>
