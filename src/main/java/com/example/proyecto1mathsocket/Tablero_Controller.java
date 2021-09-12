@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 
@@ -83,6 +84,12 @@ public class Tablero_Controller {
     private Rectangle Rectangulo_1;
 
     @FXML
+    private Circle Server_ficha;
+
+    @FXML
+    private Circle Cliente_ficha;
+
+    @FXML
     void Correcto(MouseEvent event) {
 
     }
@@ -95,9 +102,11 @@ public class Tablero_Controller {
     @FXML
     void Tirar_dado(MouseEvent event) {
         int valor = (int) (Math.random() * 4 + 1);
-        String amover = String.valueOf(valor);
+        int posicion;
 
+        String amover = String.valueOf(valor);
         this.Resul_Dado.setText(String.valueOf(valor));
+
         String Posicion1 = String.valueOf(Casilla_1.getId());
         System.out.println(valor);
         System.out.println(Casilla_1.getId());
