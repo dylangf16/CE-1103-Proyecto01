@@ -3,6 +3,7 @@ package DoublyLinkedList;
 public class DoubleList {
     private DoubleNode head;
     private DoubleNode tail;
+    public DoubleList lista_completa;
 
     public DoubleList() {
         head = null;
@@ -48,12 +49,12 @@ public class DoubleList {
         return str;
     }
 
-    public static void main(String[] a) {
+    public String creacion () {
         DoubleList list = new DoubleList();
-        int reto = 8;
+        int reto = 7;
         int trampa = 4;
-        int tunel = 4;
-        int total = 16;
+        int tunel = 3;
+        int total = 14;
 
         while (total != 0) {
             int probabilidad = (int) (Math.random() * 3) + 1;
@@ -90,6 +91,11 @@ public class DoubleList {
                 }
             }
         }
-        System.out.println(list.toString());
+        System.out.println("Lista desde su creación:" + list.toString());
+        lista_completa = list;
+        AccederLista logg = AccederLista.getInstance();
+        logg.log(list.toString());
+
+        return (list.toString());
     }
 }

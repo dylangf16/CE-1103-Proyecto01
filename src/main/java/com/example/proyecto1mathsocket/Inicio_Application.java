@@ -5,13 +5,12 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 
-public class Tablero_Application extends Application {
+public class Inicio_Application extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Tablero_Application.class.getResource("Tablero-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Tablero_Application.class.getResource("Inicio-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Math Socket VideoGame!!!");
         stage.setScene(scene);
