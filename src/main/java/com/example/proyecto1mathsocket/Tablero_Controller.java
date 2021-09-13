@@ -1,7 +1,9 @@
 package com.example.proyecto1mathsocket;
 
+import DoublyLinkedList.AccederLista;
 import DoublyLinkedList.DoubleList;
 import javafx.fxml.FXML;
+import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
@@ -102,20 +104,47 @@ public class Tablero_Controller {
     @FXML
     void Tirar_dado(MouseEvent event) {
         int valor = (int) (Math.random() * 4 + 1);
-        int posicion;
-
-        String amover = String.valueOf(valor);
+        int posicion = 0;
+        int movimiento = posicion + valor;
         this.Resul_Dado.setText(String.valueOf(valor));
+        int Posicion1 = Integer.parseInt((Casilla_1.getId()));
+        int Posicion2 = Integer.parseInt((Casilla_2.getId()));
+        int Posicion3 = Integer.parseInt((Casilla_3.getId()));
+        int Posicion4 = Integer.parseInt((Casilla_4.getId()));
+        System.out.println("Posicion Server_Ficha" + Server_ficha.getCenterX());
 
-        String Posicion1 = String.valueOf(Casilla_1.getId());
-        System.out.println(valor);
-        System.out.println(Casilla_1.getId());
-
-
+        
+        System.out.println("Casilla a mover: " + movimiento);
         //Idea para moverse por el tablero
-        if (amover.equalsIgnoreCase(Posicion1)) {
-            System.out.println("MoverAqui");
+        if (movimiento == Posicion1){
+            double Pos1 = Casilla_1.getLayoutX();
+            double Pos2 = Casilla_1.getLayoutY();
+            Server_ficha.setCenterX(Pos1 - 47);
+            Server_ficha.setCenterY(Pos2-170);
+            posicion +=1;
         }
+        if (movimiento == Posicion2){
+            double Pos1 = Casilla_2.getLayoutX();
+            double Pos2 = Casilla_2.getLayoutY();
+            Server_ficha.setCenterX(Pos1 - 47);
+            Server_ficha.setCenterY(Pos2-170);
+            posicion +=2;
+        }
+        if (movimiento == Posicion3) {
+            double Pos1 = Casilla_3.getLayoutX();
+            double Pos2 = Casilla_3.getLayoutY();
+            Server_ficha.setCenterX(Pos1 - 47);
+            Server_ficha.setCenterY(Pos2 - 170);
+            posicion += 3;
+        }
+        if (movimiento == Posicion4){
+            double Pos1 = Casilla_4.getLayoutX();
+            double Pos2 = Casilla_4.getLayoutY();
+            Server_ficha.setCenterX(Pos1 - 47);
+            Server_ficha.setCenterY(Pos2-170);
+            posicion +=4;
+        }
+
     }
 
     @FXML
@@ -123,7 +152,6 @@ public class Tablero_Controller {
         //Creación de lista dentro del controlador
         DoubleList Lista = new DoubleList();
         String Lista1 = Lista.creacion();
-        String Lista_Copia = Lista1;
         System.out.println("Lista 1 desde el controlador: " + Lista1);
 
         //Desaparecer botón de Inicio
@@ -135,39 +163,56 @@ public class Tablero_Controller {
         Btn_Tirar.setVisible(true);
         System.out.println(Lista1.length());
 
-        //Cambiar ID del Texto (posible método de ubicación para moverse por el tablero)
+        /*
+        Establece un valor del Arraylist al texto de cada casilla
+        Además, cambia la ID de cada texto para saber ubicación y futuro lugar de posición
+        cada vez que el jugador se mueve
+         */
+
         Casilla_1.setText(String.valueOf(Lista1.charAt(0)));
         Casilla_1.setId("1");
 
         //Establecer un valor de Array a cada casilla del tablero
         Casilla_2.setText(String.valueOf(Lista1.charAt(1)));
+        Casilla_2.setId("2");
+
         Casilla_3.setText(String.valueOf(Lista1.charAt(2)));
+        Casilla_3.setId("3");
+
         Casilla_4.setText(String.valueOf(Lista1.charAt(3)));
+        Casilla_4.setId("4");
+
         Casilla_5.setText(String.valueOf(Lista1.charAt(4)));
+        Casilla_5.setId("5");
+
         Casilla_6.setText(String.valueOf(Lista1.charAt(5)));
+        Casilla_6.setId("6");
+
         Casilla_7.setText(String.valueOf(Lista1.charAt(6)));
+        Casilla_7.setId("7");
+
         Casilla_8.setText(String.valueOf(Lista1.charAt(7)));
+        Casilla_8.setId("8");
+
         Casilla_9.setText(String.valueOf(Lista1.charAt(8)));
+        Casilla_9.setId("9");
+
         Casilla_10.setText(String.valueOf(Lista1.charAt(9)));
+        Casilla_10.setId("10");
+
         Casilla_11.setText(String.valueOf(Lista1.charAt(10)));
+        Casilla_11.setId("11");
+
         Casilla_12.setText(String.valueOf(Lista1.charAt(11)));
+        Casilla_12.setId("12");
+
         Casilla_13.setText(String.valueOf(Lista1.charAt(12)));
+        Casilla_13.setId("13");
+
         Casilla_14.setText(String.valueOf(Lista1.charAt(13)));
+        Casilla_14.setId("14");
 
     }
 }
 
 
-/*
-        Ideas para moverse por el tablero
-
-        *************
-
-        Pos1 = Cuadro1.getX();
-        Pos2 = Cuadro2.getLayoutX();
-
-        System.out.println("Posición X del Cuadro 1: " + Pos1);
-        System.out.println("Posición X del Cuadro 1: " + Pos2);
-
-        Cuadro1.setX(Pos2);
-*/
