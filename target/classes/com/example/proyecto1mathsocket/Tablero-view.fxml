@@ -196,5 +196,15 @@
       </Text>
       <Circle fx:id="Server_ficha" fill="#ff1f1f" layoutX="55.0" layoutY="159.0" radius="29.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fx:id="Cliente_ficha" layoutX="55.0" layoutY="233.0" radius="29.0" stroke="BLACK" strokeType="INSIDE" />
+      <Text layoutX="44.0" layoutY="416.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Posición:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text fx:id="Posicion_Server" layoutX="73.0" layoutY="443.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
    </children>
 </Pane>
