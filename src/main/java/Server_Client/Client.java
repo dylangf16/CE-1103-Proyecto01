@@ -17,13 +17,18 @@ public class Client  extends IOException {
 
     public static void main(String[] args) throws IOException {
 
+
         try {
+
+
             Client func = new Client();
-            //func.connect_socket();
             System.out.println("Conexion establecida");
             Scanner scanner = new Scanner(System.in);
 
+
+
             while (true) {
+                func.connect_socket();
                 String msg = scanner.nextLine();
                 func.out.writeUTF("[Client]:" + msg);
                 String entrada = func.in.readUTF();

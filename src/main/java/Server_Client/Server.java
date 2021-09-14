@@ -23,9 +23,10 @@ public class Server extends IOException {
             Server func = new Server();
             System.out.println("Conexion Establecida");
             Scanner scanner = new Scanner(System.in);
-            //func.connect_ServerSocket();
-            //func.connect_socket();
+
             while (true) {
+                func.connect_ServerSocket();
+                func.connect_socket();
                 String msg = scanner.nextLine();
                 func.out.writeUTF("[Server]:" + msg);
                 String entranda = func.in.readUTF();

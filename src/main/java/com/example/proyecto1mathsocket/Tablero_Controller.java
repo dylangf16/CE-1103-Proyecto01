@@ -308,6 +308,8 @@ public class Tablero_Controller {
         Casilla_14.setText(String.valueOf(Lista1.charAt(13)));
         Casilla_14.setId("14");
 
+        System.out.println("Hola");
+
     }
 }
 
