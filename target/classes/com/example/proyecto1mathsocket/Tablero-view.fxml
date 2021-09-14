@@ -38,7 +38,7 @@
             <Font size="23.0" />
          </font>
       </Text>
-      <TextField fx:id="Respuesta_out" layoutX="347.0" layoutY="643.0" text="0" />
+      <TextField fx:id="Respuesta_out" layoutX="347.0" layoutY="612.0" text="0" />
       <Text fx:id="Respuesta_in" layoutX="618.0" layoutY="663.0" strokeType="OUTSIDE" strokeWidth="0.0" text="null">
          <font>
             <Font size="23.0" />
@@ -89,7 +89,7 @@
             <Font size="20.0" />
          </font>
       </Text>
-      <Text layoutX="198.0" layoutY="501.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Final">
+      <Text fx:id="Casilla_Final" layoutX="198.0" layoutY="501.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Final">
          <font>
             <Font size="20.0" />
          </font>
@@ -194,17 +194,23 @@
             <Font size="15.0" />
          </font>
       </Text>
-      <Circle fx:id="Server_ficha" fill="#ff1f1f" layoutX="55.0" layoutY="159.0" radius="29.0" stroke="BLACK" strokeType="INSIDE" />
-      <Circle fx:id="Cliente_ficha" layoutX="55.0" layoutY="233.0" radius="29.0" stroke="BLACK" strokeType="INSIDE" />
-      <Text layoutX="44.0" layoutY="416.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Posición:">
+      <Circle fx:id="Server_ficha" fill="#ff1f1f" layoutX="185.0" layoutY="161.0" radius="29.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="Cliente_ficha" layoutX="254.0" layoutY="161.0" radius="29.0" stroke="BLACK" strokeType="INSIDE" />
+      <Text fx:id="Posicion_Cliente" layoutX="28.0" layoutY="418.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
          <font>
             <Font size="20.0" />
          </font>
       </Text>
-      <Text fx:id="Posicion_Server" layoutX="73.0" layoutY="443.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+      <Text fx:id="Posicion_Server" layoutX="28.0" layoutY="385.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
          <font>
             <Font size="20.0" />
          </font>
       </Text>
+      <Text fx:id="turno" layoutX="28.0" layoutY="443.0" strokeType="OUTSIDE" strokeWidth="0.0" text="true">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Button layoutX="395.0" layoutY="656.0" mnemonicParsing="false" text="Enviar" />
    </children>
 </Pane>
