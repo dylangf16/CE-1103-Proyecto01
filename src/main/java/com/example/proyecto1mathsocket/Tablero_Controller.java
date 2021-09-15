@@ -311,6 +311,10 @@ public class Tablero_Controller {
         System.out.println("Hola");
 
     }
+    @FXML
+    void Btn_Iniciar(MouseEvent event) {
+        System.out.println("Se ejecutó el botón");
+    }
 }
 
 
