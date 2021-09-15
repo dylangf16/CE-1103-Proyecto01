@@ -103,6 +103,10 @@ public class Tablero_Controller {
     void Incorrecto(MouseEvent event) {
 
     }
+    @FXML
+    void send_text(MouseEvent event) {
+        System.out.println("Hello world");
+    }
 
     @FXML
     void Tirar_dado(MouseEvent event) {
@@ -308,12 +312,12 @@ public class Tablero_Controller {
         Casilla_14.setText(String.valueOf(Lista1.charAt(13)));
         Casilla_14.setId("14");
 
-        System.out.println("Hola");
+
 
     }
     @FXML
     void Btn_Iniciar(MouseEvent event) {
-        System.out.println("Se ejecutó el botón");
+        System.out.println("Hola mundo");
     }
 }
 
