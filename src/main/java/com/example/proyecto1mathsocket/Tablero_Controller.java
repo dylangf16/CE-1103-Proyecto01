@@ -1,9 +1,7 @@
 package com.example.proyecto1mathsocket;
 
-import DoublyLinkedList.AccederLista;
 import DoublyLinkedList.DoubleList;
 import javafx.fxml.FXML;
-import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
@@ -32,6 +30,9 @@ public class Tablero_Controller {
     private Rectangle Inicio;
 
     @FXML
+    private Rectangle Rectangulo_1;
+
+    @FXML
     private Button Btn_Tirar;
 
     @FXML
@@ -42,6 +43,9 @@ public class Tablero_Controller {
 
     @FXML
     private Text Casilla_1;
+
+    @FXML
+    private Text Casilla_Final;
 
     @FXML
     private Text Casilla_2;
@@ -83,16 +87,20 @@ public class Tablero_Controller {
     private Text Casilla_14;
 
     @FXML
-    private Rectangle Rectangulo_1;
-
-    @FXML
     private Circle Server_ficha;
 
     @FXML
     private Circle Cliente_ficha;
 
     @FXML
+    private Text Posicion_Cliente;
+
+    @FXML
     private Text Posicion_Server;
+
+    @FXML
+    private Text turno;
+
 
     @FXML
     void Correcto(MouseEvent event) {
@@ -103,17 +111,18 @@ public class Tablero_Controller {
     void Incorrecto(MouseEvent event) {
 
     }
-    @FXML
-    void send_text(MouseEvent event) {
-        System.out.println("Hello world");
-    }
 
     @FXML
     void Tirar_dado(MouseEvent event) {
+        //Valores de movimiento
         int valor = (int) (Math.random() * 4 + 1);
-        int posicion = Integer.parseInt(Posicion_Server.getText());
-        int movimiento = posicion + valor;
+        int posicion_server = Integer.parseInt(Posicion_Server.getText());
+        int posicion_cliente = Integer.parseInt(Posicion_Cliente.getText());
+        int movimiento_server = posicion_server + valor;
+        int movimiento_cliente = posicion_cliente + valor;
         this.Resul_Dado.setText(String.valueOf(valor));
+
+        //ID de las casillas para saber donde mover la ficha
         int Posicion1 = Integer.parseInt((Casilla_1.getId()));
         int Posicion2 = Integer.parseInt((Casilla_2.getId()));
         int Posicion3 = Integer.parseInt((Casilla_3.getId()));
@@ -128,122 +137,545 @@ public class Tablero_Controller {
         int Posicion12 = Integer.parseInt((Casilla_12.getId()));
         int Posicion13 = Integer.parseInt((Casilla_13.getId()));
         int Posicion14 = Integer.parseInt((Casilla_14.getId()));
-        System.out.println("Posicion Server_Ficha" + posicion);
 
+        boolean Turno = Boolean.parseBoolean(turno.getText());
+        /*
+        True = turno del server
+        False = turno del cliente
+         */
 
-        System.out.println("Casilla a mover: " + movimiento);
-        //Idea para moverse por el tablero
-        if (movimiento == Posicion1){
-            double Pos1 = Casilla_1.getLayoutX();
-            double Pos2 = Casilla_1.getLayoutY();
-            Server_ficha.setCenterX(Pos1 - 47);
-            Server_ficha.setCenterY(Pos2-170);
-            posicion +=valor;
-            Posicion_Server.setText(String.valueOf(posicion));
+        System.out.println("Turno de: " + turno.getText());
+
+        if (Turno){
+            if (movimiento_server == Posicion1){
+                double Pos1 = Casilla_1.getLayoutX();
+                double Pos2 = Casilla_1.getLayoutY();
+                Server_ficha.setCenterX(Pos1-182);
+                Server_ficha.setCenterY(Pos2-170);
+                posicion_server +=valor;
+                Posicion_Server.setText(String.valueOf(posicion_server));
+                turno.setText(String.valueOf(false));
+                if (Casilla_1.getText().equalsIgnoreCase("T")){
+                    System.out.println("La casilla es Trampa");
+                }
+                if (Casilla_1.getText().equalsIgnoreCase("R")){
+                    System.out.println("La casilla es Reto");
+                }
+                if (Casilla_1.getText().equalsIgnoreCase("U")) {
+                    System.out.println("La casilla es Túnel");
+                }
+            }
+            if (movimiento_server == Posicion2){
+                double Pos1 = Casilla_2.getLayoutX();
+                double Pos2 = Casilla_2.getLayoutY();
+                Server_ficha.setCenterX(Pos1-182);
+                Server_ficha.setCenterY(Pos2-170);
+                posicion_server +=valor;
+                Posicion_Server.setText(String.valueOf(posicion_server));
+                turno.setText(String.valueOf(false));
+                if (Casilla_2.getText().equalsIgnoreCase("T")){
+                    System.out.println("La casilla es Trampa");
+                }
+                if (Casilla_2.getText().equalsIgnoreCase("R")){
+                    System.out.println("La casilla es Reto");
+                }
+                if (Casilla_2.getText().equalsIgnoreCase("U")) {
+                    System.out.println("La casilla es Túnel");
+                }
+            }
+            if (movimiento_server == Posicion3) {
+                double Pos1 = Casilla_3.getLayoutX();
+                double Pos2 = Casilla_3.getLayoutY();
+                Server_ficha.setCenterX(Pos1-182);
+                Server_ficha.setCenterY(Pos2-170);
+                posicion_server +=valor;
+                Posicion_Server.setText(String.valueOf(posicion_server));
+                turno.setText(String.valueOf(false));
+                if (Casilla_3.getText().equalsIgnoreCase("T")){
+                    System.out.println("La casilla es Trampa");
+                }
+                if (Casilla_3.getText().equalsIgnoreCase("R")){
+                    System.out.println("La casilla es Reto");
+                }
+                if (Casilla_3.getText().equalsIgnoreCase("U")) {
+                    System.out.println("La casilla es Túnel");
+                }
+            }
+            if (movimiento_server == Posicion4){
+                double Pos1 = Casilla_4.getLayoutX();
+                double Pos2 = Casilla_4.getLayoutY();
+                Server_ficha.setCenterX(Pos1-182);
+                Server_ficha.setCenterY(Pos2-170);
+                posicion_server +=valor;
+                Posicion_Server.setText(String.valueOf(posicion_server));
+                turno.setText(String.valueOf(false));
+                if (Casilla_4.getText().equalsIgnoreCase("T")){
+                    System.out.println("La casilla es Trampa");
+                }
+                if (Casilla_4.getText().equalsIgnoreCase("R")){
+                    System.out.println("La casilla es Reto");
+                }
+                if (Casilla_4.getText().equalsIgnoreCase("U")) {
+                    System.out.println("La casilla es Túnel");
+                }
+            }
+            if (movimiento_server == Posicion5){
+                double Pos1 = Casilla_5.getLayoutX();
+                double Pos2 = Casilla_5.getLayoutY();
+                Server_ficha.setCenterX(Pos1-150);
+                Server_ficha.setCenterY(Pos2-170);
+                posicion_server +=valor;
+                Posicion_Server.setText(String.valueOf(posicion_server));
+                turno.setText(String.valueOf(false));
+                if (Casilla_5.getText().equalsIgnoreCase("T")){
+                    System.out.println("La casilla es Trampa");
+                }
+                if (Casilla_5.getText().equalsIgnoreCase("R")){
+                    System.out.println("La casilla es Reto");
+                }
+                if (Casilla_5.getText().equalsIgnoreCase("U")) {
+                    System.out.println("La casilla es Túnel");
+                }
+            }
+            if (movimiento_server == Posicion6){
+                double Pos1 = Casilla_6.getLayoutX();
+                double Pos2 = Casilla_6.getLayoutY();
+                Server_ficha.setCenterX(Pos1-182);
+                Server_ficha.setCenterY(Pos2-170);
+                posicion_server +=valor;
+                Posicion_Server.setText(String.valueOf(posicion_server));
+                turno.setText(String.valueOf(false));
+                if (Casilla_6.getText().equalsIgnoreCase("T")){
+                    System.out.println("La casilla es Trampa");
+                }
+                if (Casilla_6.getText().equalsIgnoreCase("R")){
+                    System.out.println("La casilla es Reto");
+                }
+                if (Casilla_6.getText().equalsIgnoreCase("U")) {
+                    System.out.println("La casilla es Túnel");
+                }
+            }
+            if (movimiento_server == Posicion7){
+                double Pos1 = Casilla_7.getLayoutX();
+                double Pos2 = Casilla_7.getLayoutY();
+                Server_ficha.setCenterX(Pos1-182);
+                Server_ficha.setCenterY(Pos2-170);
+                posicion_server +=valor;
+                Posicion_Server.setText(String.valueOf(posicion_server));
+                turno.setText(String.valueOf(false));
+                if (Casilla_7.getText().equalsIgnoreCase("T")){
+                    System.out.println("La casilla es Trampa");
+                }
+                if (Casilla_7.getText().equalsIgnoreCase("R")){
+                    System.out.println("La casilla es Reto");
+                }
+                if (Casilla_7.getText().equalsIgnoreCase("U")) {
+                    System.out.println("La casilla es Túnel");
+                }
+            }
+            if (movimiento_server == Posicion8){
+                double Pos1 = Casilla_8.getLayoutX();
+                double Pos2 = Casilla_8.getLayoutY();
+                Server_ficha.setCenterX(Pos1-182);
+                Server_ficha.setCenterY(Pos2-170);
+                posicion_server +=valor;
+                Posicion_Server.setText(String.valueOf(posicion_server));
+                turno.setText(String.valueOf(false));
+                if (Casilla_8.getText().equalsIgnoreCase("T")){
+                    System.out.println("La casilla es Trampa");
+                }
+                if (Casilla_8.getText().equalsIgnoreCase("R")){
+                    System.out.println("La casilla es Reto");
+                }
+                if (Casilla_8.getText().equalsIgnoreCase("U")) {
+                    System.out.println("La casilla es Túnel");
+                }
+            }
+            if (movimiento_server == Posicion9){
+                double Pos1 = Casilla_9.getLayoutX();
+                double Pos2 = Casilla_9.getLayoutY();
+                Server_ficha.setCenterX(Pos1-182);
+                Server_ficha.setCenterY(Pos2-170);
+                posicion_server +=valor;
+                Posicion_Server.setText(String.valueOf(posicion_server));
+                turno.setText(String.valueOf(false));
+                if (Casilla_9.getText().equalsIgnoreCase("T")){
+                    System.out.println("La casilla es Trampa");
+                }
+                if (Casilla_9.getText().equalsIgnoreCase("R")){
+                    System.out.println("La casilla es Reto");
+                }
+                if (Casilla_9.getText().equalsIgnoreCase("U")) {
+                    System.out.println("La casilla es Túnel");
+                }
+            }
+            if (movimiento_server == Posicion10){
+                double Pos1 = Casilla_10.getLayoutX();
+                double Pos2 = Casilla_10.getLayoutY();
+                Server_ficha.setCenterX(Pos1-182);
+                Server_ficha.setCenterY(Pos2-170);
+                posicion_server +=valor;
+                Posicion_Server.setText(String.valueOf(posicion_server));
+                turno.setText(String.valueOf(false));
+                if (Casilla_10.getText().equalsIgnoreCase("T")){
+                    System.out.println("La casilla es Trampa");
+                }
+                if (Casilla_10.getText().equalsIgnoreCase("R")){
+                    System.out.println("La casilla es Reto");
+                }
+                if (Casilla_10.getText().equalsIgnoreCase("U")) {
+                    System.out.println("La casilla es Túnel");
+                }
+            }
+            if (movimiento_server == Posicion11){
+                double Pos1 = Casilla_11.getLayoutX();
+                double Pos2 = Casilla_11.getLayoutY();
+                Server_ficha.setCenterX(Pos1-182);
+                Server_ficha.setCenterY(Pos2-170);
+                posicion_server +=valor;
+                Posicion_Server.setText(String.valueOf(posicion_server));
+                turno.setText(String.valueOf(false));
+                if (Casilla_11.getText().equalsIgnoreCase("T")){
+                    System.out.println("La casilla es Trampa");
+                }
+                if (Casilla_11.getText().equalsIgnoreCase("R")){
+                    System.out.println("La casilla es Reto");
+                }
+                if (Casilla_11.getText().equalsIgnoreCase("U")) {
+                    System.out.println("La casilla es Túnel");
+                }
+            }
+            if (movimiento_server == Posicion12){
+                double Pos1 = Casilla_12.getLayoutX();
+                double Pos2 = Casilla_12.getLayoutY();
+                Server_ficha.setCenterX(Pos1-182);
+                Server_ficha.setCenterY(Pos2-170);
+                posicion_server +=valor;
+                Posicion_Server.setText(String.valueOf(posicion_server));
+                turno.setText(String.valueOf(false));
+                if (Casilla_12.getText().equalsIgnoreCase("T")){
+                    System.out.println("La casilla es Trampa");
+                }
+                if (Casilla_12.getText().equalsIgnoreCase("R")){
+                    System.out.println("La casilla es Reto");
+                }
+                if (Casilla_12.getText().equalsIgnoreCase("U")) {
+                    System.out.println("La casilla es Túnel");
+                }
+            }
+            if (movimiento_server == Posicion13){
+                double Pos1 = Casilla_13.getLayoutX();
+                double Pos2 = Casilla_13.getLayoutY();
+                Server_ficha.setCenterX(Pos1-182);
+                Server_ficha.setCenterY(Pos2-170);
+                posicion_server +=valor;
+                Posicion_Server.setText(String.valueOf(posicion_server));
+                turno.setText(String.valueOf(false));
+                if (Casilla_13.getText().equalsIgnoreCase("T")){
+                    System.out.println("La casilla es Trampa");
+                }
+                if (Casilla_13.getText().equalsIgnoreCase("R")){
+                    System.out.println("La casilla es Reto");
+                }
+                if (Casilla_13.getText().equalsIgnoreCase("U")) {
+                    System.out.println("La casilla es Túnel");
+                }
+            }
+            if (movimiento_server == Posicion14){
+                double Pos1 = Casilla_14.getLayoutX();
+                double Pos2 = Casilla_14.getLayoutY();
+                Server_ficha.setCenterX(Pos1-182);
+                Server_ficha.setCenterY(Pos2-170);
+                posicion_server +=valor;
+                Posicion_Server.setText(String.valueOf(posicion_server));
+                turno.setText(String.valueOf(false));
+                if (Casilla_14.getText().equalsIgnoreCase("T")){
+                    System.out.println("La casilla es Trampa");
+                }
+                if (Casilla_14.getText().equalsIgnoreCase("R")){
+                    System.out.println("La casilla es Reto");
+                }
+                if (Casilla_14.getText().equalsIgnoreCase("U")) {
+                    System.out.println("La casilla es Túnel");
+                }
+            }
+            if (movimiento_server > Posicion14){
+                double Pos1 = Casilla_Final.getLayoutX();
+                double Pos2 = Casilla_Final.getLayoutY();
+                Server_ficha.setCenterX(Pos1-182);
+                Server_ficha.setCenterY(Pos2-170);
+                posicion_server += valor;
+                Posicion_Server.setText(String.valueOf(posicion_server));
+                turno.setText(String.valueOf(false));
+                System.out.println("El Servidor gana!");
+                Btn_Tirar.setVisible(false);
+            }
         }
-        if (movimiento == Posicion2){
-            double Pos1 = Casilla_2.getLayoutX();
-            double Pos2 = Casilla_2.getLayoutY();
-            Server_ficha.setCenterX(Pos1 - 47);
-            Server_ficha.setCenterY(Pos2-170);
-            posicion +=valor;
-            Posicion_Server.setText(String.valueOf(posicion));
-        }
-        if (movimiento == Posicion3) {
-            double Pos1 = Casilla_3.getLayoutX();
-            double Pos2 = Casilla_3.getLayoutY();
-            Server_ficha.setCenterX(Pos1 - 47);
-            Server_ficha.setCenterY(Pos2 - 170);
-            posicion +=valor;
-            Posicion_Server.setText(String.valueOf(posicion));
-        }
-        if (movimiento == Posicion4){
-            double Pos1 = Casilla_4.getLayoutX();
-            double Pos2 = Casilla_4.getLayoutY();
-            Server_ficha.setCenterX(Pos1 - 47);
-            Server_ficha.setCenterY(Pos2-170);
-            posicion +=valor;
-            Posicion_Server.setText(String.valueOf(posicion));
-        }
-        if (movimiento == Posicion5){
-            double Pos1 = Casilla_5.getLayoutX();
-            double Pos2 = Casilla_5.getLayoutY();
-            Server_ficha.setCenterX(Pos1 - 47);
-            Server_ficha.setCenterY(Pos2-170);
-            posicion +=valor;
-            Posicion_Server.setText(String.valueOf(posicion));
-        }
-        if (movimiento == Posicion6){
-            double Pos1 = Casilla_6.getLayoutX();
-            double Pos2 = Casilla_6.getLayoutY();
-            Server_ficha.setCenterX(Pos1 - 47);
-            Server_ficha.setCenterY(Pos2-170);
-            posicion +=valor;
-            Posicion_Server.setText(String.valueOf(posicion));
-        }
-        if (movimiento == Posicion7){
-            double Pos1 = Casilla_7.getLayoutX();
-            double Pos2 = Casilla_7.getLayoutY();
-            Server_ficha.setCenterX(Pos1 - 47);
-            Server_ficha.setCenterY(Pos2-170);
-            posicion +=valor;
-            Posicion_Server.setText(String.valueOf(posicion));
-        }
-        if (movimiento == Posicion8){
-            double Pos1 = Casilla_8.getLayoutX();
-            double Pos2 = Casilla_8.getLayoutY();
-            Server_ficha.setCenterX(Pos1 - 47);
-            Server_ficha.setCenterY(Pos2-170);
-            posicion +=valor;
-            Posicion_Server.setText(String.valueOf(posicion));
-        }
-        if (movimiento == Posicion9){
-            double Pos1 = Casilla_9.getLayoutX();
-            double Pos2 = Casilla_9.getLayoutY();
-            Server_ficha.setCenterX(Pos1 - 47);
-            Server_ficha.setCenterY(Pos2-170);
-            posicion +=valor;
-            Posicion_Server.setText(String.valueOf(posicion));
-        }
-        if (movimiento == Posicion10){
-            double Pos1 = Casilla_10.getLayoutX();
-            double Pos2 = Casilla_10.getLayoutY();
-            Server_ficha.setCenterX(Pos1 - 47);
-            Server_ficha.setCenterY(Pos2-170);
-            posicion +=valor;
-            Posicion_Server.setText(String.valueOf(posicion));
-        }
-        if (movimiento == Posicion11){
-            double Pos1 = Casilla_11.getLayoutX();
-            double Pos2 = Casilla_11.getLayoutY();
-            Server_ficha.setCenterX(Pos1 - 47);
-            Server_ficha.setCenterY(Pos2-170);
-            posicion +=valor;
-            Posicion_Server.setText(String.valueOf(posicion));
-        }
-        if (movimiento == Posicion12){
-            double Pos1 = Casilla_12.getLayoutX();
-            double Pos2 = Casilla_12.getLayoutY();
-            Server_ficha.setCenterX(Pos1 - 47);
-            Server_ficha.setCenterY(Pos2-170);
-            posicion +=valor;
-            Posicion_Server.setText(String.valueOf(posicion));
-        }
-        if (movimiento == Posicion13){
-            double Pos1 = Casilla_13.getLayoutX();
-            double Pos2 = Casilla_13.getLayoutY();
-            Server_ficha.setCenterX(Pos1 - 47);
-            Server_ficha.setCenterY(Pos2-170);
-            posicion +=valor;
-            Posicion_Server.setText(String.valueOf(posicion));
-        }
-        if (movimiento == Posicion14){
-            double Pos1 = Casilla_14.getLayoutX();
-            double Pos2 = Casilla_14.getLayoutY();
-            Server_ficha.setCenterX(Pos1 - 47);
-            Server_ficha.setCenterY(Pos2-170);
-            posicion +=valor;
-            Posicion_Server.setText(String.valueOf(posicion));
+
+        else{
+            if (movimiento_cliente == Posicion1){
+                double Pos1 = Casilla_1.getLayoutX();
+                double Pos2 = Casilla_1.getLayoutY();
+                Cliente_ficha.setCenterX(Pos1 - 250);
+                Cliente_ficha.setCenterY(Pos2 -170);
+                posicion_cliente +=valor;
+                Posicion_Cliente.setText(String.valueOf(posicion_cliente));
+                turno.setText(String.valueOf(true));
+                if (Casilla_1.getText().equalsIgnoreCase("T")){
+                    System.out.println("La casilla es Trampa");
+                }
+                if (Casilla_1.getText().equalsIgnoreCase("R")){
+                    System.out.println("La casilla es Reto");
+                }
+                if (Casilla_1.getText().equalsIgnoreCase("U")) {
+                    System.out.println("La casilla es Túnel");
+                }
+            }
+            if (movimiento_cliente == Posicion2){
+                double Pos1 = Casilla_2.getLayoutX();
+                double Pos2 = Casilla_2.getLayoutY();
+                Cliente_ficha.setCenterX(Pos1 - 250);
+                Cliente_ficha.setCenterY(Pos2 -170);
+                posicion_cliente +=valor;
+                Posicion_Cliente.setText(String.valueOf(posicion_cliente));
+                turno.setText(String.valueOf(true));
+                if (Casilla_2.getText().equalsIgnoreCase("T")){
+                    System.out.println("La casilla es Trampa");
+                }
+                if (Casilla_2.getText().equalsIgnoreCase("R")){
+                    System.out.println("La casilla es Reto");
+                }
+                if (Casilla_2.getText().equalsIgnoreCase("U")) {
+                    System.out.println("La casilla es Túnel");
+                }
+            }
+            if (movimiento_cliente == Posicion3) {
+                double Pos1 = Casilla_3.getLayoutX();
+                double Pos2 = Casilla_3.getLayoutY();
+                Cliente_ficha.setCenterX(Pos1 - 250);
+                Cliente_ficha.setCenterY(Pos2 -170);
+                Posicion_Cliente.setText(String.valueOf(posicion_cliente));
+                turno.setText(String.valueOf(true));
+                if (Casilla_3.getText().equalsIgnoreCase("T")){
+                    System.out.println("La casilla es Trampa");
+                }
+                if (Casilla_3.getText().equalsIgnoreCase("R")){
+                    System.out.println("La casilla es Reto");
+                }
+                if (Casilla_3.getText().equalsIgnoreCase("U")) {
+                    System.out.println("La casilla es Túnel");
+                }
+            }
+            if (movimiento_cliente == Posicion4){
+                double Pos1 = Casilla_4.getLayoutX();
+                double Pos2 = Casilla_4.getLayoutY();
+                Cliente_ficha.setCenterX(Pos1 - 250);
+                Cliente_ficha.setCenterY(Pos2 -170);
+                posicion_cliente +=valor;
+                Posicion_Cliente.setText(String.valueOf(posicion_cliente));
+                turno.setText(String.valueOf(true));
+                if (Casilla_4.getText().equalsIgnoreCase("T")){
+                    System.out.println("La casilla es Trampa");
+                }
+                if (Casilla_4.getText().equalsIgnoreCase("R")){
+                    System.out.println("La casilla es Reto");
+                }
+                if (Casilla_4.getText().equalsIgnoreCase("U")) {
+                    System.out.println("La casilla es Túnel");
+                }
+            }
+            if (movimiento_cliente == Posicion5){
+                double Pos1 = Casilla_5.getLayoutX();
+                double Pos2 = Casilla_5.getLayoutY();
+                Cliente_ficha.setCenterX(Pos1 - 250);
+                Cliente_ficha.setCenterY(Pos2-170);
+                posicion_cliente +=valor;
+                Posicion_Cliente.setText(String.valueOf(posicion_cliente));
+                turno.setText(String.valueOf(true));
+                if (Casilla_5.getText().equalsIgnoreCase("T")){
+                    System.out.println("La casilla es Trampa");
+                }
+                if (Casilla_5.getText().equalsIgnoreCase("R")){
+                    System.out.println("La casilla es Reto");
+                }
+                if (Casilla_5.getText().equalsIgnoreCase("U")) {
+                    System.out.println("La casilla es Túnel");
+                }
+            }
+            if (movimiento_cliente == Posicion6){
+                double Pos1 = Casilla_6.getLayoutX();
+                double Pos2 = Casilla_6.getLayoutY();
+                Cliente_ficha.setCenterX(Pos1 - 250);
+                Cliente_ficha.setCenterY(Pos2-170);
+                posicion_cliente +=valor;
+                Posicion_Cliente.setText(String.valueOf(posicion_cliente));
+                turno.setText(String.valueOf(true));
+                if (Casilla_6.getText().equalsIgnoreCase("T")){
+                    System.out.println("La casilla es Trampa");
+                }
+                if (Casilla_6.getText().equalsIgnoreCase("R")){
+                    System.out.println("La casilla es Reto");
+                }
+                if (Casilla_6.getText().equalsIgnoreCase("U")) {
+                    System.out.println("La casilla es Túnel");
+                }
+            }
+            if (movimiento_cliente == Posicion7){
+                double Pos1 = Casilla_7.getLayoutX();
+                double Pos2 = Casilla_7.getLayoutY();
+                Cliente_ficha.setCenterX(Pos1 - 250);
+                Cliente_ficha.setCenterY(Pos2-170);
+                posicion_cliente +=valor;
+                Posicion_Cliente.setText(String.valueOf(posicion_cliente));
+                turno.setText(String.valueOf(true));
+                if (Casilla_7.getText().equalsIgnoreCase("T")){
+                    System.out.println("La casilla es Trampa");
+                }
+                if (Casilla_7.getText().equalsIgnoreCase("R")){
+                    System.out.println("La casilla es Reto");
+                }
+                if (Casilla_7.getText().equalsIgnoreCase("U")) {
+                    System.out.println("La casilla es Túnel");
+                }
+            }
+            if (movimiento_cliente == Posicion8){
+                double Pos1 = Casilla_8.getLayoutX();
+                double Pos2 = Casilla_8.getLayoutY();
+                Cliente_ficha.setCenterX(Pos1 - 250);
+                Cliente_ficha.setCenterY(Pos2-170);
+                posicion_cliente +=valor;
+                Posicion_Cliente.setText(String.valueOf(posicion_cliente));
+                turno.setText(String.valueOf(true));
+                if (Casilla_8.getText().equalsIgnoreCase("T")){
+                    System.out.println("La casilla es Trampa");
+                }
+                if (Casilla_8.getText().equalsIgnoreCase("R")){
+                    System.out.println("La casilla es Reto");
+                }
+                if (Casilla_8.getText().equalsIgnoreCase("U")) {
+                    System.out.println("La casilla es Túnel");
+                }
+            }
+            if (movimiento_cliente == Posicion9){
+                double Pos1 = Casilla_9.getLayoutX();
+                double Pos2 = Casilla_9.getLayoutY();
+                Cliente_ficha.setCenterX(Pos1 - 250);
+                Cliente_ficha.setCenterY(Pos2-170);
+                posicion_cliente +=valor;
+                Posicion_Cliente.setText(String.valueOf(posicion_cliente));
+                turno.setText(String.valueOf(true));
+                if (Casilla_9.getText().equalsIgnoreCase("T")){
+                    System.out.println("La casilla es Trampa");
+                }
+                if (Casilla_9.getText().equalsIgnoreCase("R")){
+                    System.out.println("La casilla es Reto");
+                }
+                if (Casilla_9.getText().equalsIgnoreCase("U")) {
+                    System.out.println("La casilla es Túnel");
+                }
+            }
+            if (movimiento_cliente == Posicion10){
+                double Pos1 = Casilla_10.getLayoutX();
+                double Pos2 = Casilla_10.getLayoutY();
+                Cliente_ficha.setCenterX(Pos1 - 250);
+                Cliente_ficha.setCenterY(Pos2-170);
+                posicion_cliente +=valor;
+                Posicion_Cliente.setText(String.valueOf(posicion_cliente));
+                turno.setText(String.valueOf(true));
+                if (Casilla_10.getText().equalsIgnoreCase("T")){
+                    System.out.println("La casilla es Trampa");
+                }
+                if (Casilla_10.getText().equalsIgnoreCase("R")){
+                    System.out.println("La casilla es Reto");
+                }
+                if (Casilla_10.getText().equalsIgnoreCase("U")) {
+                    System.out.println("La casilla es Túnel");
+                }
+            }
+            if (movimiento_cliente == Posicion11){
+                double Pos1 = Casilla_11.getLayoutX();
+                double Pos2 = Casilla_11.getLayoutY();
+                Cliente_ficha.setCenterX(Pos1 - 250);
+                Cliente_ficha.setCenterY(Pos2-170);
+                posicion_cliente +=valor;
+                Posicion_Cliente.setText(String.valueOf(posicion_cliente));
+                turno.setText(String.valueOf(true));
+                if (Casilla_11.getText().equalsIgnoreCase("T")){
+                    System.out.println("La casilla es Trampa");
+                }
+                if (Casilla_11.getText().equalsIgnoreCase("R")){
+                    System.out.println("La casilla es Reto");
+                }
+                if (Casilla_11.getText().equalsIgnoreCase("U")) {
+                    System.out.println("La casilla es Túnel");
+                }
+            }
+            if (movimiento_cliente == Posicion12){
+                double Pos1 = Casilla_12.getLayoutX();
+                double Pos2 = Casilla_12.getLayoutY();
+                Cliente_ficha.setCenterX(Pos1 - 250);
+                Cliente_ficha.setCenterY(Pos2-170);
+                posicion_cliente +=valor;
+                Posicion_Cliente.setText(String.valueOf(posicion_cliente));
+                turno.setText(String.valueOf(true));
+                if (Casilla_12.getText().equalsIgnoreCase("T")){
+                    System.out.println("La casilla es Trampa");
+                }
+                if (Casilla_12.getText().equalsIgnoreCase("R")){
+                    System.out.println("La casilla es Reto");
+                }
+                if (Casilla_12.getText().equalsIgnoreCase("U")) {
+                    System.out.println("La casilla es Túnel");
+                }
+            }
+            if (movimiento_cliente == Posicion13){
+                double Pos1 = Casilla_13.getLayoutX();
+                double Pos2 = Casilla_13.getLayoutY();
+                Cliente_ficha.setCenterX(Pos1 - 250);
+                Cliente_ficha.setCenterY(Pos2-170);
+                posicion_cliente +=valor;
+                Posicion_Cliente.setText(String.valueOf(posicion_cliente));
+                turno.setText(String.valueOf(true));
+                if (Casilla_13.getText().equalsIgnoreCase("T")){
+                    System.out.println("La casilla es Trampa");
+                }
+                if (Casilla_13.getText().equalsIgnoreCase("R")){
+                    System.out.println("La casilla es Reto");
+                }
+                if (Casilla_13.getText().equalsIgnoreCase("U")) {
+                    System.out.println("La casilla es Túnel");
+                }
+            }
+            if (movimiento_cliente == Posicion14) {
+                double Pos1 = Casilla_14.getLayoutX();
+                double Pos2 = Casilla_14.getLayoutY();
+                Cliente_ficha.setCenterX(Pos1 - 250);
+                Cliente_ficha.setCenterY(Pos2 - 170);
+                posicion_cliente += valor;
+                Posicion_Cliente.setText(String.valueOf(posicion_cliente));
+                turno.setText(String.valueOf(true));
+                if (Casilla_14.getText().equalsIgnoreCase("T")){
+                    System.out.println("La casilla es Trampa");
+                }
+                if (Casilla_14.getText().equalsIgnoreCase("R")){
+                    System.out.println("La casilla es Reto");
+                }
+                if (Casilla_14.getText().equalsIgnoreCase("U")) {
+                    System.out.println("La casilla es Túnel");
+                }
+            }
+
+            if (movimiento_cliente > Posicion14){
+                double Pos1 = Casilla_Final.getLayoutX();
+                double Pos2 = Casilla_Final.getLayoutY();
+                Cliente_ficha.setCenterX(Pos1 - 250);
+                Cliente_ficha.setCenterY(Pos2 - 170);
+                posicion_cliente += valor;
+                Posicion_Cliente.setText(String.valueOf(posicion_cliente));
+                turno.setText(String.valueOf(true));
+                System.out.println("El Cliente gana!");
+                Btn_Tirar.setVisible(false);
+            }
         }
     }
 
@@ -311,8 +743,6 @@ public class Tablero_Controller {
 
         Casilla_14.setText(String.valueOf(Lista1.charAt(13)));
         Casilla_14.setId("14");
-
-
 
     }
     @FXML
