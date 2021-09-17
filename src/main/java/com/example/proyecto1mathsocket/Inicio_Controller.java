@@ -1,11 +1,8 @@
 package com.example.proyecto1mathsocket;
 
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -46,6 +43,7 @@ public class Inicio_Controller {
        // Server server = new Server();
         Btn_Cliente.setVisible(true);
         Txt_cliente.setText("Estado:");
-        Estado_cliente.setText("En espera");
+        Estado_cliente.setText("Conectado");
+        this.Estado_cliente.setText((Server.main()));
     }
 }

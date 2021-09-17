@@ -1,7 +1,5 @@
 package com.example.proyecto1mathsocket;
 
-import DoublyLinkedList.DoubleList;
-
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
