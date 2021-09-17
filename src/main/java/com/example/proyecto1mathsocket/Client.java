@@ -19,7 +19,9 @@ public class Client {
             in = new DataInputStream(socket.getInputStream());
             out = new DataOutputStream(socket.getOutputStream());
             String msgin = "";
+
             while (!msgin.equals("exit")) {
+
                 msgin = in.readUTF();
                 System.out.println(msgin);
                 pantalla.Respuesta_in.setText(pantalla.Respuesta_in.getText().trim() + msgin);

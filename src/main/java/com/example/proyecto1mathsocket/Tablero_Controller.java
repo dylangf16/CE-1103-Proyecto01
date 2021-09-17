@@ -1160,6 +1160,8 @@ public class Tablero_Controller {
     @FXML
     void Btn_Iniciar(MouseEvent event) {
         System.out.println("Hola mundo");
+        //ACA se escribe un Try, Ira el out
+        // Se instancia server
     }
 }
 
