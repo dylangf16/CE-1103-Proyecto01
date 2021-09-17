@@ -8,7 +8,7 @@ import java.net.Socket;
 
 
 public class Server {
-    public static void main(String[] args) {
+    public static String main() {
         ServerSocket servidor = null;
         Socket sc = null;
         DataInputStream in;
@@ -16,6 +16,7 @@ public class Server {
         DataOutputStream out;
 
         final int PUERTO = 5000;
+        String mensaje = null;
         try {
             servidor = new ServerSocket(PUERTO);
             System.out.println("Servidor iniciado. . .");
@@ -28,12 +29,14 @@ public class Server {
                 System.out.println(recibir);
                 sc.close();
                 System.out.println("Server cerrado");
+                mensaje = "Hola!!!!!!!!!!!!";
+                return mensaje;
             }
 
         } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.println("Conexión cortada");
+        return null;
     }
 
 }

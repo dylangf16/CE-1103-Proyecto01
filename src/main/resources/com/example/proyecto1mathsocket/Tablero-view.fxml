@@ -33,7 +33,7 @@
          </font>
       </Text>
       <Line endX="-13.5" endY="146.0" layoutX="557.0" layoutY="550.0" startX="-13.5" startY="3.5" />
-      <Text fx:id="Operación" layoutX="108.0" layoutY="664.0" strokeType="OUTSIDE" strokeWidth="0.0" text="null">
+      <Text fx:id="num1" layoutX="64.0" layoutY="652.0" strokeType="OUTSIDE" strokeWidth="0.0" text="50">
          <font>
             <Font size="23.0" />
          </font>
@@ -212,5 +212,15 @@
          </font>
       </Text>
       <Button layoutX="395.0" layoutY="656.0" mnemonicParsing="false" text="Enviar" />
+      <Text fx:id="Operación" layoutX="121.0" layoutY="651.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Text>
+      <Text fx:id="num2" layoutX="171.0" layoutY="652.0" strokeType="OUTSIDE" strokeWidth="0.0" text="50">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Text>
    </children>
 </Pane>

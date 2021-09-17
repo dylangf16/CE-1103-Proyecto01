@@ -12,7 +12,7 @@ import javafx.scene.text.Text;
 public class Tablero_Controller {
 
     @FXML
-    private Text Operación;
+    private Text num1;
 
     @FXML
     private TextField Respuesta_out;
@@ -69,7 +69,7 @@ public class Tablero_Controller {
     private Text Casilla_8;
 
     @FXML
-    private Text Casilla_9;
+    public Text Casilla_9;
 
     @FXML
     private Text Casilla_10;
@@ -101,6 +101,12 @@ public class Tablero_Controller {
     @FXML
     private Text turno;
 
+    @FXML
+    private Text Operación;
+
+    @FXML
+    private Text num2;
+
 
     @FXML
     void Correcto(MouseEvent event) {
@@ -121,6 +127,7 @@ public class Tablero_Controller {
         int movimiento_server = posicion_server + valor;
         int movimiento_cliente = posicion_cliente + valor;
         this.Resul_Dado.setText(String.valueOf(valor));
+        int simbolo = (int) (Math.random()*4+1);
 
         //ID de las casillas para saber donde mover la ficha
         int Posicion1 = Integer.parseInt((Casilla_1.getId()));
@@ -145,7 +152,6 @@ public class Tablero_Controller {
          */
 
         System.out.println("Turno de: " + turno.getText());
-
         if (Turno){
             if (movimiento_server == Posicion1){
                 double Pos1 = Casilla_1.getLayoutX();
@@ -160,6 +166,21 @@ public class Tablero_Controller {
                 }
                 if (Casilla_1.getText().equalsIgnoreCase("R")){
                     System.out.println("La casilla es Reto");
+                    num1.setText(String.valueOf((int)(Math.random()*50+1)));
+                    num2.setText(String.valueOf((int)(Math.random()*50+1)));
+
+                    if (simbolo == 1){ //Suma
+                        Operación.setText("+");
+                    }
+                    if (simbolo == 2){ //Resta
+                        Operación.setText("-");
+                    }
+                    if (simbolo == 3){ //Multiplicación
+                        Operación.setText("*");
+                    }
+                    if (simbolo == 4){ //División
+                        Operación.setText("/");
+                    }
                 }
                 if (Casilla_1.getText().equalsIgnoreCase("U")) {
                     System.out.println("La casilla es Túnel");
@@ -178,6 +199,21 @@ public class Tablero_Controller {
                 }
                 if (Casilla_2.getText().equalsIgnoreCase("R")){
                     System.out.println("La casilla es Reto");
+                    num1.setText(String.valueOf((int)(Math.random()*50+1)));
+                    num2.setText(String.valueOf((int)(Math.random()*50+1)));
+
+                    if (simbolo == 1){ //Suma
+                        Operación.setText("+");
+                    }
+                    if (simbolo == 2){ //Resta
+                        Operación.setText("-");
+                    }
+                    if (simbolo == 3){ //Multiplicación
+                        Operación.setText("*");
+                    }
+                    if (simbolo == 4){ //División
+                        Operación.setText("/");
+                    }
                 }
                 if (Casilla_2.getText().equalsIgnoreCase("U")) {
                     System.out.println("La casilla es Túnel");
@@ -196,6 +232,21 @@ public class Tablero_Controller {
                 }
                 if (Casilla_3.getText().equalsIgnoreCase("R")){
                     System.out.println("La casilla es Reto");
+                    num1.setText(String.valueOf((int)(Math.random()*50+1)));
+                    num2.setText(String.valueOf((int)(Math.random()*50+1)));
+
+                    if (simbolo == 1){ //Suma
+                        Operación.setText("+");
+                    }
+                    if (simbolo == 2){ //Resta
+                        Operación.setText("-");
+                    }
+                    if (simbolo == 3){ //Multiplicación
+                        Operación.setText("*");
+                    }
+                    if (simbolo == 4){ //División
+                        Operación.setText("/");
+                    }
                 }
                 if (Casilla_3.getText().equalsIgnoreCase("U")) {
                     System.out.println("La casilla es Túnel");
@@ -214,6 +265,21 @@ public class Tablero_Controller {
                 }
                 if (Casilla_4.getText().equalsIgnoreCase("R")){
                     System.out.println("La casilla es Reto");
+                    num1.setText(String.valueOf((int)(Math.random()*50+1)));
+                    num2.setText(String.valueOf((int)(Math.random()*50+1)));
+
+                    if (simbolo == 1){ //Suma
+                        Operación.setText("+");
+                    }
+                    if (simbolo == 2){ //Resta
+                        Operación.setText("-");
+                    }
+                    if (simbolo == 3){ //Multiplicación
+                        Operación.setText("*");
+                    }
+                    if (simbolo == 4){ //División
+                        Operación.setText("/");
+                    }
                 }
                 if (Casilla_4.getText().equalsIgnoreCase("U")) {
                     System.out.println("La casilla es Túnel");
@@ -250,6 +316,21 @@ public class Tablero_Controller {
                 }
                 if (Casilla_6.getText().equalsIgnoreCase("R")){
                     System.out.println("La casilla es Reto");
+                    num1.setText(String.valueOf((int)(Math.random()*50+1)));
+                    num2.setText(String.valueOf((int)(Math.random()*50+1)));
+
+                    if (simbolo == 1){ //Suma
+                        Operación.setText("+");
+                    }
+                    if (simbolo == 2){ //Resta
+                        Operación.setText("-");
+                    }
+                    if (simbolo == 3){ //Multiplicación
+                        Operación.setText("*");
+                    }
+                    if (simbolo == 4){ //División
+                        Operación.setText("/");
+                    }
                 }
                 if (Casilla_6.getText().equalsIgnoreCase("U")) {
                     System.out.println("La casilla es Túnel");
@@ -268,6 +349,21 @@ public class Tablero_Controller {
                 }
                 if (Casilla_7.getText().equalsIgnoreCase("R")){
                     System.out.println("La casilla es Reto");
+                    num1.setText(String.valueOf((int)(Math.random()*50+1)));
+                    num2.setText(String.valueOf((int)(Math.random()*50+1)));
+
+                    if (simbolo == 1){ //Suma
+                        Operación.setText("+");
+                    }
+                    if (simbolo == 2){ //Resta
+                        Operación.setText("-");
+                    }
+                    if (simbolo == 3){ //Multiplicación
+                        Operación.setText("*");
+                    }
+                    if (simbolo == 4){ //División
+                        Operación.setText("/");
+                    }
                 }
                 if (Casilla_7.getText().equalsIgnoreCase("U")) {
                     System.out.println("La casilla es Túnel");
@@ -286,6 +382,21 @@ public class Tablero_Controller {
                 }
                 if (Casilla_8.getText().equalsIgnoreCase("R")){
                     System.out.println("La casilla es Reto");
+                    num1.setText(String.valueOf((int)(Math.random()*50+1)));
+                    num2.setText(String.valueOf((int)(Math.random()*50+1)));
+
+                    if (simbolo == 1){ //Suma
+                        Operación.setText("+");
+                    }
+                    if (simbolo == 2){ //Resta
+                        Operación.setText("-");
+                    }
+                    if (simbolo == 3){ //Multiplicación
+                        Operación.setText("*");
+                    }
+                    if (simbolo == 4){ //División
+                        Operación.setText("/");
+                    }
                 }
                 if (Casilla_8.getText().equalsIgnoreCase("U")) {
                     System.out.println("La casilla es Túnel");
@@ -304,6 +415,21 @@ public class Tablero_Controller {
                 }
                 if (Casilla_9.getText().equalsIgnoreCase("R")){
                     System.out.println("La casilla es Reto");
+                    num1.setText(String.valueOf((int)(Math.random()*50+1)));
+                    num2.setText(String.valueOf((int)(Math.random()*50+1)));
+
+                    if (simbolo == 1){ //Suma
+                        Operación.setText("+");
+                    }
+                    if (simbolo == 2){ //Resta
+                        Operación.setText("-");
+                    }
+                    if (simbolo == 3){ //Multiplicación
+                        Operación.setText("*");
+                    }
+                    if (simbolo == 4){ //División
+                        Operación.setText("/");
+                    }
                 }
                 if (Casilla_9.getText().equalsIgnoreCase("U")) {
                     System.out.println("La casilla es Túnel");
@@ -322,6 +448,21 @@ public class Tablero_Controller {
                 }
                 if (Casilla_10.getText().equalsIgnoreCase("R")){
                     System.out.println("La casilla es Reto");
+                    num1.setText(String.valueOf((int)(Math.random()*50+1)));
+                    num2.setText(String.valueOf((int)(Math.random()*50+1)));
+
+                    if (simbolo == 1){ //Suma
+                        Operación.setText("+");
+                    }
+                    if (simbolo == 2){ //Resta
+                        Operación.setText("-");
+                    }
+                    if (simbolo == 3){ //Multiplicación
+                        Operación.setText("*");
+                    }
+                    if (simbolo == 4){ //División
+                        Operación.setText("/");
+                    }
                 }
                 if (Casilla_10.getText().equalsIgnoreCase("U")) {
                     System.out.println("La casilla es Túnel");
@@ -340,6 +481,21 @@ public class Tablero_Controller {
                 }
                 if (Casilla_11.getText().equalsIgnoreCase("R")){
                     System.out.println("La casilla es Reto");
+                    num1.setText(String.valueOf((int)(Math.random()*50+1)));
+                    num2.setText(String.valueOf((int)(Math.random()*50+1)));
+
+                    if (simbolo == 1){ //Suma
+                        Operación.setText("+");
+                    }
+                    if (simbolo == 2){ //Resta
+                        Operación.setText("-");
+                    }
+                    if (simbolo == 3){ //Multiplicación
+                        Operación.setText("*");
+                    }
+                    if (simbolo == 4){ //División
+                        Operación.setText("/");
+                    }
                 }
                 if (Casilla_11.getText().equalsIgnoreCase("U")) {
                     System.out.println("La casilla es Túnel");
@@ -358,6 +514,21 @@ public class Tablero_Controller {
                 }
                 if (Casilla_12.getText().equalsIgnoreCase("R")){
                     System.out.println("La casilla es Reto");
+                    num1.setText(String.valueOf((int)(Math.random()*50+1)));
+                    num2.setText(String.valueOf((int)(Math.random()*50+1)));
+
+                    if (simbolo == 1){ //Suma
+                        Operación.setText("+");
+                    }
+                    if (simbolo == 2){ //Resta
+                        Operación.setText("-");
+                    }
+                    if (simbolo == 3){ //Multiplicación
+                        Operación.setText("*");
+                    }
+                    if (simbolo == 4){ //División
+                        Operación.setText("/");
+                    }
                 }
                 if (Casilla_12.getText().equalsIgnoreCase("U")) {
                     System.out.println("La casilla es Túnel");
@@ -376,6 +547,21 @@ public class Tablero_Controller {
                 }
                 if (Casilla_13.getText().equalsIgnoreCase("R")){
                     System.out.println("La casilla es Reto");
+                    num1.setText(String.valueOf((int)(Math.random()*50+1)));
+                    num2.setText(String.valueOf((int)(Math.random()*50+1)));
+
+                    if (simbolo == 1){ //Suma
+                        Operación.setText("+");
+                    }
+                    if (simbolo == 2){ //Resta
+                        Operación.setText("-");
+                    }
+                    if (simbolo == 3){ //Multiplicación
+                        Operación.setText("*");
+                    }
+                    if (simbolo == 4){ //División
+                        Operación.setText("/");
+                    }
                 }
                 if (Casilla_13.getText().equalsIgnoreCase("U")) {
                     System.out.println("La casilla es Túnel");
@@ -394,6 +580,21 @@ public class Tablero_Controller {
                 }
                 if (Casilla_14.getText().equalsIgnoreCase("R")){
                     System.out.println("La casilla es Reto");
+                    num1.setText(String.valueOf((int)(Math.random()*50+1)));
+                    num2.setText(String.valueOf((int)(Math.random()*50+1)));
+
+                    if (simbolo == 1){ //Suma
+                        Operación.setText("+");
+                    }
+                    if (simbolo == 2){ //Resta
+                        Operación.setText("-");
+                    }
+                    if (simbolo == 3){ //Multiplicación
+                        Operación.setText("*");
+                    }
+                    if (simbolo == 4){ //División
+                        Operación.setText("/");
+                    }
                 }
                 if (Casilla_14.getText().equalsIgnoreCase("U")) {
                     System.out.println("La casilla es Túnel");
@@ -426,6 +627,21 @@ public class Tablero_Controller {
                 }
                 if (Casilla_1.getText().equalsIgnoreCase("R")){
                     System.out.println("La casilla es Reto");
+                    num1.setText(String.valueOf((int)(Math.random()*50+1)));
+                    num2.setText(String.valueOf((int)(Math.random()*50+1)));
+
+                    if (simbolo == 1){ //Suma
+                        Operación.setText("+");
+                    }
+                    if (simbolo == 2){ //Resta
+                        Operación.setText("-");
+                    }
+                    if (simbolo == 3){ //Multiplicación
+                        Operación.setText("*");
+                    }
+                    if (simbolo == 4){ //División
+                        Operación.setText("/");
+                    }
                 }
                 if (Casilla_1.getText().equalsIgnoreCase("U")) {
                     System.out.println("La casilla es Túnel");
@@ -444,6 +660,21 @@ public class Tablero_Controller {
                 }
                 if (Casilla_2.getText().equalsIgnoreCase("R")){
                     System.out.println("La casilla es Reto");
+                    num1.setText(String.valueOf((int)(Math.random()*50+1)));
+                    num2.setText(String.valueOf((int)(Math.random()*50+1)));
+
+                    if (simbolo == 1){ //Suma
+                        Operación.setText("+");
+                    }
+                    if (simbolo == 2){ //Resta
+                        Operación.setText("-");
+                    }
+                    if (simbolo == 3){ //Multiplicación
+                        Operación.setText("*");
+                    }
+                    if (simbolo == 4){ //División
+                        Operación.setText("/");
+                    }
                 }
                 if (Casilla_2.getText().equalsIgnoreCase("U")) {
                     System.out.println("La casilla es Túnel");
@@ -461,6 +692,21 @@ public class Tablero_Controller {
                 }
                 if (Casilla_3.getText().equalsIgnoreCase("R")){
                     System.out.println("La casilla es Reto");
+                    num1.setText(String.valueOf((int)(Math.random()*50+1)));
+                    num2.setText(String.valueOf((int)(Math.random()*50+1)));
+
+                    if (simbolo == 1){ //Suma
+                        Operación.setText("+");
+                    }
+                    if (simbolo == 2){ //Resta
+                        Operación.setText("-");
+                    }
+                    if (simbolo == 3){ //Multiplicación
+                        Operación.setText("*");
+                    }
+                    if (simbolo == 4){ //División
+                        Operación.setText("/");
+                    }
                 }
                 if (Casilla_3.getText().equalsIgnoreCase("U")) {
                     System.out.println("La casilla es Túnel");
@@ -479,6 +725,21 @@ public class Tablero_Controller {
                 }
                 if (Casilla_4.getText().equalsIgnoreCase("R")){
                     System.out.println("La casilla es Reto");
+                    num1.setText(String.valueOf((int)(Math.random()*50+1)));
+                    num2.setText(String.valueOf((int)(Math.random()*50+1)));
+
+                    if (simbolo == 1){ //Suma
+                        Operación.setText("+");
+                    }
+                    if (simbolo == 2){ //Resta
+                        Operación.setText("-");
+                    }
+                    if (simbolo == 3){ //Multiplicación
+                        Operación.setText("*");
+                    }
+                    if (simbolo == 4){ //División
+                        Operación.setText("/");
+                    }
                 }
                 if (Casilla_4.getText().equalsIgnoreCase("U")) {
                     System.out.println("La casilla es Túnel");
@@ -497,6 +758,21 @@ public class Tablero_Controller {
                 }
                 if (Casilla_5.getText().equalsIgnoreCase("R")){
                     System.out.println("La casilla es Reto");
+                    num1.setText(String.valueOf((int)(Math.random()*50+1)));
+                    num2.setText(String.valueOf((int)(Math.random()*50+1)));
+
+                    if (simbolo == 1){ //Suma
+                        Operación.setText("+");
+                    }
+                    if (simbolo == 2){ //Resta
+                        Operación.setText("-");
+                    }
+                    if (simbolo == 3){ //Multiplicación
+                        Operación.setText("*");
+                    }
+                    if (simbolo == 4){ //División
+                        Operación.setText("/");
+                    }
                 }
                 if (Casilla_5.getText().equalsIgnoreCase("U")) {
                     System.out.println("La casilla es Túnel");
@@ -515,6 +791,21 @@ public class Tablero_Controller {
                 }
                 if (Casilla_6.getText().equalsIgnoreCase("R")){
                     System.out.println("La casilla es Reto");
+                    num1.setText(String.valueOf((int)(Math.random()*50+1)));
+                    num2.setText(String.valueOf((int)(Math.random()*50+1)));
+
+                    if (simbolo == 1){ //Suma
+                        Operación.setText("+");
+                    }
+                    if (simbolo == 2){ //Resta
+                        Operación.setText("-");
+                    }
+                    if (simbolo == 3){ //Multiplicación
+                        Operación.setText("*");
+                    }
+                    if (simbolo == 4){ //División
+                        Operación.setText("/");
+                    }
                 }
                 if (Casilla_6.getText().equalsIgnoreCase("U")) {
                     System.out.println("La casilla es Túnel");
@@ -533,6 +824,21 @@ public class Tablero_Controller {
                 }
                 if (Casilla_7.getText().equalsIgnoreCase("R")){
                     System.out.println("La casilla es Reto");
+                    num1.setText(String.valueOf((int)(Math.random()*50+1)));
+                    num2.setText(String.valueOf((int)(Math.random()*50+1)));
+
+                    if (simbolo == 1){ //Suma
+                        Operación.setText("+");
+                    }
+                    if (simbolo == 2){ //Resta
+                        Operación.setText("-");
+                    }
+                    if (simbolo == 3){ //Multiplicación
+                        Operación.setText("*");
+                    }
+                    if (simbolo == 4){ //División
+                        Operación.setText("/");
+                    }
                 }
                 if (Casilla_7.getText().equalsIgnoreCase("U")) {
                     System.out.println("La casilla es Túnel");
@@ -551,6 +857,21 @@ public class Tablero_Controller {
                 }
                 if (Casilla_8.getText().equalsIgnoreCase("R")){
                     System.out.println("La casilla es Reto");
+                    num1.setText(String.valueOf((int)(Math.random()*50+1)));
+                    num2.setText(String.valueOf((int)(Math.random()*50+1)));
+
+                    if (simbolo == 1){ //Suma
+                        Operación.setText("+");
+                    }
+                    if (simbolo == 2){ //Resta
+                        Operación.setText("-");
+                    }
+                    if (simbolo == 3){ //Multiplicación
+                        Operación.setText("*");
+                    }
+                    if (simbolo == 4){ //División
+                        Operación.setText("/");
+                    }
                 }
                 if (Casilla_8.getText().equalsIgnoreCase("U")) {
                     System.out.println("La casilla es Túnel");
@@ -569,6 +890,21 @@ public class Tablero_Controller {
                 }
                 if (Casilla_9.getText().equalsIgnoreCase("R")){
                     System.out.println("La casilla es Reto");
+                    num1.setText(String.valueOf((int)(Math.random()*50+1)));
+                    num2.setText(String.valueOf((int)(Math.random()*50+1)));
+
+                    if (simbolo == 1){ //Suma
+                        Operación.setText("+");
+                    }
+                    if (simbolo == 2){ //Resta
+                        Operación.setText("-");
+                    }
+                    if (simbolo == 3){ //Multiplicación
+                        Operación.setText("*");
+                    }
+                    if (simbolo == 4){ //División
+                        Operación.setText("/");
+                    }
                 }
                 if (Casilla_9.getText().equalsIgnoreCase("U")) {
                     System.out.println("La casilla es Túnel");
@@ -587,6 +923,21 @@ public class Tablero_Controller {
                 }
                 if (Casilla_10.getText().equalsIgnoreCase("R")){
                     System.out.println("La casilla es Reto");
+                    num1.setText(String.valueOf((int)(Math.random()*50+1)));
+                    num2.setText(String.valueOf((int)(Math.random()*50+1)));
+
+                    if (simbolo == 1){ //Suma
+                        Operación.setText("+");
+                    }
+                    if (simbolo == 2){ //Resta
+                        Operación.setText("-");
+                    }
+                    if (simbolo == 3){ //Multiplicación
+                        Operación.setText("*");
+                    }
+                    if (simbolo == 4){ //División
+                        Operación.setText("/");
+                    }
                 }
                 if (Casilla_10.getText().equalsIgnoreCase("U")) {
                     System.out.println("La casilla es Túnel");
@@ -605,6 +956,21 @@ public class Tablero_Controller {
                 }
                 if (Casilla_11.getText().equalsIgnoreCase("R")){
                     System.out.println("La casilla es Reto");
+                    num1.setText(String.valueOf((int)(Math.random()*50+1)));
+                    num2.setText(String.valueOf((int)(Math.random()*50+1)));
+
+                    if (simbolo == 1){ //Suma
+                        Operación.setText("+");
+                    }
+                    if (simbolo == 2){ //Resta
+                        Operación.setText("-");
+                    }
+                    if (simbolo == 3){ //Multiplicación
+                        Operación.setText("*");
+                    }
+                    if (simbolo == 4){ //División
+                        Operación.setText("/");
+                    }
                 }
                 if (Casilla_11.getText().equalsIgnoreCase("U")) {
                     System.out.println("La casilla es Túnel");
@@ -623,6 +989,21 @@ public class Tablero_Controller {
                 }
                 if (Casilla_12.getText().equalsIgnoreCase("R")){
                     System.out.println("La casilla es Reto");
+                    num1.setText(String.valueOf((int)(Math.random()*50+1)));
+                    num2.setText(String.valueOf((int)(Math.random()*50+1)));
+
+                    if (simbolo == 1){ //Suma
+                        Operación.setText("+");
+                    }
+                    if (simbolo == 2){ //Resta
+                        Operación.setText("-");
+                    }
+                    if (simbolo == 3){ //Multiplicación
+                        Operación.setText("*");
+                    }
+                    if (simbolo == 4){ //División
+                        Operación.setText("/");
+                    }
                 }
                 if (Casilla_12.getText().equalsIgnoreCase("U")) {
                     System.out.println("La casilla es Túnel");
@@ -641,6 +1022,21 @@ public class Tablero_Controller {
                 }
                 if (Casilla_13.getText().equalsIgnoreCase("R")){
                     System.out.println("La casilla es Reto");
+                    num1.setText(String.valueOf((int)(Math.random()*50+1)));
+                    num2.setText(String.valueOf((int)(Math.random()*50+1)));
+
+                    if (simbolo == 1){ //Suma
+                        Operación.setText("+");
+                    }
+                    if (simbolo == 2){ //Resta
+                        Operación.setText("-");
+                    }
+                    if (simbolo == 3){ //Multiplicación
+                        Operación.setText("*");
+                    }
+                    if (simbolo == 4){ //División
+                        Operación.setText("/");
+                    }
                 }
                 if (Casilla_13.getText().equalsIgnoreCase("U")) {
                     System.out.println("La casilla es Túnel");
@@ -659,6 +1055,21 @@ public class Tablero_Controller {
                 }
                 if (Casilla_14.getText().equalsIgnoreCase("R")){
                     System.out.println("La casilla es Reto");
+                    num1.setText(String.valueOf((int)(Math.random()*50+1)));
+                    num2.setText(String.valueOf((int)(Math.random()*50+1)));
+
+                    if (simbolo == 1){ //Suma
+                        Operación.setText("+");
+                    }
+                    if (simbolo == 2){ //Resta
+                        Operación.setText("-");
+                    }
+                    if (simbolo == 3){ //Multiplicación
+                        Operación.setText("*");
+                    }
+                    if (simbolo == 4){ //División
+                        Operación.setText("/");
+                    }
                 }
                 if (Casilla_14.getText().equalsIgnoreCase("U")) {
                     System.out.println("La casilla es Túnel");
@@ -745,6 +1156,7 @@ public class Tablero_Controller {
         Casilla_14.setId("14");
 
     }
+
     @FXML
     void Btn_Iniciar(MouseEvent event) {
         System.out.println("Hola mundo");
