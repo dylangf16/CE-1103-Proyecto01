@@ -20,7 +20,7 @@ public class Tablero_Controller {
     private TextField Respuesta_out;
 
     @FXML
-    private Text Respuesta_in;
+    public Text Respuesta_in;
 
     @FXML
     private Button Btn_Correcto;
@@ -103,10 +103,6 @@ public class Tablero_Controller {
     void Incorrecto(MouseEvent event) {
 
     }
-    @FXML
-    void send_text(MouseEvent event) {
-        System.out.println("Hello world");
-    }
 
     @FXML
     void Tirar_dado(MouseEvent event) {
@@ -133,20 +129,20 @@ public class Tablero_Controller {
 
         System.out.println("Casilla a mover: " + movimiento);
         //Idea para moverse por el tablero
-        if (movimiento == Posicion1){
+        if (movimiento == Posicion1) {
             double Pos1 = Casilla_1.getLayoutX();
             double Pos2 = Casilla_1.getLayoutY();
             Server_ficha.setCenterX(Pos1 - 47);
-            Server_ficha.setCenterY(Pos2-170);
-            posicion +=valor;
+            Server_ficha.setCenterY(Pos2 - 170);
+            posicion += valor;
             Posicion_Server.setText(String.valueOf(posicion));
         }
-        if (movimiento == Posicion2){
+        if (movimiento == Posicion2) {
             double Pos1 = Casilla_2.getLayoutX();
             double Pos2 = Casilla_2.getLayoutY();
             Server_ficha.setCenterX(Pos1 - 47);
-            Server_ficha.setCenterY(Pos2-170);
-            posicion +=valor;
+            Server_ficha.setCenterY(Pos2 - 170);
+            posicion += valor;
             Posicion_Server.setText(String.valueOf(posicion));
         }
         if (movimiento == Posicion3) {
@@ -154,95 +150,95 @@ public class Tablero_Controller {
             double Pos2 = Casilla_3.getLayoutY();
             Server_ficha.setCenterX(Pos1 - 47);
             Server_ficha.setCenterY(Pos2 - 170);
-            posicion +=valor;
+            posicion += valor;
             Posicion_Server.setText(String.valueOf(posicion));
         }
-        if (movimiento == Posicion4){
+        if (movimiento == Posicion4) {
             double Pos1 = Casilla_4.getLayoutX();
             double Pos2 = Casilla_4.getLayoutY();
             Server_ficha.setCenterX(Pos1 - 47);
-            Server_ficha.setCenterY(Pos2-170);
-            posicion +=valor;
+            Server_ficha.setCenterY(Pos2 - 170);
+            posicion += valor;
             Posicion_Server.setText(String.valueOf(posicion));
         }
-        if (movimiento == Posicion5){
+        if (movimiento == Posicion5) {
             double Pos1 = Casilla_5.getLayoutX();
             double Pos2 = Casilla_5.getLayoutY();
             Server_ficha.setCenterX(Pos1 - 47);
-            Server_ficha.setCenterY(Pos2-170);
-            posicion +=valor;
+            Server_ficha.setCenterY(Pos2 - 170);
+            posicion += valor;
             Posicion_Server.setText(String.valueOf(posicion));
         }
-        if (movimiento == Posicion6){
+        if (movimiento == Posicion6) {
             double Pos1 = Casilla_6.getLayoutX();
             double Pos2 = Casilla_6.getLayoutY();
             Server_ficha.setCenterX(Pos1 - 47);
-            Server_ficha.setCenterY(Pos2-170);
-            posicion +=valor;
+            Server_ficha.setCenterY(Pos2 - 170);
+            posicion += valor;
             Posicion_Server.setText(String.valueOf(posicion));
         }
-        if (movimiento == Posicion7){
+        if (movimiento == Posicion7) {
             double Pos1 = Casilla_7.getLayoutX();
             double Pos2 = Casilla_7.getLayoutY();
             Server_ficha.setCenterX(Pos1 - 47);
-            Server_ficha.setCenterY(Pos2-170);
-            posicion +=valor;
+            Server_ficha.setCenterY(Pos2 - 170);
+            posicion += valor;
             Posicion_Server.setText(String.valueOf(posicion));
         }
-        if (movimiento == Posicion8){
+        if (movimiento == Posicion8) {
             double Pos1 = Casilla_8.getLayoutX();
             double Pos2 = Casilla_8.getLayoutY();
             Server_ficha.setCenterX(Pos1 - 47);
-            Server_ficha.setCenterY(Pos2-170);
-            posicion +=valor;
+            Server_ficha.setCenterY(Pos2 - 170);
+            posicion += valor;
             Posicion_Server.setText(String.valueOf(posicion));
         }
-        if (movimiento == Posicion9){
+        if (movimiento == Posicion9) {
             double Pos1 = Casilla_9.getLayoutX();
             double Pos2 = Casilla_9.getLayoutY();
             Server_ficha.setCenterX(Pos1 - 47);
-            Server_ficha.setCenterY(Pos2-170);
-            posicion +=valor;
+            Server_ficha.setCenterY(Pos2 - 170);
+            posicion += valor;
             Posicion_Server.setText(String.valueOf(posicion));
         }
-        if (movimiento == Posicion10){
+        if (movimiento == Posicion10) {
             double Pos1 = Casilla_10.getLayoutX();
             double Pos2 = Casilla_10.getLayoutY();
             Server_ficha.setCenterX(Pos1 - 47);
-            Server_ficha.setCenterY(Pos2-170);
-            posicion +=valor;
+            Server_ficha.setCenterY(Pos2 - 170);
+            posicion += valor;
             Posicion_Server.setText(String.valueOf(posicion));
         }
-        if (movimiento == Posicion11){
+        if (movimiento == Posicion11) {
             double Pos1 = Casilla_11.getLayoutX();
             double Pos2 = Casilla_11.getLayoutY();
             Server_ficha.setCenterX(Pos1 - 47);
-            Server_ficha.setCenterY(Pos2-170);
-            posicion +=valor;
+            Server_ficha.setCenterY(Pos2 - 170);
+            posicion += valor;
             Posicion_Server.setText(String.valueOf(posicion));
         }
-        if (movimiento == Posicion12){
+        if (movimiento == Posicion12) {
             double Pos1 = Casilla_12.getLayoutX();
             double Pos2 = Casilla_12.getLayoutY();
             Server_ficha.setCenterX(Pos1 - 47);
-            Server_ficha.setCenterY(Pos2-170);
-            posicion +=valor;
+            Server_ficha.setCenterY(Pos2 - 170);
+            posicion += valor;
             Posicion_Server.setText(String.valueOf(posicion));
         }
-        if (movimiento == Posicion13){
+        if (movimiento == Posicion13) {
             double Pos1 = Casilla_13.getLayoutX();
             double Pos2 = Casilla_13.getLayoutY();
             Server_ficha.setCenterX(Pos1 - 47);
-            Server_ficha.setCenterY(Pos2-170);
-            posicion +=valor;
+            Server_ficha.setCenterY(Pos2 - 170);
+            posicion += valor;
             Posicion_Server.setText(String.valueOf(posicion));
         }
-        if (movimiento == Posicion14){
+        if (movimiento == Posicion14) {
             double Pos1 = Casilla_14.getLayoutX();
             double Pos2 = Casilla_14.getLayoutY();
             Server_ficha.setCenterX(Pos1 - 47);
-            Server_ficha.setCenterY(Pos2-170);
-            posicion +=valor;
+            Server_ficha.setCenterY(Pos2 - 170);
+            posicion += valor;
             Posicion_Server.setText(String.valueOf(posicion));
         }
     }
@@ -313,12 +309,21 @@ public class Tablero_Controller {
         Casilla_14.setId("14");
 
 
-
     }
+
     @FXML
     void Btn_Iniciar(MouseEvent event) {
-        System.out.println("Hola mundo");
+        String msgout;
+        msgout = Respuesta_out.getText();
+        System.out.println(msgout);
+        try{
+            Server server = new Server();
+            server.out.writeUTF(msgout);
+
+        }catch(Exception e){
+
+        }
+
     }
 }
-
 

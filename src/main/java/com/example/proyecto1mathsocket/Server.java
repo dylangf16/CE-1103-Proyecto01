@@ -7,33 +7,37 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 
-public class Server {
-    public static void main(String[] args) {
-        ServerSocket servidor = null;
-        Socket sc = null;
-        DataInputStream in;
-        DataInputStream stdIn;
-        DataOutputStream out;
 
-        final int PUERTO = 5000;
+public class Server extends IOException {
+    public ServerSocket  server_socket = new ServerSocket(4001);
+    public Socket socket = server_socket.accept();
+    public DataOutputStream out = new DataOutputStream(socket.getOutputStream());
+    public DataInputStream in = new DataInputStream(socket.getInputStream());
+
+    public Server() throws IOException {
+    }
+
+
+    public static String main(String[] args) throws IOException {
+
+        Server server = new Server();
+        Tablero_Controller pantalla = new Tablero_Controller();
+        String msgin = "";
         try {
-            servidor = new ServerSocket(PUERTO);
-            System.out.println("Servidor iniciado. . .");
-            while (true){
-                sc = servidor.accept();
-                in = new DataInputStream(sc.getInputStream()); //Variable que permite recibir mensajes mediante sockets
-                out = new DataOutputStream(sc.getOutputStream()); //Variable que perminte enviar un mensaje mediante sockets
-                out.writeUTF("Conexión Establecida con el cliente");
-                String recibir = in.readUTF();
-                System.out.println(recibir);
-                sc.close();
-                System.out.println("Server cerrado");
+
+            while (!msgin.equals("exit")) {
+                msgin = server.in.readUTF();
+                System.out.println(msgin);
+                pantalla.Respuesta_in.setText(pantalla.Respuesta_in.getText().trim() + msgin);
+                return msgin;
             }
 
         } catch (IOException e) {
             e.printStackTrace();
         }
         System.out.println("Conexión cortada");
+        return null;
     }
+
 
 }

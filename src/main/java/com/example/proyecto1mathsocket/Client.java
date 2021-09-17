@@ -8,26 +8,25 @@ import java.io.IOException;
 import java.net.Socket;
 
 public class Client {
+    static Socket socket;
+    static DataInputStream in;
+    static DataOutputStream out;
+
     public static void main(String[] args) {
-        final String HOST = "127.0.0.1";
-        final int PUERTO = 5000;
-        DataInputStream in;
-        DataOutputStream out;
+
 
         try {
-            Socket sc = new Socket(HOST, PUERTO);
-            in = new DataInputStream(sc.getInputStream()); //Variable que permite recibir mensajes mediante sockets
-            out = new DataOutputStream(sc.getOutputStream()); //Variable que perminte enviar un mensaje mediante sockets
+            Tablero_Controller pantalla = new Tablero_Controller();
+            socket = new Socket("LocalHost", 4001);
+            in = new DataInputStream(socket.getInputStream());
+            out = new DataOutputStream(socket.getOutputStream());
+            String msgin = "";
+            while (!msgin.equals("exit")) {
+                msgin = in.readUTF();
+                System.out.println(msgin);
+                pantalla.Respuesta_in.setText(pantalla.Respuesta_in.getText().trim() + msgin);
 
-            String mensaje = in.readUTF();
-            System.out.println(mensaje);
-
-            out.writeUTF("Hola desde el cliente");
-            sc.close();
-
-
-        } catch (IOException e){
-
+             }
+            } catch(IOException e){}
         }
-    }
 }
