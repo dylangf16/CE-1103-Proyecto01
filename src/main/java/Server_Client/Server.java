@@ -5,7 +5,6 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.net.UnknownHostException;
 import java.util.Scanner;
 
 public class Server extends IOException {
@@ -18,20 +17,24 @@ public class Server extends IOException {
     public ServerSocket connect_ServerSocket(){return server_socket;}
     public Server() throws IOException {}
 
-    public static void main(String[] args)throws IOException {
+    public static String enviar(int entero){
+
         try {
             Server func = new Server();
             System.out.println("Conexion Establecida");
             Scanner scanner = new Scanner(System.in);
+            String entrada ="";
 
-            while (true) {
+            while (!entrada.equals("exit")) {
                 func.connect_ServerSocket();
                 func.connect_socket();
-                String msg = scanner.nextLine();
+                String msg = String.valueOf(entero);
                 func.out.writeUTF("[Server]:" + msg);
-                String entranda = func.in.readUTF();
-                System.out.println(entranda);
+                entrada = func.in.readUTF();
+                System.out.println(entrada);
+                return entrada;
             }
-        } catch(UnknownHostException e){} catch(IOException e){}
+        } catch(IOException e){}
+        return null;
     }
 }

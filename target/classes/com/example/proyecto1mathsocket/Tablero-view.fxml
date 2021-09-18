@@ -211,7 +211,7 @@
             <Font size="20.0" />
          </font>
       </Text>
-      <Button layoutX="395.0" layoutY="656.0" mnemonicParsing="false" text="Enviar" />
+      <Button layoutX="395.0" layoutY="656.0" mnemonicParsing="false" onMouseClicked="#Enviar_server" text="Enviar" />
       <Text fx:id="Operación" layoutX="121.0" layoutY="651.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x">
          <font>
             <Font size="23.0" />

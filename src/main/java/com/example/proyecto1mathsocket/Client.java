@@ -11,22 +11,23 @@ public class Client {
     static DataOutputStream out;
 
     public static void main(String[] args) {
+        while (true) {
+            try {
+                Tablero_Controller pantalla = new Tablero_Controller();
+                socket = new Socket("LocalHost", 4001);
+                in = new DataInputStream(socket.getInputStream());
+                out = new DataOutputStream(socket.getOutputStream());
+                String msgin = "";
 
-
-        try {
-            Tablero_Controller pantalla = new Tablero_Controller();
-            socket = new Socket("LocalHost", 4001);
-            in = new DataInputStream(socket.getInputStream());
-            out = new DataOutputStream(socket.getOutputStream());
-            String msgin = "";
-
-            while (!msgin.equals("exit")) {
-
-                msgin = in.readUTF();
-                System.out.println(msgin);
-                pantalla.Respuesta_in.setText(pantalla.Respuesta_in.getText().trim() + msgin);
-
-             }
-            } catch(IOException e){}
+                while (!msgin.equals("exit")) {
+                    msgin = in.readUTF();
+                    System.out.println(msgin);
+                    //pantalla.Respuesta_in.setText(pantalla.Respuesta_in.getText().trim() + msgin);
+                }
+                System.out.println("Conexión terminada");
+            }
+            catch (IOException e) {
+            }
         }
+    }
 }

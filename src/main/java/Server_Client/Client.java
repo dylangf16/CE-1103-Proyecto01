@@ -16,16 +16,10 @@ public class Client  extends IOException {
     public Client() throws IOException {}
 
     public static void main(String[] args) throws IOException {
-
-
         try {
-
-
             Client func = new Client();
             System.out.println("Conexion establecida");
             Scanner scanner = new Scanner(System.in);
-
-
 
             while (true) {
                 func.connect_socket();
@@ -33,8 +27,6 @@ public class Client  extends IOException {
                 func.out.writeUTF("[Client]:" + msg);
                 String entrada = func.in.readUTF();
                 System.out.println(entrada);
-
-
             }
         } catch(UnknownHostException e){} catch(IOException e){}
     }

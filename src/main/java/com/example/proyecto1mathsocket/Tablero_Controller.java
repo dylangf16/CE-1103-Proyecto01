@@ -1,6 +1,7 @@
 package com.example.proyecto1mathsocket;
 
 import DoublyLinkedList.DoubleList;
+import Server_Client.Server;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -8,6 +9,8 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
+
+import java.io.IOException;
 
 public class Tablero_Controller {
 
@@ -18,7 +21,7 @@ public class Tablero_Controller {
     private TextField Respuesta_out;
 
     @FXML
-    private Text Respuesta_in;
+    public Text Respuesta_in;
 
     @FXML
     private Button Btn_Correcto;
@@ -1158,11 +1161,10 @@ public class Tablero_Controller {
     }
 
     @FXML
-    void Btn_Iniciar(MouseEvent event) {
-        System.out.println("Hola mundo");
-        //ACA se escribe un Try, Ira el out
-        // Se instancia server
+    void Enviar_server(MouseEvent event) throws IOException {
+        Respuesta_in.setText(Server.enviar(Integer.parseInt(Respuesta_out.getText())));
     }
+
 }
 
 

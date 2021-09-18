@@ -18,7 +18,6 @@ public class Tablero_Application extends Application {
         stage.setScene(scene);
         stage.show();
 
-
         System.out.println("Lista desde el application: " + AccederLista.getInstance());
     }
 
