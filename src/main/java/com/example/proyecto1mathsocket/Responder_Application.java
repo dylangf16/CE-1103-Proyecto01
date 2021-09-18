@@ -8,12 +8,12 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class Tablero_Application extends Application {
+public class Responder_Application extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Tablero_Application.class.getResource("Tablero-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Responder_Application.class.getResource("Responder-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        stage.setTitle("Math Socket VideoGame!!!");
+        stage.setTitle("Ventana de respuesta!!!");
         stage.setScene(scene);
         stage.show();
 

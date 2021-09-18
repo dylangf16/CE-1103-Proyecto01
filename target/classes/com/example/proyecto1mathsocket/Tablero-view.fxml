@@ -17,40 +17,32 @@
          </font>
       </Text>
       <Line endX="987.0" layoutX="115.0" layoutY="554.0" startX="-115.0" />
-      <Text layoutX="33.0" layoutY="591.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Operación a Resolver">
+      <Text layoutX="163.0" layoutY="592.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Operación a Resolver">
          <font>
             <Font size="20.0" />
          </font>
       </Text>
-      <Text layoutX="784.0" layoutY="591.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Validación del Resultado:">
+      <Text layoutX="507.0" layoutY="592.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Respuesta">
          <font>
             <Font size="20.0" />
          </font>
       </Text>
-      <Text layoutX="377.0" layoutY="591.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Respuesta">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Text>
-      <Line endX="-13.5" endY="146.0" layoutX="557.0" layoutY="550.0" startX="-13.5" startY="3.5" />
-      <Text fx:id="num1" layoutX="64.0" layoutY="652.0" strokeType="OUTSIDE" strokeWidth="0.0" text="50">
+      <Text fx:id="num1" layoutX="194.0" layoutY="653.0" strokeType="OUTSIDE" strokeWidth="0.0" text="50">
          <font>
             <Font size="23.0" />
          </font>
       </Text>
-      <TextField fx:id="Respuesta_out" layoutX="347.0" layoutY="612.0" text="0" />
-      <Text fx:id="Respuesta_in" layoutX="618.0" layoutY="663.0" strokeType="OUTSIDE" strokeWidth="0.0" text="null">
+      <TextField fx:id="Respuesta_out" layoutX="477.0" layoutY="613.0" text="0" />
+      <Text fx:id="Respuesta_in" layoutX="748.0" layoutY="664.0" strokeType="OUTSIDE" strokeWidth="0.0" text="null">
          <font>
             <Font size="23.0" />
          </font>
       </Text>
-      <Text layoutX="592.0" layoutY="591.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Respuesta">
+      <Text layoutX="722.0" layoutY="592.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Respuesta">
          <font>
             <Font size="20.0" />
          </font>
       </Text>
-      <Button fx:id="Btn_Correcto" layoutX="784.0" layoutY="644.0" mnemonicParsing="false" onMouseClicked="#Correcto" text="Correcto" visible="false" />
-      <Button fx:id="Btn_Incorrecto" layoutX="935.0" layoutY="643.0" mnemonicParsing="false" onMouseClicked="#Incorrecto" text="Incorrecto" visible="false" />
       <Rectangle fx:id="Inicio" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="63.0" layoutX="185.0" layoutY="129.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
       <Rectangle fx:id="Rectangulo_1" arcHeight="5.0" arcWidth="5.0" fill="#1f93ff" height="63.0" layoutX="387.0" layoutY="127.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="63.0" layoutX="592.0" layoutY="129.0" stroke="BLACK" strokeType="INSIDE" width="70.0" />
@@ -211,13 +203,13 @@
             <Font size="20.0" />
          </font>
       </Text>
-      <Button layoutX="395.0" layoutY="656.0" mnemonicParsing="false" onMouseClicked="#Enviar_server" text="Enviar" />
-      <Text fx:id="Operación" layoutX="121.0" layoutY="651.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x">
+      <Button layoutX="525.0" layoutY="657.0" mnemonicParsing="false" onMouseClicked="#Enviar_server" text="Enviar" />
+      <Text fx:id="Operación" layoutX="251.0" layoutY="652.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x">
          <font>
             <Font size="23.0" />
          </font>
       </Text>
-      <Text fx:id="num2" layoutX="171.0" layoutY="652.0" strokeType="OUTSIDE" strokeWidth="0.0" text="50">
+      <Text fx:id="num2" layoutX="301.0" layoutY="653.0" strokeType="OUTSIDE" strokeWidth="0.0" text="50">
          <font>
             <Font size="23.0" />
          </font>

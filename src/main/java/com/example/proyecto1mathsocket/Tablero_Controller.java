@@ -1,6 +1,7 @@
 package com.example.proyecto1mathsocket;
 
 import DoublyLinkedList.DoubleList;
+import Server_Client.Client;
 import Server_Client.Server;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -110,17 +111,6 @@ public class Tablero_Controller {
     @FXML
     private Text num2;
 
-
-    @FXML
-    void Correcto(MouseEvent event) {
-
-    }
-
-    @FXML
-    void Incorrecto(MouseEvent event) {
-
-    }
-
     @FXML
     void Tirar_dado(MouseEvent event) {
         //Valores de movimiento
@@ -149,6 +139,7 @@ public class Tablero_Controller {
         int Posicion14 = Integer.parseInt((Casilla_14.getId()));
 
         boolean Turno = Boolean.parseBoolean(turno.getText());
+
         /*
         True = turno del server
         False = turno del cliente
@@ -1104,8 +1095,6 @@ public class Tablero_Controller {
         Btn_Iniciar.setVisible(false);
 
         //Aparecer botones de juego
-        Btn_Correcto.setVisible(true);
-        Btn_Incorrecto.setVisible(true);
         Btn_Tirar.setVisible(true);
         System.out.println(Lista1.length());
 
@@ -1162,6 +1151,7 @@ public class Tablero_Controller {
 
     @FXML
     void Enviar_server(MouseEvent event) throws IOException {
+        //Client.main();
         Respuesta_in.setText(Server.enviar(Integer.parseInt(Respuesta_out.getText())));
     }
 

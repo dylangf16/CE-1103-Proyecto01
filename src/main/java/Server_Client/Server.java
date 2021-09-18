@@ -18,7 +18,6 @@ public class Server extends IOException {
     public Server() throws IOException {}
 
     public static String enviar(int entero){
-
         try {
             Server func = new Server();
             System.out.println("Conexion Establecida");
@@ -32,6 +31,7 @@ public class Server extends IOException {
                 func.out.writeUTF("[Server]:" + msg);
                 entrada = func.in.readUTF();
                 System.out.println(entrada);
+                scanner.close();
                 return entrada;
             }
         } catch(IOException e){}
