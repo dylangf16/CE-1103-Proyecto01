@@ -15,6 +15,7 @@ public class Inicio_Application extends Application {
         stage.setTitle("Math Socket VideoGame!!!");
         stage.setScene(scene);
         stage.show();
+
         System.out.println("Lista desde el application: " + AccederLista.getInstance());
     }
 

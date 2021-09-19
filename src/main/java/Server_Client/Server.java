@@ -13,6 +13,10 @@ public class Server extends IOException {
 
     DataOutputStream out = new DataOutputStream(socket.getOutputStream());
     DataInputStream in = new DataInputStream(socket.getInputStream());
+
+    public static void main() {
+    }
+
     public Socket connect_socket(){return socket;}
     public ServerSocket connect_ServerSocket(){return server_socket;}
     public Server() throws IOException {}
@@ -29,8 +33,8 @@ public class Server extends IOException {
                 func.connect_socket();
                 String msg = String.valueOf(entero);
                 func.out.writeUTF("[Server]:" + msg);
-                entrada = func.in.readUTF();
-                System.out.println(entrada);
+                //entrada = func.in.readUTF();
+                //System.out.println(entrada);
                 scanner.close();
                 return entrada;
             }

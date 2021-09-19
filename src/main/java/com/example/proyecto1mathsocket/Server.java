@@ -8,7 +8,8 @@ import java.net.Socket;
 
 
 public class Server {
-    public static String main() {
+    public static void main(String[] args) {
+
         ServerSocket servidor = null;
         Socket sc = null;
         DataInputStream in;
@@ -30,13 +31,12 @@ public class Server {
                 sc.close();
                 System.out.println("Server cerrado");
                 mensaje = "Hola!!!!!!!!!!!!";
-                return mensaje;
+
             }
 
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return null;
     }
 
 }
