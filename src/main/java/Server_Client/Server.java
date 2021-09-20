@@ -14,7 +14,7 @@ public class Server extends IOException {
     private static DataOutputStream out;
     private static int PUERTO = 4001;
 
-    public static String enviar(int entero) throws IOException {
+    public static String enviar(String entero) throws IOException {
         try {
             servidor = new ServerSocket(PUERTO);
             sc = servidor.accept();

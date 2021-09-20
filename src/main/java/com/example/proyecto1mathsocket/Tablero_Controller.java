@@ -9,7 +9,6 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
-import javafx.stage.Stage;
 
 import java.io.IOException;
 
@@ -1153,7 +1152,7 @@ public class Tablero_Controller {
     void Enviar_server(MouseEvent event) throws IOException {
         System.out.println("-------------------- Se envía dato ---------------------");
         Server sv = new Server();
-        String respuesta = sv.enviar(Integer.parseInt(Respuesta_out.getText()));
+        String respuesta = sv.enviar(String.valueOf(Respuesta_out.getText()));
         Respuesta_in.setText(respuesta);
         System.out.println("-------------------- Dato recibido ---------------------");
 

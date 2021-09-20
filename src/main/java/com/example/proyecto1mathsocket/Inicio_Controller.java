@@ -23,9 +23,7 @@ public class Inicio_Controller {
     private Text Estado_cliente;
 
     @FXML
-    void Conectar_Cliente(MouseEvent event) {
-        //Client client = new Client();
-        //client.getClass();
+    void Conectar_Cliente(MouseEvent event){
         Btn_empezar.setVisible(true);
     }
 
@@ -34,7 +32,6 @@ public class Inicio_Controller {
         Tablero_Application Tablero = new Tablero_Application();
         Stage stage = new Stage();
         Tablero.start(stage);
-
     }
 
     @FXML
