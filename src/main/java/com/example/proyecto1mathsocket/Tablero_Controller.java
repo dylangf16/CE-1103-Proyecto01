@@ -9,6 +9,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 
@@ -110,16 +111,6 @@ public class Tablero_Controller {
     @FXML
     private Text num2;
 
-
-    @FXML
-    void Correcto(MouseEvent event) {
-
-    }
-
-    @FXML
-    void Incorrecto(MouseEvent event) {
-
-    }
 
     @FXML
     void Tirar_dado(MouseEvent event) {
@@ -1104,8 +1095,6 @@ public class Tablero_Controller {
         Btn_Iniciar.setVisible(false);
 
         //Aparecer botones de juego
-        Btn_Correcto.setVisible(true);
-        Btn_Incorrecto.setVisible(true);
         Btn_Tirar.setVisible(true);
         System.out.println(Lista1.length());
 
@@ -1162,7 +1151,12 @@ public class Tablero_Controller {
 
     @FXML
     void Enviar_server(MouseEvent event) throws IOException {
-        Respuesta_in.setText(Server.enviar(Integer.parseInt(Respuesta_out.getText())));
+        System.out.println("-------------------- Se envía dato ---------------------");
+        Server sv = new Server();
+        String respuesta = sv.enviar(Integer.parseInt(Respuesta_out.getText()));
+        Respuesta_in.setText(respuesta);
+        System.out.println("-------------------- Dato recibido ---------------------");
+
     }
 
 }

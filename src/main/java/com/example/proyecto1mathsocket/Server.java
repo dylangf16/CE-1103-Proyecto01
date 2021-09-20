@@ -21,18 +21,16 @@ public class Server {
         try {
             servidor = new ServerSocket(PUERTO);
             System.out.println("Servidor iniciado. . .");
-            while (true){
-                sc = servidor.accept();
-                in = new DataInputStream(sc.getInputStream()); //Variable que permite recibir mensajes mediante sockets
-                out = new DataOutputStream(sc.getOutputStream()); //Variable que perminte enviar un mensaje mediante sockets
-                out.writeUTF("Conexión Establecida con el cliente");
-                String recibir = in.readUTF();
-                System.out.println(recibir);
-                sc.close();
-                System.out.println("Server cerrado");
-                mensaje = "Hola!!!!!!!!!!!!";
+            sc = servidor.accept();
+            in = new DataInputStream(sc.getInputStream()); //Variable que permite recibir mensajes mediante sockets
+            out = new DataOutputStream(sc.getOutputStream()); //Variable que perminte enviar un mensaje mediante sockets
+            out.writeUTF("Conexión Establecida con el cliente");
+            String recibir = in.readUTF();
+            System.out.println(recibir);
+            sc.close();
+            System.out.println("Server cerrado");
+            mensaje = "Hola!!!!!!!!!!!!";
 
-            }
 
         } catch (IOException e) {
             e.printStackTrace();

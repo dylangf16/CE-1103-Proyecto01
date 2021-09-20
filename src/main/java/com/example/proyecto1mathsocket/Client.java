@@ -14,7 +14,7 @@ public class Client {
         while (true) {
             try {
                 Tablero_Controller pantalla = new Tablero_Controller();
-                socket = new Socket("LocalHost", 4001);
+                socket = new Socket("LocalHost", 5000);
                 in = new DataInputStream(socket.getInputStream());
                 out = new DataOutputStream(socket.getOutputStream());
                 String msgin = "";

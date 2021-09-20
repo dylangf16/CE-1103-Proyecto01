@@ -13,4 +13,9 @@
       <module name="Proyecto-1-Math-Socket" target="16" />
     </bytecodeTargetLevel>
   </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Proyecto-1-Math-Socket" options="--add-exports java.base/jdk.internal.org.objectweb.asm=com.example.proyecto1mathsocket" />
+    </option>
+  </component>
 </project>

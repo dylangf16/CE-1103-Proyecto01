@@ -4,30 +4,40 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.Socket;
-import java.net.UnknownHostException;
-import java.util.Scanner;
 
 public class Client  extends IOException {
-    public Socket socket = new Socket("LocalHost",4001);
-    public DataInputStream in = new DataInputStream(socket.getInputStream());
-    public DataOutputStream out = new DataOutputStream(socket.getOutputStream());
+    private static int PUERTO = 4001;
+    private static String HOST = "127.0.0.1";
+    private static DataInputStream in;
+    private static DataOutputStream out;
 
-    public Socket connect_socket(){return socket;}
     public Client() throws IOException {}
 
-    public static void main(String respuesta) throws IOException {
+    public static String main(String respuesta) throws IOException {
         try {
-            Client func = new Client();
+            Socket sc = new Socket(HOST, PUERTO);
+            in = new DataInputStream(sc.getInputStream());
+            out = new DataOutputStream(sc.getOutputStream());
             System.out.println("Conexion establecida");
-            Scanner scanner = new Scanner(System.in);
 
-            while (true) {
-                func.connect_socket();
-                String msg = scanner.nextLine();
-                func.out.writeUTF("[Client]:" + respuesta);
-                String entrada = func.in.readUTF();
-                System.out.println(entrada);
-            }
-        } catch(UnknownHostException e){} catch(IOException e){}
+            String entrada = in.readUTF();
+            System.out.println(entrada);
+            out.writeUTF("[Client]:" + respuesta);
+
+            //sc.close();
+            System.out.println("CLiente cerrado");
+            return entrada;
+
+
+        } catch(IOException e){
+            System.out.println("Conexion establecida");
+            String entrada = in.readUTF();
+            System.out.println(entrada);
+            out.writeUTF("[Client]:" + respuesta);
+
+            //sc.close();
+            System.out.println("CLiente cerrado");
+        }
+        return null;
     }
 }

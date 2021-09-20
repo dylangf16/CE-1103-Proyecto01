@@ -33,7 +33,6 @@ public class Inicio_Controller {
     void Empezar_Juego(MouseEvent event) throws IOException {
         Tablero_Application Tablero = new Tablero_Application();
         Stage stage = new Stage();
-
         Tablero.start(stage);
 
     }

@@ -8,37 +8,43 @@ import java.net.Socket;
 import java.util.Scanner;
 
 public class Server extends IOException {
-    ServerSocket server_socket = new ServerSocket(4001);
-    Socket socket = server_socket.accept();
+    private static ServerSocket servidor;
+    private static Socket sc;
+    private static DataInputStream in;
+    private static DataOutputStream out;
+    private static int PUERTO = 4001;
 
-    DataOutputStream out = new DataOutputStream(socket.getOutputStream());
-    DataInputStream in = new DataInputStream(socket.getInputStream());
-
-    public static void main() {
-    }
-
-    public Socket connect_socket(){return socket;}
-    public ServerSocket connect_ServerSocket(){return server_socket;}
-    public Server() throws IOException {}
-
-    public static String enviar(int entero){
+    public static String enviar(int entero) throws IOException {
         try {
-            Server func = new Server();
+            servidor = new ServerSocket(PUERTO);
+            sc = servidor.accept();
+            in = new DataInputStream(sc.getInputStream());
+            out = new DataOutputStream(sc.getOutputStream());
             System.out.println("Conexion Establecida");
-            Scanner scanner = new Scanner(System.in);
             String entrada ="";
 
-            while (!entrada.equals("exit")) {
-                func.connect_ServerSocket();
-                func.connect_socket();
-                String msg = String.valueOf(entero);
-                func.out.writeUTF("[Server]:" + msg);
-                //entrada = func.in.readUTF();
-                //System.out.println(entrada);
-                scanner.close();
-                return entrada;
-            }
-        } catch(IOException e){}
-        return null;
+            String msg = String.valueOf(entero);
+            out.writeUTF("[Server]:" + msg);
+            entrada = in.readUTF();
+            System.out.println("Server Cerrado");
+
+            servidor.close();
+            return entrada;
+
+        } catch(IOException e){
+            servidor = new ServerSocket(PUERTO);
+            sc = servidor.accept();
+            in = new DataInputStream(sc.getInputStream());
+            out = new DataOutputStream(sc.getOutputStream());
+            System.out.println("Conexion Establecida");
+
+            String msg = String.valueOf(entero);
+            out.writeUTF("[Server]:" + msg);
+            String entrada = in.readUTF();
+            System.out.println("Server Cerrado");
+            servidor.close();
+        }
+        String entrada = enviar(entero);
+        return entrada;
     }
 }

@@ -13,7 +13,6 @@ public class Tablero_Application extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Tablero_Application.class.getResource("Tablero-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        //Server server = new Server(.load());
         stage.setTitle("Math Socket VideoGame!!!");
         stage.setScene(scene);
         stage.show();
