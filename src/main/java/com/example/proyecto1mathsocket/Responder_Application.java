@@ -7,6 +7,9 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+/*
+Esta clase es el ejecutable de la clase "Responder_Controller"
+ */
 
 public class Responder_Application extends Application {
     @Override

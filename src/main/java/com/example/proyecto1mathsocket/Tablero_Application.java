@@ -7,6 +7,9 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+/*
+Esta clase es el ejecutable de la clase "Tablero_Controller"
+ */
 
 public class Tablero_Application extends Application {
     @Override

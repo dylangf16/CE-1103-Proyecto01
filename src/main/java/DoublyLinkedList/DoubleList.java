@@ -50,6 +50,11 @@ public class DoubleList {
     }
 
     public String creacion () {
+        /*
+        Genera aleatoriamente una lista con 3 caractéres
+        Dónde un 50% de estos caractéres van a ser R
+        Un 25% T y el otro 25% va a ser U
+         */
         DoubleList list = new DoubleList();
         int reto = 7;
         int trampa = 4;

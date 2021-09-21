@@ -1,6 +1,6 @@
 package DoublyLinkedList;
 
-//Singleton para el Arraylist
+//Singleton para el Arraylist de tipo de Casillas para el tablero
 public class AccederLista {
     private static AccederLista log;
     private String value;

@@ -15,6 +15,9 @@ public class Client  extends IOException {
 
     public static String main(String respuesta) throws IOException {
         try {
+            /*
+            Inicia el cliente para realizar la conexión por Socket con el cliente
+             */
             Socket sc = new Socket(HOST, PUERTO);
             in = new DataInputStream(sc.getInputStream());
             out = new DataOutputStream(sc.getOutputStream());
@@ -30,6 +33,11 @@ public class Client  extends IOException {
 
 
         } catch(IOException e){
+             /*
+            Es necesario tener el mismo código aquí, ya que, si se envía algo por el mismo puente varias veces, se va a ejecutar esta parte del código
+            y no la anterior
+            Se ejecuta el código anterior
+             */
             System.out.println("Conexion establecida");
             String entrada = in.readUTF();
             System.out.println(entrada);

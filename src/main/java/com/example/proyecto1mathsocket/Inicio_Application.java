@@ -7,6 +7,10 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.io.IOException;
 
+/*
+Esta clase es el ejecutable de la clase "Inicio_Controller"
+ */
+
 public class Inicio_Application extends Application {
     @Override
     public void start(Stage stage) throws IOException {

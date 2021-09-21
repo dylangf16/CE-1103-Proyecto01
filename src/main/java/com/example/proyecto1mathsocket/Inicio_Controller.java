@@ -8,6 +8,10 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/*
+Esta clase es la encargada de toda la programación interna de la ventana "Inicio"
+ */
+
 public class Inicio_Controller {
 
     @FXML
@@ -24,11 +28,11 @@ public class Inicio_Controller {
 
     @FXML
     void Conectar_Cliente(MouseEvent event){
-        Btn_empezar.setVisible(true);
+        Btn_empezar.setVisible(true); //Activa botón para continuar
     }
 
     @FXML
-    void Empezar_Juego(MouseEvent event) throws IOException {
+    void Empezar_Juego(MouseEvent event) throws IOException { //Llama Clase Tablero_Application para poder ser ejecutada
         Tablero_Application Tablero = new Tablero_Application();
         Stage stage = new Stage();
         Tablero.start(stage);
@@ -36,10 +40,8 @@ public class Inicio_Controller {
 
     @FXML
     void Iniciar_server(MouseEvent event) throws IOException {
-       // Server server = new Server();
-        Btn_Cliente.setVisible(true);
+        Btn_Cliente.setVisible(true); //Activa botón para continuar
         Txt_cliente.setText("Estado:");
         Estado_cliente.setText("Conectado");
-       // this.Estado_cliente.setText((Server.main(null)));
     }
 }
