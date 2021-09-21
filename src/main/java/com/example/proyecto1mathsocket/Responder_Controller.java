@@ -18,7 +18,7 @@ public class Responder_Controller {
 
     @FXML
     void Correcto(MouseEvent event) throws IOException {
-        String total = Client.main("correcto");
+        String total = Client.main("Correcto");
         resultado.setText(total);
 
     }

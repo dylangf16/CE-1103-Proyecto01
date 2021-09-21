@@ -3,6 +3,7 @@ package com.example.proyecto1mathsocket;
 import DoublyLinkedList.DoubleList;
 import Server_Client.Server;
 import javafx.fxml.FXML;
+import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
@@ -16,18 +17,14 @@ public class Tablero_Controller {
 
     @FXML
     private Text num1;
+    @FXML
+    private Text Inicio_txt;
 
     @FXML
     private TextField Respuesta_out;
 
     @FXML
     public Text Respuesta_in;
-
-    @FXML
-    private Button Btn_Correcto;
-
-    @FXML
-    private Button Btn_Incorrecto;
 
     @FXML
     private Rectangle Inicio;
@@ -43,6 +40,9 @@ public class Tablero_Controller {
 
     @FXML
     private Button Btn_Iniciar;
+
+    @FXML
+    private Button Btn_Enviar;
 
     @FXML
     private Text Casilla_1;
@@ -110,6 +110,12 @@ public class Tablero_Controller {
     @FXML
     private Text num2;
 
+    @FXML
+    private Button Btn_tunel;
+
+    @FXML
+    private Button Btn_trampa;
+
 
     @FXML
     void Tirar_dado(MouseEvent event) {
@@ -153,12 +159,16 @@ public class Tablero_Controller {
                 Server_ficha.setCenterY(Pos2-170);
                 posicion_server +=valor;
                 Posicion_Server.setText(String.valueOf(posicion_server));
-                turno.setText(String.valueOf(false));
                 if (Casilla_1.getText().equalsIgnoreCase("T")){
                     System.out.println("La casilla es Trampa");
+                    Btn_trampa.setVisible(true);
+                    Btn_Tirar.setVisible(false);
                 }
                 if (Casilla_1.getText().equalsIgnoreCase("R")){
                     System.out.println("La casilla es Reto");
+                    Btn_Enviar.setVisible(true);
+                    Btn_Tirar.setVisible(false);
+
                     num1.setText(String.valueOf((int)(Math.random()*50+1)));
                     num2.setText(String.valueOf((int)(Math.random()*50+1)));
 
@@ -177,6 +187,8 @@ public class Tablero_Controller {
                 }
                 if (Casilla_1.getText().equalsIgnoreCase("U")) {
                     System.out.println("La casilla es Túnel");
+                    Btn_tunel.setVisible(true);
+                    Btn_Tirar.setVisible(false);
                 }
             }
             if (movimiento_server == Posicion2){
@@ -186,12 +198,16 @@ public class Tablero_Controller {
                 Server_ficha.setCenterY(Pos2-170);
                 posicion_server +=valor;
                 Posicion_Server.setText(String.valueOf(posicion_server));
-                turno.setText(String.valueOf(false));
                 if (Casilla_2.getText().equalsIgnoreCase("T")){
                     System.out.println("La casilla es Trampa");
+                    Btn_trampa.setVisible(true);
+                    Btn_Tirar.setVisible(false);
                 }
                 if (Casilla_2.getText().equalsIgnoreCase("R")){
                     System.out.println("La casilla es Reto");
+                    Btn_Enviar.setVisible(true);
+                    Btn_Tirar.setVisible(false);
+
                     num1.setText(String.valueOf((int)(Math.random()*50+1)));
                     num2.setText(String.valueOf((int)(Math.random()*50+1)));
 
@@ -210,6 +226,8 @@ public class Tablero_Controller {
                 }
                 if (Casilla_2.getText().equalsIgnoreCase("U")) {
                     System.out.println("La casilla es Túnel");
+                    Btn_tunel.setVisible(true);
+                    Btn_Tirar.setVisible(false);
                 }
             }
             if (movimiento_server == Posicion3) {
@@ -219,12 +237,16 @@ public class Tablero_Controller {
                 Server_ficha.setCenterY(Pos2-170);
                 posicion_server +=valor;
                 Posicion_Server.setText(String.valueOf(posicion_server));
-                turno.setText(String.valueOf(false));
                 if (Casilla_3.getText().equalsIgnoreCase("T")){
                     System.out.println("La casilla es Trampa");
+                    Btn_trampa.setVisible(true);
+                    Btn_Tirar.setVisible(false);
                 }
                 if (Casilla_3.getText().equalsIgnoreCase("R")){
                     System.out.println("La casilla es Reto");
+                    Btn_Enviar.setVisible(true);
+                    Btn_Tirar.setVisible(false);
+
                     num1.setText(String.valueOf((int)(Math.random()*50+1)));
                     num2.setText(String.valueOf((int)(Math.random()*50+1)));
 
@@ -243,6 +265,8 @@ public class Tablero_Controller {
                 }
                 if (Casilla_3.getText().equalsIgnoreCase("U")) {
                     System.out.println("La casilla es Túnel");
+                    Btn_tunel.setVisible(true);
+                    Btn_Tirar.setVisible(false);
                 }
             }
             if (movimiento_server == Posicion4){
@@ -252,12 +276,16 @@ public class Tablero_Controller {
                 Server_ficha.setCenterY(Pos2-170);
                 posicion_server +=valor;
                 Posicion_Server.setText(String.valueOf(posicion_server));
-                turno.setText(String.valueOf(false));
                 if (Casilla_4.getText().equalsIgnoreCase("T")){
                     System.out.println("La casilla es Trampa");
+                    Btn_trampa.setVisible(true);
+                    Btn_Tirar.setVisible(false);
                 }
                 if (Casilla_4.getText().equalsIgnoreCase("R")){
                     System.out.println("La casilla es Reto");
+                    Btn_Enviar.setVisible(true);
+                    Btn_Tirar.setVisible(false);
+
                     num1.setText(String.valueOf((int)(Math.random()*50+1)));
                     num2.setText(String.valueOf((int)(Math.random()*50+1)));
 
@@ -276,6 +304,8 @@ public class Tablero_Controller {
                 }
                 if (Casilla_4.getText().equalsIgnoreCase("U")) {
                     System.out.println("La casilla es Túnel");
+                    Btn_tunel.setVisible(true);
+                    Btn_Tirar.setVisible(false);
                 }
             }
             if (movimiento_server == Posicion5){
@@ -285,15 +315,36 @@ public class Tablero_Controller {
                 Server_ficha.setCenterY(Pos2-170);
                 posicion_server +=valor;
                 Posicion_Server.setText(String.valueOf(posicion_server));
-                turno.setText(String.valueOf(false));
                 if (Casilla_5.getText().equalsIgnoreCase("T")){
                     System.out.println("La casilla es Trampa");
+                    Btn_trampa.setVisible(true);
+                    Btn_Tirar.setVisible(false);
                 }
                 if (Casilla_5.getText().equalsIgnoreCase("R")){
                     System.out.println("La casilla es Reto");
+                    Btn_Enviar.setVisible(true);
+                    Btn_Tirar.setVisible(false);
+
+                    num1.setText(String.valueOf((int)(Math.random()*50+1)));
+                    num2.setText(String.valueOf((int)(Math.random()*50+1)));
+
+                    if (simbolo == 1){ //Suma
+                        Operación.setText("+");
+                    }
+                    if (simbolo == 2){ //Resta
+                        Operación.setText("-");
+                    }
+                    if (simbolo == 3){ //Multiplicación
+                        Operación.setText("*");
+                    }
+                    if (simbolo == 4){ //División
+                        Operación.setText("/");
+                    }
                 }
                 if (Casilla_5.getText().equalsIgnoreCase("U")) {
                     System.out.println("La casilla es Túnel");
+                    Btn_tunel.setVisible(true);
+                    Btn_Tirar.setVisible(false);
                 }
             }
             if (movimiento_server == Posicion6){
@@ -303,12 +354,16 @@ public class Tablero_Controller {
                 Server_ficha.setCenterY(Pos2-170);
                 posicion_server +=valor;
                 Posicion_Server.setText(String.valueOf(posicion_server));
-                turno.setText(String.valueOf(false));
                 if (Casilla_6.getText().equalsIgnoreCase("T")){
                     System.out.println("La casilla es Trampa");
+                    Btn_trampa.setVisible(true);
+                    Btn_Tirar.setVisible(false);
                 }
                 if (Casilla_6.getText().equalsIgnoreCase("R")){
                     System.out.println("La casilla es Reto");
+                    Btn_Enviar.setVisible(true);
+                    Btn_Tirar.setVisible(false);
+
                     num1.setText(String.valueOf((int)(Math.random()*50+1)));
                     num2.setText(String.valueOf((int)(Math.random()*50+1)));
 
@@ -327,6 +382,8 @@ public class Tablero_Controller {
                 }
                 if (Casilla_6.getText().equalsIgnoreCase("U")) {
                     System.out.println("La casilla es Túnel");
+                    Btn_tunel.setVisible(true);
+                    Btn_Tirar.setVisible(false);
                 }
             }
             if (movimiento_server == Posicion7){
@@ -336,12 +393,16 @@ public class Tablero_Controller {
                 Server_ficha.setCenterY(Pos2-170);
                 posicion_server +=valor;
                 Posicion_Server.setText(String.valueOf(posicion_server));
-                turno.setText(String.valueOf(false));
                 if (Casilla_7.getText().equalsIgnoreCase("T")){
                     System.out.println("La casilla es Trampa");
+                    Btn_trampa.setVisible(true);
+                    Btn_Tirar.setVisible(false);
                 }
                 if (Casilla_7.getText().equalsIgnoreCase("R")){
                     System.out.println("La casilla es Reto");
+                    Btn_Enviar.setVisible(true);
+                    Btn_Tirar.setVisible(false);
+
                     num1.setText(String.valueOf((int)(Math.random()*50+1)));
                     num2.setText(String.valueOf((int)(Math.random()*50+1)));
 
@@ -360,6 +421,8 @@ public class Tablero_Controller {
                 }
                 if (Casilla_7.getText().equalsIgnoreCase("U")) {
                     System.out.println("La casilla es Túnel");
+                    Btn_tunel.setVisible(true);
+                    Btn_Tirar.setVisible(false);
                 }
             }
             if (movimiento_server == Posicion8){
@@ -369,12 +432,16 @@ public class Tablero_Controller {
                 Server_ficha.setCenterY(Pos2-170);
                 posicion_server +=valor;
                 Posicion_Server.setText(String.valueOf(posicion_server));
-                turno.setText(String.valueOf(false));
                 if (Casilla_8.getText().equalsIgnoreCase("T")){
                     System.out.println("La casilla es Trampa");
+                    Btn_trampa.setVisible(true);
+                    Btn_Tirar.setVisible(false);
                 }
                 if (Casilla_8.getText().equalsIgnoreCase("R")){
                     System.out.println("La casilla es Reto");
+                    Btn_Enviar.setVisible(true);
+                    Btn_Tirar.setVisible(false);
+
                     num1.setText(String.valueOf((int)(Math.random()*50+1)));
                     num2.setText(String.valueOf((int)(Math.random()*50+1)));
 
@@ -393,6 +460,8 @@ public class Tablero_Controller {
                 }
                 if (Casilla_8.getText().equalsIgnoreCase("U")) {
                     System.out.println("La casilla es Túnel");
+                    Btn_tunel.setVisible(true);
+                    Btn_Tirar.setVisible(false);
                 }
             }
             if (movimiento_server == Posicion9){
@@ -402,12 +471,16 @@ public class Tablero_Controller {
                 Server_ficha.setCenterY(Pos2-170);
                 posicion_server +=valor;
                 Posicion_Server.setText(String.valueOf(posicion_server));
-                turno.setText(String.valueOf(false));
                 if (Casilla_9.getText().equalsIgnoreCase("T")){
                     System.out.println("La casilla es Trampa");
+                    Btn_trampa.setVisible(true);
+                    Btn_Tirar.setVisible(false);
                 }
                 if (Casilla_9.getText().equalsIgnoreCase("R")){
                     System.out.println("La casilla es Reto");
+                    Btn_Enviar.setVisible(true);
+                    Btn_Tirar.setVisible(false);
+
                     num1.setText(String.valueOf((int)(Math.random()*50+1)));
                     num2.setText(String.valueOf((int)(Math.random()*50+1)));
 
@@ -426,6 +499,8 @@ public class Tablero_Controller {
                 }
                 if (Casilla_9.getText().equalsIgnoreCase("U")) {
                     System.out.println("La casilla es Túnel");
+                    Btn_tunel.setVisible(true);
+                    Btn_Tirar.setVisible(false);
                 }
             }
             if (movimiento_server == Posicion10){
@@ -435,12 +510,16 @@ public class Tablero_Controller {
                 Server_ficha.setCenterY(Pos2-170);
                 posicion_server +=valor;
                 Posicion_Server.setText(String.valueOf(posicion_server));
-                turno.setText(String.valueOf(false));
                 if (Casilla_10.getText().equalsIgnoreCase("T")){
                     System.out.println("La casilla es Trampa");
+                    Btn_trampa.setVisible(true);
+                    Btn_Tirar.setVisible(false);
                 }
                 if (Casilla_10.getText().equalsIgnoreCase("R")){
                     System.out.println("La casilla es Reto");
+                    Btn_Enviar.setVisible(true);
+                    Btn_Tirar.setVisible(false);
+
                     num1.setText(String.valueOf((int)(Math.random()*50+1)));
                     num2.setText(String.valueOf((int)(Math.random()*50+1)));
 
@@ -459,6 +538,8 @@ public class Tablero_Controller {
                 }
                 if (Casilla_10.getText().equalsIgnoreCase("U")) {
                     System.out.println("La casilla es Túnel");
+                    Btn_tunel.setVisible(true);
+                    Btn_Tirar.setVisible(false);
                 }
             }
             if (movimiento_server == Posicion11){
@@ -468,12 +549,16 @@ public class Tablero_Controller {
                 Server_ficha.setCenterY(Pos2-170);
                 posicion_server +=valor;
                 Posicion_Server.setText(String.valueOf(posicion_server));
-                turno.setText(String.valueOf(false));
                 if (Casilla_11.getText().equalsIgnoreCase("T")){
                     System.out.println("La casilla es Trampa");
+                    Btn_trampa.setVisible(true);
+                    Btn_Tirar.setVisible(false);
                 }
                 if (Casilla_11.getText().equalsIgnoreCase("R")){
                     System.out.println("La casilla es Reto");
+                    Btn_Enviar.setVisible(true);
+                    Btn_Tirar.setVisible(false);
+
                     num1.setText(String.valueOf((int)(Math.random()*50+1)));
                     num2.setText(String.valueOf((int)(Math.random()*50+1)));
 
@@ -492,6 +577,8 @@ public class Tablero_Controller {
                 }
                 if (Casilla_11.getText().equalsIgnoreCase("U")) {
                     System.out.println("La casilla es Túnel");
+                    Btn_tunel.setVisible(true);
+                    Btn_Tirar.setVisible(false);
                 }
             }
             if (movimiento_server == Posicion12){
@@ -501,12 +588,16 @@ public class Tablero_Controller {
                 Server_ficha.setCenterY(Pos2-170);
                 posicion_server +=valor;
                 Posicion_Server.setText(String.valueOf(posicion_server));
-                turno.setText(String.valueOf(false));
                 if (Casilla_12.getText().equalsIgnoreCase("T")){
                     System.out.println("La casilla es Trampa");
+                    Btn_trampa.setVisible(true);
+                    Btn_Tirar.setVisible(false);
                 }
                 if (Casilla_12.getText().equalsIgnoreCase("R")){
                     System.out.println("La casilla es Reto");
+                    Btn_Enviar.setVisible(true);
+                    Btn_Tirar.setVisible(false);
+
                     num1.setText(String.valueOf((int)(Math.random()*50+1)));
                     num2.setText(String.valueOf((int)(Math.random()*50+1)));
 
@@ -525,6 +616,8 @@ public class Tablero_Controller {
                 }
                 if (Casilla_12.getText().equalsIgnoreCase("U")) {
                     System.out.println("La casilla es Túnel");
+                    Btn_tunel.setVisible(true);
+                    Btn_Tirar.setVisible(false);
                 }
             }
             if (movimiento_server == Posicion13){
@@ -534,12 +627,16 @@ public class Tablero_Controller {
                 Server_ficha.setCenterY(Pos2-170);
                 posicion_server +=valor;
                 Posicion_Server.setText(String.valueOf(posicion_server));
-                turno.setText(String.valueOf(false));
                 if (Casilla_13.getText().equalsIgnoreCase("T")){
                     System.out.println("La casilla es Trampa");
+                    Btn_trampa.setVisible(true);
+                    Btn_Tirar.setVisible(false);
                 }
                 if (Casilla_13.getText().equalsIgnoreCase("R")){
                     System.out.println("La casilla es Reto");
+                    Btn_Enviar.setVisible(true);
+                    Btn_Tirar.setVisible(false);
+
                     num1.setText(String.valueOf((int)(Math.random()*50+1)));
                     num2.setText(String.valueOf((int)(Math.random()*50+1)));
 
@@ -558,6 +655,8 @@ public class Tablero_Controller {
                 }
                 if (Casilla_13.getText().equalsIgnoreCase("U")) {
                     System.out.println("La casilla es Túnel");
+                    Btn_tunel.setVisible(true);
+                    Btn_Tirar.setVisible(false);
                 }
             }
             if (movimiento_server == Posicion14){
@@ -567,12 +666,16 @@ public class Tablero_Controller {
                 Server_ficha.setCenterY(Pos2-170);
                 posicion_server +=valor;
                 Posicion_Server.setText(String.valueOf(posicion_server));
-                turno.setText(String.valueOf(false));
                 if (Casilla_14.getText().equalsIgnoreCase("T")){
                     System.out.println("La casilla es Trampa");
+                    Btn_trampa.setVisible(true);
+                    Btn_Tirar.setVisible(false);
                 }
                 if (Casilla_14.getText().equalsIgnoreCase("R")){
                     System.out.println("La casilla es Reto");
+                    Btn_Enviar.setVisible(true);
+                    Btn_Tirar.setVisible(false);
+
                     num1.setText(String.valueOf((int)(Math.random()*50+1)));
                     num2.setText(String.valueOf((int)(Math.random()*50+1)));
 
@@ -591,6 +694,8 @@ public class Tablero_Controller {
                 }
                 if (Casilla_14.getText().equalsIgnoreCase("U")) {
                     System.out.println("La casilla es Túnel");
+                    Btn_tunel.setVisible(true);
+                    Btn_Tirar.setVisible(false);
                 }
             }
             if (movimiento_server > Posicion14){
@@ -600,9 +705,10 @@ public class Tablero_Controller {
                 Server_ficha.setCenterY(Pos2-170);
                 posicion_server += valor;
                 Posicion_Server.setText(String.valueOf(posicion_server));
-                turno.setText(String.valueOf(false));
                 System.out.println("El Servidor gana!");
                 Btn_Tirar.setVisible(false);
+                Btn_trampa.setVisible(false);
+                Btn_tunel.setVisible(false);
             }
         }
 
@@ -614,12 +720,16 @@ public class Tablero_Controller {
                 Cliente_ficha.setCenterY(Pos2 -170);
                 posicion_cliente +=valor;
                 Posicion_Cliente.setText(String.valueOf(posicion_cliente));
-                turno.setText(String.valueOf(true));
                 if (Casilla_1.getText().equalsIgnoreCase("T")){
                     System.out.println("La casilla es Trampa");
+                    Btn_trampa.setVisible(true);
+                    Btn_Tirar.setVisible(false);
                 }
                 if (Casilla_1.getText().equalsIgnoreCase("R")){
                     System.out.println("La casilla es Reto");
+                    Btn_Enviar.setVisible(true);
+                    Btn_Tirar.setVisible(false);
+
                     num1.setText(String.valueOf((int)(Math.random()*50+1)));
                     num2.setText(String.valueOf((int)(Math.random()*50+1)));
 
@@ -638,6 +748,8 @@ public class Tablero_Controller {
                 }
                 if (Casilla_1.getText().equalsIgnoreCase("U")) {
                     System.out.println("La casilla es Túnel");
+                    Btn_tunel.setVisible(true);
+                    Btn_Tirar.setVisible(false);
                 }
             }
             if (movimiento_cliente == Posicion2){
@@ -647,12 +759,16 @@ public class Tablero_Controller {
                 Cliente_ficha.setCenterY(Pos2 -170);
                 posicion_cliente +=valor;
                 Posicion_Cliente.setText(String.valueOf(posicion_cliente));
-                turno.setText(String.valueOf(true));
                 if (Casilla_2.getText().equalsIgnoreCase("T")){
                     System.out.println("La casilla es Trampa");
+                    Btn_trampa.setVisible(true);
+                    Btn_Tirar.setVisible(false);
                 }
                 if (Casilla_2.getText().equalsIgnoreCase("R")){
                     System.out.println("La casilla es Reto");
+                    Btn_Enviar.setVisible(true);
+                    Btn_Tirar.setVisible(false);
+
                     num1.setText(String.valueOf((int)(Math.random()*50+1)));
                     num2.setText(String.valueOf((int)(Math.random()*50+1)));
 
@@ -671,6 +787,8 @@ public class Tablero_Controller {
                 }
                 if (Casilla_2.getText().equalsIgnoreCase("U")) {
                     System.out.println("La casilla es Túnel");
+                    Btn_tunel.setVisible(true);
+                    Btn_Tirar.setVisible(false);
                 }
             }
             if (movimiento_cliente == Posicion3) {
@@ -679,12 +797,16 @@ public class Tablero_Controller {
                 Cliente_ficha.setCenterX(Pos1 - 250);
                 Cliente_ficha.setCenterY(Pos2 -170);
                 Posicion_Cliente.setText(String.valueOf(posicion_cliente));
-                turno.setText(String.valueOf(true));
                 if (Casilla_3.getText().equalsIgnoreCase("T")){
                     System.out.println("La casilla es Trampa");
+                    Btn_trampa.setVisible(true);
+                    Btn_Tirar.setVisible(false);
                 }
                 if (Casilla_3.getText().equalsIgnoreCase("R")){
                     System.out.println("La casilla es Reto");
+                    Btn_Enviar.setVisible(true);
+                    Btn_Tirar.setVisible(false);
+
                     num1.setText(String.valueOf((int)(Math.random()*50+1)));
                     num2.setText(String.valueOf((int)(Math.random()*50+1)));
 
@@ -703,6 +825,8 @@ public class Tablero_Controller {
                 }
                 if (Casilla_3.getText().equalsIgnoreCase("U")) {
                     System.out.println("La casilla es Túnel");
+                    Btn_tunel.setVisible(true);
+                    Btn_Tirar.setVisible(false);
                 }
             }
             if (movimiento_cliente == Posicion4){
@@ -712,12 +836,16 @@ public class Tablero_Controller {
                 Cliente_ficha.setCenterY(Pos2 -170);
                 posicion_cliente +=valor;
                 Posicion_Cliente.setText(String.valueOf(posicion_cliente));
-                turno.setText(String.valueOf(true));
                 if (Casilla_4.getText().equalsIgnoreCase("T")){
                     System.out.println("La casilla es Trampa");
+                    Btn_trampa.setVisible(true);
+                    Btn_Tirar.setVisible(false);
                 }
                 if (Casilla_4.getText().equalsIgnoreCase("R")){
                     System.out.println("La casilla es Reto");
+                    Btn_Enviar.setVisible(true);
+                    Btn_Tirar.setVisible(false);
+
                     num1.setText(String.valueOf((int)(Math.random()*50+1)));
                     num2.setText(String.valueOf((int)(Math.random()*50+1)));
 
@@ -736,6 +864,8 @@ public class Tablero_Controller {
                 }
                 if (Casilla_4.getText().equalsIgnoreCase("U")) {
                     System.out.println("La casilla es Túnel");
+                    Btn_tunel.setVisible(true);
+                    Btn_Tirar.setVisible(false);
                 }
             }
             if (movimiento_cliente == Posicion5){
@@ -745,14 +875,17 @@ public class Tablero_Controller {
                 Cliente_ficha.setCenterY(Pos2-170);
                 posicion_cliente +=valor;
                 Posicion_Cliente.setText(String.valueOf(posicion_cliente));
-                turno.setText(String.valueOf(true));
                 if (Casilla_5.getText().equalsIgnoreCase("T")){
                     System.out.println("La casilla es Trampa");
+                    Btn_trampa.setVisible(true);
+                    Btn_Tirar.setVisible(false);
                 }
                 if (Casilla_5.getText().equalsIgnoreCase("R")){
                     System.out.println("La casilla es Reto");
                     num1.setText(String.valueOf((int)(Math.random()*50+1)));
                     num2.setText(String.valueOf((int)(Math.random()*50+1)));
+                    Btn_Enviar.setVisible(true);
+                    Btn_Tirar.setVisible(false);
 
                     if (simbolo == 1){ //Suma
                         Operación.setText("+");
@@ -769,6 +902,9 @@ public class Tablero_Controller {
                 }
                 if (Casilla_5.getText().equalsIgnoreCase("U")) {
                     System.out.println("La casilla es Túnel");
+                    Btn_tunel.setVisible(true);
+                    Btn_Tirar.setVisible(false);
+
                 }
             }
             if (movimiento_cliente == Posicion6){
@@ -778,14 +914,17 @@ public class Tablero_Controller {
                 Cliente_ficha.setCenterY(Pos2-170);
                 posicion_cliente +=valor;
                 Posicion_Cliente.setText(String.valueOf(posicion_cliente));
-                turno.setText(String.valueOf(true));
                 if (Casilla_6.getText().equalsIgnoreCase("T")){
                     System.out.println("La casilla es Trampa");
+                    Btn_trampa.setVisible(true);
+                    Btn_Tirar.setVisible(false);
                 }
                 if (Casilla_6.getText().equalsIgnoreCase("R")){
                     System.out.println("La casilla es Reto");
                     num1.setText(String.valueOf((int)(Math.random()*50+1)));
                     num2.setText(String.valueOf((int)(Math.random()*50+1)));
+                    Btn_Enviar.setVisible(true);
+                    Btn_Tirar.setVisible(false);
 
                     if (simbolo == 1){ //Suma
                         Operación.setText("+");
@@ -802,6 +941,8 @@ public class Tablero_Controller {
                 }
                 if (Casilla_6.getText().equalsIgnoreCase("U")) {
                     System.out.println("La casilla es Túnel");
+                    Btn_tunel.setVisible(true);
+                    Btn_Tirar.setVisible(false);
                 }
             }
             if (movimiento_cliente == Posicion7){
@@ -811,14 +952,17 @@ public class Tablero_Controller {
                 Cliente_ficha.setCenterY(Pos2-170);
                 posicion_cliente +=valor;
                 Posicion_Cliente.setText(String.valueOf(posicion_cliente));
-                turno.setText(String.valueOf(true));
                 if (Casilla_7.getText().equalsIgnoreCase("T")){
                     System.out.println("La casilla es Trampa");
+                    Btn_trampa.setVisible(true);
+                    Btn_Tirar.setVisible(false);
                 }
                 if (Casilla_7.getText().equalsIgnoreCase("R")){
                     System.out.println("La casilla es Reto");
                     num1.setText(String.valueOf((int)(Math.random()*50+1)));
                     num2.setText(String.valueOf((int)(Math.random()*50+1)));
+                    Btn_Enviar.setVisible(true);
+                    Btn_Tirar.setVisible(false);
 
                     if (simbolo == 1){ //Suma
                         Operación.setText("+");
@@ -835,6 +979,8 @@ public class Tablero_Controller {
                 }
                 if (Casilla_7.getText().equalsIgnoreCase("U")) {
                     System.out.println("La casilla es Túnel");
+                    Btn_tunel.setVisible(true);
+                    Btn_Tirar.setVisible(false);
                 }
             }
             if (movimiento_cliente == Posicion8){
@@ -844,14 +990,17 @@ public class Tablero_Controller {
                 Cliente_ficha.setCenterY(Pos2-170);
                 posicion_cliente +=valor;
                 Posicion_Cliente.setText(String.valueOf(posicion_cliente));
-                turno.setText(String.valueOf(true));
                 if (Casilla_8.getText().equalsIgnoreCase("T")){
                     System.out.println("La casilla es Trampa");
+                    Btn_trampa.setVisible(true);
+                    Btn_Tirar.setVisible(false);
                 }
                 if (Casilla_8.getText().equalsIgnoreCase("R")){
                     System.out.println("La casilla es Reto");
                     num1.setText(String.valueOf((int)(Math.random()*50+1)));
                     num2.setText(String.valueOf((int)(Math.random()*50+1)));
+                    Btn_Enviar.setVisible(true);
+                    Btn_Tirar.setVisible(false);
 
                     if (simbolo == 1){ //Suma
                         Operación.setText("+");
@@ -868,6 +1017,8 @@ public class Tablero_Controller {
                 }
                 if (Casilla_8.getText().equalsIgnoreCase("U")) {
                     System.out.println("La casilla es Túnel");
+                    Btn_tunel.setVisible(true);
+                    Btn_Tirar.setVisible(false);
                 }
             }
             if (movimiento_cliente == Posicion9){
@@ -877,14 +1028,17 @@ public class Tablero_Controller {
                 Cliente_ficha.setCenterY(Pos2-170);
                 posicion_cliente +=valor;
                 Posicion_Cliente.setText(String.valueOf(posicion_cliente));
-                turno.setText(String.valueOf(true));
                 if (Casilla_9.getText().equalsIgnoreCase("T")){
                     System.out.println("La casilla es Trampa");
+                    Btn_trampa.setVisible(true);
+                    Btn_Tirar.setVisible(false);
                 }
                 if (Casilla_9.getText().equalsIgnoreCase("R")){
                     System.out.println("La casilla es Reto");
                     num1.setText(String.valueOf((int)(Math.random()*50+1)));
                     num2.setText(String.valueOf((int)(Math.random()*50+1)));
+                    Btn_Enviar.setVisible(true);
+                    Btn_Tirar.setVisible(false);
 
                     if (simbolo == 1){ //Suma
                         Operación.setText("+");
@@ -901,6 +1055,8 @@ public class Tablero_Controller {
                 }
                 if (Casilla_9.getText().equalsIgnoreCase("U")) {
                     System.out.println("La casilla es Túnel");
+                    Btn_tunel.setVisible(true);
+                    Btn_Tirar.setVisible(false);
                 }
             }
             if (movimiento_cliente == Posicion10){
@@ -910,14 +1066,17 @@ public class Tablero_Controller {
                 Cliente_ficha.setCenterY(Pos2-170);
                 posicion_cliente +=valor;
                 Posicion_Cliente.setText(String.valueOf(posicion_cliente));
-                turno.setText(String.valueOf(true));
                 if (Casilla_10.getText().equalsIgnoreCase("T")){
                     System.out.println("La casilla es Trampa");
+                    Btn_trampa.setVisible(true);
+                    Btn_Tirar.setVisible(false);
                 }
                 if (Casilla_10.getText().equalsIgnoreCase("R")){
                     System.out.println("La casilla es Reto");
                     num1.setText(String.valueOf((int)(Math.random()*50+1)));
                     num2.setText(String.valueOf((int)(Math.random()*50+1)));
+                    Btn_Enviar.setVisible(true);
+                    Btn_Tirar.setVisible(false);
 
                     if (simbolo == 1){ //Suma
                         Operación.setText("+");
@@ -934,6 +1093,8 @@ public class Tablero_Controller {
                 }
                 if (Casilla_10.getText().equalsIgnoreCase("U")) {
                     System.out.println("La casilla es Túnel");
+                    Btn_tunel.setVisible(true);
+                    Btn_Tirar.setVisible(false);
                 }
             }
             if (movimiento_cliente == Posicion11){
@@ -943,14 +1104,17 @@ public class Tablero_Controller {
                 Cliente_ficha.setCenterY(Pos2-170);
                 posicion_cliente +=valor;
                 Posicion_Cliente.setText(String.valueOf(posicion_cliente));
-                turno.setText(String.valueOf(true));
                 if (Casilla_11.getText().equalsIgnoreCase("T")){
                     System.out.println("La casilla es Trampa");
+                    Btn_trampa.setVisible(true);
+                    Btn_Tirar.setVisible(false);
                 }
                 if (Casilla_11.getText().equalsIgnoreCase("R")){
                     System.out.println("La casilla es Reto");
                     num1.setText(String.valueOf((int)(Math.random()*50+1)));
                     num2.setText(String.valueOf((int)(Math.random()*50+1)));
+                    Btn_Enviar.setVisible(true);
+                    Btn_Tirar.setVisible(false);
 
                     if (simbolo == 1){ //Suma
                         Operación.setText("+");
@@ -967,6 +1131,8 @@ public class Tablero_Controller {
                 }
                 if (Casilla_11.getText().equalsIgnoreCase("U")) {
                     System.out.println("La casilla es Túnel");
+                    Btn_tunel.setVisible(true);
+                    Btn_Tirar.setVisible(false);
                 }
             }
             if (movimiento_cliente == Posicion12){
@@ -976,14 +1142,18 @@ public class Tablero_Controller {
                 Cliente_ficha.setCenterY(Pos2-170);
                 posicion_cliente +=valor;
                 Posicion_Cliente.setText(String.valueOf(posicion_cliente));
-                turno.setText(String.valueOf(true));
-                if (Casilla_12.getText().equalsIgnoreCase("T")){
+                if (Casilla_11.getText().equalsIgnoreCase("T")) {
                     System.out.println("La casilla es Trampa");
+                    Btn_trampa.setVisible(true);
+                    Btn_Tirar.setVisible(false);
                 }
                 if (Casilla_12.getText().equalsIgnoreCase("R")){
                     System.out.println("La casilla es Reto");
                     num1.setText(String.valueOf((int)(Math.random()*50+1)));
                     num2.setText(String.valueOf((int)(Math.random()*50+1)));
+                    Btn_Enviar.setVisible(true);
+                    Btn_Tirar.setVisible(false);
+
 
                     if (simbolo == 1){ //Suma
                         Operación.setText("+");
@@ -1000,6 +1170,8 @@ public class Tablero_Controller {
                 }
                 if (Casilla_12.getText().equalsIgnoreCase("U")) {
                     System.out.println("La casilla es Túnel");
+                    Btn_tunel.setVisible(true);
+                    Btn_Tirar.setVisible(false);
                 }
             }
             if (movimiento_cliente == Posicion13){
@@ -1009,14 +1181,17 @@ public class Tablero_Controller {
                 Cliente_ficha.setCenterY(Pos2-170);
                 posicion_cliente +=valor;
                 Posicion_Cliente.setText(String.valueOf(posicion_cliente));
-                turno.setText(String.valueOf(true));
-                if (Casilla_13.getText().equalsIgnoreCase("T")){
+                if (Casilla_13.getText().equalsIgnoreCase("T")) {
                     System.out.println("La casilla es Trampa");
+                    Btn_trampa.setVisible(true);
+                    Btn_Tirar.setVisible(false);
                 }
                 if (Casilla_13.getText().equalsIgnoreCase("R")){
                     System.out.println("La casilla es Reto");
                     num1.setText(String.valueOf((int)(Math.random()*50+1)));
                     num2.setText(String.valueOf((int)(Math.random()*50+1)));
+                    Btn_Enviar.setVisible(true);
+                    Btn_Tirar.setVisible(false);
 
                     if (simbolo == 1){ //Suma
                         Operación.setText("+");
@@ -1033,7 +1208,10 @@ public class Tablero_Controller {
                 }
                 if (Casilla_13.getText().equalsIgnoreCase("U")) {
                     System.out.println("La casilla es Túnel");
+                    Btn_tunel.setVisible(true);
+                    Btn_Tirar.setVisible(false);
                 }
+
             }
             if (movimiento_cliente == Posicion14) {
                 double Pos1 = Casilla_14.getLayoutX();
@@ -1042,14 +1220,18 @@ public class Tablero_Controller {
                 Cliente_ficha.setCenterY(Pos2 - 170);
                 posicion_cliente += valor;
                 Posicion_Cliente.setText(String.valueOf(posicion_cliente));
-                turno.setText(String.valueOf(true));
-                if (Casilla_14.getText().equalsIgnoreCase("T")){
+                if (Casilla_14.getText().equalsIgnoreCase("T")) {
                     System.out.println("La casilla es Trampa");
+                    Btn_trampa.setVisible(true);
+                    Btn_Tirar.setVisible(false);
                 }
+
                 if (Casilla_14.getText().equalsIgnoreCase("R")){
                     System.out.println("La casilla es Reto");
                     num1.setText(String.valueOf((int)(Math.random()*50+1)));
                     num2.setText(String.valueOf((int)(Math.random()*50+1)));
+                    Btn_Enviar.setVisible(true);
+                    Btn_Tirar.setVisible(false);
 
                     if (simbolo == 1){ //Suma
                         Operación.setText("+");
@@ -1066,7 +1248,10 @@ public class Tablero_Controller {
                 }
                 if (Casilla_14.getText().equalsIgnoreCase("U")) {
                     System.out.println("La casilla es Túnel");
+                    Btn_tunel.setVisible(true);
+                    Btn_Tirar.setVisible(false);
                 }
+
             }
 
             if (movimiento_cliente > Posicion14){
@@ -1076,9 +1261,10 @@ public class Tablero_Controller {
                 Cliente_ficha.setCenterY(Pos2 - 170);
                 posicion_cliente += valor;
                 Posicion_Cliente.setText(String.valueOf(posicion_cliente));
-                turno.setText(String.valueOf(true));
                 System.out.println("El Cliente gana!");
                 Btn_Tirar.setVisible(false);
+                Btn_trampa.setVisible(false);
+                Btn_tunel.setVisible(false);
             }
         }
     }
@@ -1094,6 +1280,7 @@ public class Tablero_Controller {
         Btn_Iniciar.setVisible(false);
 
         //Aparecer botones de juego
+        Btn_Tirar.setVisible(true);
         Btn_Tirar.setVisible(true);
         System.out.println(Lista1.length());
 
@@ -1153,11 +1340,1139 @@ public class Tablero_Controller {
         System.out.println("-------------------- Se envía dato ---------------------");
         Server sv = new Server();
         String respuesta = sv.enviar(String.valueOf(Respuesta_out.getText()));
-        Respuesta_in.setText(respuesta);
-        System.out.println("-------------------- Dato recibido ---------------------");
 
+        System.out.println(Respuesta_out.getText());
+
+        if (respuesta.equalsIgnoreCase("Incorrecto")){
+            int valor = 1;
+            int posicion_server = Integer.parseInt(Posicion_Server.getText());
+            int posicion_cliente = Integer.parseInt(Posicion_Cliente.getText());
+            int movimiento_server = posicion_server - valor;
+            int movimiento_cliente = posicion_cliente - valor;
+            this.Resul_Dado.setText(String.valueOf(valor));
+
+            //ID de las casillas para saber donde mover la ficha
+            int Posicion1 = Integer.parseInt((Casilla_1.getId()));
+            int Posicion2 = Integer.parseInt((Casilla_2.getId()));
+            int Posicion3 = Integer.parseInt((Casilla_3.getId()));
+            int Posicion4 = Integer.parseInt((Casilla_4.getId()));
+            int Posicion5 = Integer.parseInt((Casilla_5.getId()));
+            int Posicion6 = Integer.parseInt((Casilla_6.getId()));
+            int Posicion7 = Integer.parseInt((Casilla_7.getId()));
+            int Posicion8 = Integer.parseInt((Casilla_8.getId()));
+            int Posicion9 = Integer.parseInt((Casilla_9.getId()));
+            int Posicion10 = Integer.parseInt((Casilla_10.getId()));
+            int Posicion11 = Integer.parseInt((Casilla_11.getId()));
+            int Posicion12 = Integer.parseInt((Casilla_12.getId()));
+            int Posicion13 = Integer.parseInt((Casilla_13.getId()));
+            int Posicion14 = Integer.parseInt((Casilla_14.getId()));
+
+            boolean Turno = Boolean.parseBoolean(turno.getText());
+        /*
+        True = turno del server
+        False = turno del cliente
+         */
+            System.out.println("Turno de: " + turno.getText());
+
+            if (Turno) {
+                if (movimiento_server < Posicion1) {
+                    double Pos1 = Inicio_txt.getLayoutX();
+                    double Pos2 = Inicio_txt.getLayoutY();
+                    Server_ficha.setCenterX(Pos1 - 182);
+                    Server_ficha.setCenterY(Pos2 - 170);
+                    posicion_server = 0;
+                    Posicion_Server.setText(String.valueOf(posicion_server));
+                    turno.setText(String.valueOf(false));
+                    Btn_Tirar.setVisible(true);
+                    Btn_trampa.setVisible(false);
+                }
+                if (movimiento_server == Posicion1) {
+                    double Pos1 = Casilla_1.getLayoutX();
+                    double Pos2 = Casilla_1.getLayoutY();
+                    Server_ficha.setCenterX(Pos1 - 182);
+                    Server_ficha.setCenterY(Pos2 - 170);
+                    posicion_server -= valor;
+                    Posicion_Server.setText(String.valueOf(posicion_server));
+                    turno.setText(String.valueOf(false));
+                    Btn_Tirar.setVisible(true);
+                    Btn_trampa.setVisible(false);
+                }
+                if (movimiento_server == Posicion2) {
+                    double Pos1 = Casilla_2.getLayoutX();
+                    double Pos2 = Casilla_2.getLayoutY();
+                    Server_ficha.setCenterX(Pos1 - 182);
+                    Server_ficha.setCenterY(Pos2 - 170);
+                    posicion_server -= valor;
+                    Posicion_Server.setText(String.valueOf(posicion_server));
+                    turno.setText(String.valueOf(false));
+                    Btn_Tirar.setVisible(true);
+                    Btn_trampa.setVisible(false);
+                }
+                if (movimiento_server == Posicion3) {
+                    double Pos1 = Casilla_3.getLayoutX();
+                    double Pos2 = Casilla_3.getLayoutY();
+                    Server_ficha.setCenterX(Pos1 - 182);
+                    Server_ficha.setCenterY(Pos2 - 170);
+                    posicion_server -= valor;
+                    Posicion_Server.setText(String.valueOf(posicion_server));
+                    turno.setText(String.valueOf(false));
+                    Btn_Tirar.setVisible(true);
+                    Btn_trampa.setVisible(false);
+                }
+                if (movimiento_server == Posicion4) {
+                    double Pos1 = Casilla_4.getLayoutX();
+                    double Pos2 = Casilla_4.getLayoutY();
+                    Server_ficha.setCenterX(Pos1 - 182);
+                    Server_ficha.setCenterY(Pos2 - 170);
+                    posicion_server -= valor;
+                    Posicion_Server.setText(String.valueOf(posicion_server));
+                    turno.setText(String.valueOf(false));
+                    Btn_Tirar.setVisible(true);
+                    Btn_trampa.setVisible(false);
+                }
+                if (movimiento_server == Posicion5) {
+                    double Pos1 = Casilla_5.getLayoutX();
+                    double Pos2 = Casilla_5.getLayoutY();
+                    Server_ficha.setCenterX(Pos1 - 150);
+                    Server_ficha.setCenterY(Pos2 - 170);
+                    posicion_server -= valor;
+                    Posicion_Server.setText(String.valueOf(posicion_server));
+                    turno.setText(String.valueOf(false));
+                    Btn_Tirar.setVisible(true);
+                    Btn_trampa.setVisible(false);
+                }
+                if (movimiento_server == Posicion6) {
+                    double Pos1 = Casilla_6.getLayoutX();
+                    double Pos2 = Casilla_6.getLayoutY();
+                    Server_ficha.setCenterX(Pos1 - 182);
+                    Server_ficha.setCenterY(Pos2 - 170);
+                    posicion_server -= valor;
+                    Posicion_Server.setText(String.valueOf(posicion_server));
+                    turno.setText(String.valueOf(false));
+                    Btn_Tirar.setVisible(true);
+                    Btn_trampa.setVisible(false);
+                }
+                if (movimiento_server == Posicion7) {
+                    double Pos1 = Casilla_7.getLayoutX();
+                    double Pos2 = Casilla_7.getLayoutY();
+                    Server_ficha.setCenterX(Pos1 - 182);
+                    Server_ficha.setCenterY(Pos2 - 170);
+                    posicion_server -= valor;
+                    Posicion_Server.setText(String.valueOf(posicion_server));
+                    turno.setText(String.valueOf(false));
+                    Btn_Tirar.setVisible(true);
+                    Btn_trampa.setVisible(false);
+                }
+                if (movimiento_server == Posicion8) {
+                    double Pos1 = Casilla_8.getLayoutX();
+                    double Pos2 = Casilla_8.getLayoutY();
+                    Server_ficha.setCenterX(Pos1 - 182);
+                    Server_ficha.setCenterY(Pos2 - 170);
+                    posicion_server -= valor;
+                    Posicion_Server.setText(String.valueOf(posicion_server));
+                    turno.setText(String.valueOf(false));
+                    Btn_Tirar.setVisible(true);
+                    Btn_trampa.setVisible(false);
+                }
+                if (movimiento_server == Posicion9) {
+                    double Pos1 = Casilla_9.getLayoutX();
+                    double Pos2 = Casilla_9.getLayoutY();
+                    Server_ficha.setCenterX(Pos1 - 182);
+                    Server_ficha.setCenterY(Pos2 - 170);
+                    posicion_server -= valor;
+                    Posicion_Server.setText(String.valueOf(posicion_server));
+                    turno.setText(String.valueOf(false));
+                    Btn_Tirar.setVisible(true);
+                    Btn_trampa.setVisible(false);
+                }
+                if (movimiento_server == Posicion10) {
+                    double Pos1 = Casilla_10.getLayoutX();
+                    double Pos2 = Casilla_10.getLayoutY();
+                    Server_ficha.setCenterX(Pos1 - 182);
+                    Server_ficha.setCenterY(Pos2 - 170);
+                    posicion_server -= valor;
+                    Posicion_Server.setText(String.valueOf(posicion_server));
+                    turno.setText(String.valueOf(false));
+                    Btn_Tirar.setVisible(true);
+                    Btn_trampa.setVisible(false);
+                }
+                if (movimiento_server == Posicion11) {
+                    double Pos1 = Casilla_11.getLayoutX();
+                    double Pos2 = Casilla_11.getLayoutY();
+                    Server_ficha.setCenterX(Pos1 - 182);
+                    Server_ficha.setCenterY(Pos2 - 170);
+                    posicion_server -= valor;
+                    Posicion_Server.setText(String.valueOf(posicion_server));
+                    turno.setText(String.valueOf(false));
+                    Btn_Tirar.setVisible(true);
+                    Btn_trampa.setVisible(false);
+                }
+                if (movimiento_server == Posicion12) {
+                    double Pos1 = Casilla_12.getLayoutX();
+                    double Pos2 = Casilla_12.getLayoutY();
+                    Server_ficha.setCenterX(Pos1 - 182);
+                    Server_ficha.setCenterY(Pos2 - 170);
+                    posicion_server -= valor;
+                    Posicion_Server.setText(String.valueOf(posicion_server));
+                    turno.setText(String.valueOf(false));
+                    Btn_Tirar.setVisible(true);
+                    Btn_trampa.setVisible(false);
+                }
+                if (movimiento_server == Posicion13) {
+                    double Pos1 = Casilla_13.getLayoutX();
+                    double Pos2 = Casilla_13.getLayoutY();
+                    Server_ficha.setCenterX(Pos1 - 182);
+                    Server_ficha.setCenterY(Pos2 - 170);
+                    posicion_server -= valor;
+                    Posicion_Server.setText(String.valueOf(posicion_server));
+                    turno.setText(String.valueOf(false));
+                    Btn_Tirar.setVisible(true);
+                    Btn_trampa.setVisible(false);
+                }
+                if (movimiento_server == Posicion14) {
+                    double Pos1 = Casilla_14.getLayoutX();
+                    double Pos2 = Casilla_14.getLayoutY();
+                    Server_ficha.setCenterX(Pos1 - 182);
+                    Server_ficha.setCenterY(Pos2 - 170);
+                    posicion_server -= valor;
+                    Posicion_Server.setText(String.valueOf(posicion_server));
+                    turno.setText(String.valueOf(false));
+                    Btn_Tirar.setVisible(true);
+                    Btn_trampa.setVisible(false);
+                }
+                if (movimiento_server > Posicion14) {
+                    double Pos1 = Casilla_Final.getLayoutX();
+                    double Pos2 = Casilla_Final.getLayoutY();
+                    Server_ficha.setCenterX(Pos1 - 250);
+                    Server_ficha.setCenterY(Pos2 - 170);
+                    posicion_server -= valor;
+                    Posicion_Server.setText(String.valueOf(posicion_server));
+                    turno.setText(String.valueOf(false));
+                    System.out.println("El Cliente gana!");
+                    Btn_Tirar.setVisible(false);
+                    Btn_Tirar.setVisible(true);
+                    Btn_trampa.setVisible(false);
+                }
+            }
+            else {
+                if (movimiento_cliente < Posicion1) {
+                    double Pos1 = Inicio_txt.getLayoutX();
+                    double Pos2 = Inicio_txt.getLayoutY();
+                    Cliente_ficha.setCenterX(Pos1 - 182);
+                    Cliente_ficha.setCenterY(Pos2 - 170);
+                    posicion_cliente = 0;
+                    Posicion_Cliente.setText(String.valueOf(posicion_server));
+                    turno.setText(String.valueOf(true));
+                    Btn_Tirar.setVisible(true);
+                    Btn_trampa.setVisible(false);
+                }
+                if (movimiento_cliente == Posicion1) {
+                    double Pos1 = Casilla_1.getLayoutX();
+                    double Pos2 = Casilla_1.getLayoutY();
+                    Cliente_ficha.setCenterX(Pos1 - 250);
+                    Cliente_ficha.setCenterY(Pos2 - 170);
+                    posicion_cliente -= valor;
+                    Posicion_Cliente.setText(String.valueOf(posicion_cliente));
+                    turno.setText(String.valueOf(true));
+                    Btn_Tirar.setVisible(true);
+                    Btn_trampa.setVisible(false);
+                }
+                if (movimiento_cliente == Posicion2) {
+                    double Pos1 = Casilla_2.getLayoutX();
+                    double Pos2 = Casilla_2.getLayoutY();
+                    Cliente_ficha.setCenterX(Pos1 - 250);
+                    Cliente_ficha.setCenterY(Pos2 - 170);
+                    posicion_cliente -= valor;
+                    Posicion_Cliente.setText(String.valueOf(posicion_cliente));
+                    turno.setText(String.valueOf(true));
+                    Btn_Tirar.setVisible(true);
+                    Btn_trampa.setVisible(false);
+                }
+                if (movimiento_cliente == Posicion3) {
+                    double Pos1 = Casilla_3.getLayoutX();
+                    double Pos2 = Casilla_3.getLayoutY();
+                    Cliente_ficha.setCenterX(Pos1 - 250);
+                    Cliente_ficha.setCenterY(Pos2 - 170);
+                    posicion_cliente -= valor;
+                    Posicion_Cliente.setText(String.valueOf(posicion_cliente));
+                    turno.setText(String.valueOf(true));
+                    Btn_Tirar.setVisible(true);
+                    Btn_trampa.setVisible(false);
+                }
+                if (movimiento_cliente == Posicion4) {
+                    double Pos1 = Casilla_4.getLayoutX();
+                    double Pos2 = Casilla_4.getLayoutY();
+                    Cliente_ficha.setCenterX(Pos1 - 250);
+                    Cliente_ficha.setCenterY(Pos2 - 170);
+                    posicion_cliente -= valor;
+                    Posicion_Cliente.setText(String.valueOf(posicion_cliente));
+                    turno.setText(String.valueOf(true));
+                    Btn_Tirar.setVisible(true);
+                    Btn_trampa.setVisible(false);
+                }
+                if (movimiento_cliente == Posicion6) {
+                    double Pos1 = Casilla_6.getLayoutX();
+                    double Pos2 = Casilla_6.getLayoutY();
+                    Cliente_ficha.setCenterX(Pos1 - 250);
+                    Cliente_ficha.setCenterY(Pos2 - 170);
+                    posicion_cliente -= valor;
+                    Posicion_Cliente.setText(String.valueOf(posicion_cliente));
+                    turno.setText(String.valueOf(true));
+                    Btn_Tirar.setVisible(true);
+                    Btn_trampa.setVisible(false);
+                }
+                if (movimiento_cliente == Posicion8) {
+                    double Pos1 = Casilla_8.getLayoutX();
+                    double Pos2 = Casilla_8.getLayoutY();
+                    Cliente_ficha.setCenterX(Pos1 - 250);
+                    Cliente_ficha.setCenterY(Pos2 - 170);
+                    posicion_cliente -= valor;
+                    Posicion_Cliente.setText(String.valueOf(posicion_cliente));
+                    turno.setText(String.valueOf(true));
+                    Btn_Tirar.setVisible(true);
+                    Btn_trampa.setVisible(false);
+                }
+                if (movimiento_cliente == Posicion9) {
+                    double Pos1 = Casilla_9.getLayoutX();
+                    double Pos2 = Casilla_9.getLayoutY();
+                    Cliente_ficha.setCenterX(Pos1 - 250);
+                    Cliente_ficha.setCenterY(Pos2 - 170);
+                    posicion_cliente -= valor;
+                    Posicion_Cliente.setText(String.valueOf(posicion_cliente));
+                    turno.setText(String.valueOf(true));
+                    Btn_Tirar.setVisible(true);
+                    Btn_trampa.setVisible(false);
+                }
+                if (movimiento_cliente == Posicion10) {
+                    double Pos1 = Casilla_10.getLayoutX();
+                    double Pos2 = Casilla_10.getLayoutY();
+                    Cliente_ficha.setCenterX(Pos1 - 250);
+                    Cliente_ficha.setCenterY(Pos2 - 170);
+                    posicion_cliente -= valor;
+                    Posicion_Cliente.setText(String.valueOf(posicion_cliente));
+                    turno.setText(String.valueOf(true));
+                    Btn_Tirar.setVisible(true);
+                    Btn_trampa.setVisible(false);
+                }
+                if (movimiento_cliente == Posicion11) {
+                    double Pos1 = Casilla_11.getLayoutX();
+                    double Pos2 = Casilla_11.getLayoutY();
+                    Cliente_ficha.setCenterX(Pos1 - 250);
+                    Cliente_ficha.setCenterY(Pos2 - 170);
+                    posicion_cliente -= valor;
+                    Posicion_Cliente.setText(String.valueOf(posicion_cliente));
+                    turno.setText(String.valueOf(true));
+                    Btn_Tirar.setVisible(true);
+                    Btn_trampa.setVisible(false);
+                }
+                if (movimiento_cliente == Posicion12) {
+                    double Pos1 = Casilla_12.getLayoutX();
+                    double Pos2 = Casilla_12.getLayoutY();
+                    Cliente_ficha.setCenterX(Pos1 - 250);
+                    Cliente_ficha.setCenterY(Pos2 - 170);
+                    posicion_cliente -= valor;
+                    Posicion_Cliente.setText(String.valueOf(posicion_cliente));
+                    turno.setText(String.valueOf(true));
+                    Btn_Tirar.setVisible(true);
+                    Btn_trampa.setVisible(false);
+                }
+                if (movimiento_cliente == Posicion13) {
+                    double Pos1 = Casilla_13.getLayoutX();
+                    double Pos2 = Casilla_13.getLayoutY();
+                    Cliente_ficha.setCenterX(Pos1 - 250);
+                    Cliente_ficha.setCenterY(Pos2 - 170);
+                    posicion_cliente -= valor;
+                    Posicion_Cliente.setText(String.valueOf(posicion_cliente));
+                    turno.setText(String.valueOf(true));
+                    Btn_Tirar.setVisible(true);
+                    Btn_trampa.setVisible(false);
+                }
+                if (movimiento_cliente == Posicion14) {
+                    double Pos1 = Casilla_14.getLayoutX();
+                    double Pos2 = Casilla_14.getLayoutY();
+                    Cliente_ficha.setCenterX(Pos1 - 250);
+                    Cliente_ficha.setCenterY(Pos2 - 170);
+                    posicion_cliente -= valor;
+                    Posicion_Cliente.setText(String.valueOf(posicion_cliente));
+                    turno.setText(String.valueOf(true));
+                    Btn_Tirar.setVisible(true);
+                    Btn_trampa.setVisible(false);
+                }
+
+                if (movimiento_cliente > Posicion14) {
+                    double Pos1 = Casilla_Final.getLayoutX();
+                    double Pos2 = Casilla_Final.getLayoutY();
+                    Cliente_ficha.setCenterX(Pos1 - 250);
+                    Cliente_ficha.setCenterY(Pos2 - 170);
+                    posicion_cliente -= valor;
+                    Posicion_Cliente.setText(String.valueOf(posicion_cliente));
+                    turno.setText(String.valueOf(true));
+                    System.out.println("El Cliente gana!");
+                    Btn_Tirar.setVisible(false);
+                    Btn_trampa.setVisible(false);
+                    Btn_tunel.setVisible(false);
+
+                }
+            }
+        }
+        if (respuesta.equalsIgnoreCase("Correcto")){
+            if (turno.getText().equalsIgnoreCase(String.valueOf(true))){
+                turno.setText(String.valueOf(false));
+            } else{
+                turno.setText(String.valueOf(true));
+            }
+        }
+
+        Respuesta_in.setText(respuesta);
+        Btn_Tirar.setVisible(true);
+        Btn_Enviar.setVisible(false);
+
+        System.out.println("-------------------- Dato recibido ---------------------");
     }
 
+    @FXML
+    void Tirar_2(MouseEvent event) {
+        //SE EJECUTA SI CAE EN CASILLAS TUNEL
+        //Valores de movimiento
+
+        //Valores de movimiento
+        int valor = (int) (Math.random() * 3 + 1);
+
+        int posicion_server = Integer.parseInt(Posicion_Server.getText());
+
+        int posicion_cliente = Integer.parseInt(Posicion_Cliente.getText());
+
+        int movimiento_server = posicion_server + valor;
+
+        int movimiento_cliente = posicion_cliente + valor;
+
+        this.Resul_Dado.setText(String.valueOf(valor));
+
+        //ID de las casillas para saber donde mover la ficha
+        int Posicion1 = Integer.parseInt((Casilla_1.getId()));
+        int Posicion2 = Integer.parseInt((Casilla_2.getId()));
+        int Posicion3 = Integer.parseInt((Casilla_3.getId()));
+        int Posicion4 = Integer.parseInt((Casilla_4.getId()));
+        int Posicion5 = Integer.parseInt((Casilla_5.getId()));
+        int Posicion6 = Integer.parseInt((Casilla_6.getId()));
+        int Posicion7 = Integer.parseInt((Casilla_7.getId()));
+        int Posicion8 = Integer.parseInt((Casilla_8.getId()));
+        int Posicion9 = Integer.parseInt((Casilla_9.getId()));
+        int Posicion10 = Integer.parseInt((Casilla_10.getId()));
+        int Posicion11 = Integer.parseInt((Casilla_11.getId()));
+        int Posicion12 = Integer.parseInt((Casilla_12.getId()));
+        int Posicion13 = Integer.parseInt((Casilla_13.getId()));
+        int Posicion14 = Integer.parseInt((Casilla_14.getId()));
+
+        boolean Turno = Boolean.parseBoolean(turno.getText());
+        if (Turno){
+            System.out.println("Turno de del Server");
+        } else{
+            System.out.println("Turno del Cliente");
+        }
+        /*
+        True = turno del server
+        False = turno del cliente
+         */
+        if (Turno){
+            if (movimiento_server == Posicion1) {
+                double Pos1 = Casilla_1.getLayoutX();
+                double Pos2 = Casilla_1.getLayoutY();
+                Server_ficha.setCenterX(Pos1 - 182);
+                Server_ficha.setCenterY(Pos2 - 170);
+                posicion_server += valor;
+                Posicion_Server.setText(String.valueOf(posicion_server));
+                turno.setText(String.valueOf(false));
+                Btn_Tirar.setVisible(true);
+                Btn_tunel.setVisible(false);
+            }
+            if (movimiento_server == Posicion2) {
+                double Pos1 = Casilla_2.getLayoutX();
+                double Pos2 = Casilla_2.getLayoutY();
+                Server_ficha.setCenterX(Pos1 - 182);
+                Server_ficha.setCenterY(Pos2 - 170);
+                posicion_server += valor;
+                Posicion_Server.setText(String.valueOf(posicion_server));
+                turno.setText(String.valueOf(false));
+                Btn_Tirar.setVisible(true);
+                Btn_tunel.setVisible(false);
+            }
+            if (movimiento_server == Posicion3) {
+                double Pos1 = Casilla_3.getLayoutX();
+                double Pos2 = Casilla_3.getLayoutY();
+                Server_ficha.setCenterX(Pos1 - 182);
+                Server_ficha.setCenterY(Pos2 - 170);
+                posicion_server += valor;
+                Posicion_Server.setText(String.valueOf(posicion_server));
+                turno.setText(String.valueOf(false));
+                Btn_Tirar.setVisible(true);
+                Btn_tunel.setVisible(false);
+            }
+            if (movimiento_server == Posicion4) {
+                double Pos1 = Casilla_4.getLayoutX();
+                double Pos2 = Casilla_4.getLayoutY();
+                Server_ficha.setCenterX(Pos1 - 182);
+                Server_ficha.setCenterY(Pos2 - 170);
+                posicion_server += valor;
+                Posicion_Server.setText(String.valueOf(posicion_server));
+                turno.setText(String.valueOf(false));
+                Btn_Tirar.setVisible(true);
+                Btn_tunel.setVisible(false);
+            }
+            if (movimiento_server == Posicion5) {
+                double Pos1 = Casilla_5.getLayoutX();
+                double Pos2 = Casilla_5.getLayoutY();
+                Server_ficha.setCenterX(Pos1 - 150);
+                Server_ficha.setCenterY(Pos2 - 170);
+                posicion_server += valor;
+                Posicion_Server.setText(String.valueOf(posicion_server));
+                turno.setText(String.valueOf(false));
+                Btn_Tirar.setVisible(true);
+                Btn_tunel.setVisible(false);
+            }
+            if (movimiento_server == Posicion6) {
+                double Pos1 = Casilla_6.getLayoutX();
+                double Pos2 = Casilla_6.getLayoutY();
+                Server_ficha.setCenterX(Pos1 - 182);
+                Server_ficha.setCenterY(Pos2 - 170);
+                posicion_server += valor;
+                Posicion_Server.setText(String.valueOf(posicion_server));
+                turno.setText(String.valueOf(false));
+                Btn_Tirar.setVisible(true);
+                Btn_tunel.setVisible(false);
+            }
+            if (movimiento_server == Posicion7) {
+                double Pos1 = Casilla_7.getLayoutX();
+                double Pos2 = Casilla_7.getLayoutY();
+                Server_ficha.setCenterX(Pos1 - 182);
+                Server_ficha.setCenterY(Pos2 - 170);
+                posicion_server += valor;
+                Posicion_Server.setText(String.valueOf(posicion_server));
+                turno.setText(String.valueOf(false));
+                Btn_Tirar.setVisible(true);
+                Btn_tunel.setVisible(false);
+            }
+            if (movimiento_server == Posicion8) {
+                double Pos1 = Casilla_8.getLayoutX();
+                double Pos2 = Casilla_8.getLayoutY();
+                Server_ficha.setCenterX(Pos1 - 182);
+                Server_ficha.setCenterY(Pos2 - 170);
+                posicion_server += valor;
+                Posicion_Server.setText(String.valueOf(posicion_server));
+                turno.setText(String.valueOf(false));
+                Btn_Tirar.setVisible(true);
+                Btn_tunel.setVisible(false);
+            }
+            if (movimiento_server == Posicion9) {
+                double Pos1 = Casilla_9.getLayoutX();
+                double Pos2 = Casilla_9.getLayoutY();
+                Server_ficha.setCenterX(Pos1 - 182);
+                Server_ficha.setCenterY(Pos2 - 170);
+                posicion_server += valor;
+                Posicion_Server.setText(String.valueOf(posicion_server));
+                turno.setText(String.valueOf(false));
+                Btn_Tirar.setVisible(true);
+                Btn_tunel.setVisible(false);
+            }
+            if (movimiento_server == Posicion10) {
+                double Pos1 = Casilla_10.getLayoutX();
+                double Pos2 = Casilla_10.getLayoutY();
+                Server_ficha.setCenterX(Pos1 - 182);
+                Server_ficha.setCenterY(Pos2 - 170);
+                posicion_server += valor;
+                Posicion_Server.setText(String.valueOf(posicion_server));
+                turno.setText(String.valueOf(false));
+                Btn_Tirar.setVisible(true);
+                Btn_tunel.setVisible(false);
+            }
+            if (movimiento_server == Posicion11) {
+                double Pos1 = Casilla_11.getLayoutX();
+                double Pos2 = Casilla_11.getLayoutY();
+                Server_ficha.setCenterX(Pos1 - 182);
+                Server_ficha.setCenterY(Pos2 - 170);
+                posicion_server += valor;
+                Posicion_Server.setText(String.valueOf(posicion_server));
+                turno.setText(String.valueOf(false));
+                Btn_Tirar.setVisible(true);
+                Btn_tunel.setVisible(false);
+            }
+            if (movimiento_server == Posicion12) {
+                double Pos1 = Casilla_12.getLayoutX();
+                double Pos2 = Casilla_12.getLayoutY();
+                Server_ficha.setCenterX(Pos1 - 182);
+                Server_ficha.setCenterY(Pos2 - 170);
+                posicion_server += valor;
+                Posicion_Server.setText(String.valueOf(posicion_server));
+                turno.setText(String.valueOf(false));
+                Btn_Tirar.setVisible(true);
+                Btn_tunel.setVisible(false);
+            }
+            if (movimiento_server == Posicion13) {
+                double Pos1 = Casilla_13.getLayoutX();
+                double Pos2 = Casilla_13.getLayoutY();
+                Server_ficha.setCenterX(Pos1 - 182);
+                Server_ficha.setCenterY(Pos2 - 170);
+                posicion_server += valor;
+                Posicion_Server.setText(String.valueOf(posicion_server));
+                turno.setText(String.valueOf(false));
+                Btn_Tirar.setVisible(true);
+                Btn_tunel.setVisible(false);
+            }
+            if (movimiento_server == Posicion14) {
+                double Pos1 = Casilla_14.getLayoutX();
+                double Pos2 = Casilla_14.getLayoutY();
+                Server_ficha.setCenterX(Pos1 - 182);
+                Server_ficha.setCenterY(Pos2 - 170);
+                posicion_server += valor;
+                Posicion_Server.setText(String.valueOf(posicion_server));
+                turno.setText(String.valueOf(false));
+                Btn_Tirar.setVisible(true);
+                Btn_tunel.setVisible(false);
+            }
+            if (movimiento_server > Posicion14) {
+                double Pos1 = Casilla_Final.getLayoutX();
+                double Pos2 = Casilla_Final.getLayoutY();
+                Cliente_ficha.setCenterX(Pos1 - 250);
+                Cliente_ficha.setCenterY(Pos2 - 170);
+                posicion_server += valor;
+                Posicion_Server.setText(String.valueOf(posicion_server));
+                turno.setText(String.valueOf(false));
+                System.out.println("El Cliente gana!");
+                Btn_Tirar.setVisible(false);
+                Btn_tunel.setVisible(false);
+                Btn_trampa.setVisible(false);
+            }
+        }
+        else{
+            if (movimiento_cliente == Posicion1){
+                double Pos1 = Casilla_1.getLayoutX();
+                double Pos2 = Casilla_1.getLayoutY();
+                Cliente_ficha.setCenterX(Pos1 - 250);
+                Cliente_ficha.setCenterY(Pos2 -170);
+                posicion_cliente +=valor;
+                Posicion_Cliente.setText(String.valueOf(posicion_cliente));
+                turno.setText(String.valueOf(true));
+                Btn_Tirar.setVisible(true);
+                Btn_tunel.setVisible(false);
+            }
+            if (movimiento_cliente == Posicion2){
+                double Pos1 = Casilla_2.getLayoutX();
+                double Pos2 = Casilla_2.getLayoutY();
+                Cliente_ficha.setCenterX(Pos1 - 250);
+                Cliente_ficha.setCenterY(Pos2 -170);
+                posicion_cliente +=valor;
+                Posicion_Cliente.setText(String.valueOf(posicion_cliente));
+                turno.setText(String.valueOf(true));
+                Btn_Tirar.setVisible(true);
+                Btn_tunel.setVisible(false);
+            }
+            if (movimiento_cliente == Posicion3) {
+                double Pos1 = Casilla_3.getLayoutX();
+                double Pos2 = Casilla_3.getLayoutY();
+                Cliente_ficha.setCenterX(Pos1 - 250);
+                Cliente_ficha.setCenterY(Pos2 -170);
+                posicion_cliente +=valor;
+                Posicion_Cliente.setText(String.valueOf(posicion_cliente));
+                turno.setText(String.valueOf(true));
+                Btn_Tirar.setVisible(true);
+                Btn_tunel.setVisible(false);
+            }
+            if (movimiento_cliente == Posicion4){
+                double Pos1 = Casilla_4.getLayoutX();
+                double Pos2 = Casilla_4.getLayoutY();
+                Cliente_ficha.setCenterX(Pos1 - 250);
+                Cliente_ficha.setCenterY(Pos2 -170);
+                posicion_cliente +=valor;
+                Posicion_Cliente.setText(String.valueOf(posicion_cliente));
+                turno.setText(String.valueOf(true));
+                Btn_Tirar.setVisible(true);
+                Btn_tunel.setVisible(false);
+            }
+            if (movimiento_cliente == Posicion6){
+                double Pos1 = Casilla_6.getLayoutX();
+                double Pos2 = Casilla_6.getLayoutY();
+                Cliente_ficha.setCenterX(Pos1 - 250);
+                Cliente_ficha.setCenterY(Pos2-170);
+                posicion_cliente +=valor;
+                Posicion_Cliente.setText(String.valueOf(posicion_cliente));
+                turno.setText(String.valueOf(true));
+                Btn_Tirar.setVisible(true);
+                Btn_tunel.setVisible(false);
+            }
+            if (movimiento_cliente == Posicion8){
+                double Pos1 = Casilla_8.getLayoutX();
+                double Pos2 = Casilla_8.getLayoutY();
+                Cliente_ficha.setCenterX(Pos1 - 250);
+                Cliente_ficha.setCenterY(Pos2-170);
+                posicion_cliente +=valor;
+                Posicion_Cliente.setText(String.valueOf(posicion_cliente));
+                turno.setText(String.valueOf(true));
+                Btn_Tirar.setVisible(true);
+                Btn_tunel.setVisible(false);
+            }
+            if (movimiento_cliente == Posicion9){
+                double Pos1 = Casilla_9.getLayoutX();
+                double Pos2 = Casilla_9.getLayoutY();
+                Cliente_ficha.setCenterX(Pos1 - 250);
+                Cliente_ficha.setCenterY(Pos2-170);
+                posicion_cliente +=valor;
+                Posicion_Cliente.setText(String.valueOf(posicion_cliente));
+                turno.setText(String.valueOf(true));
+                Btn_Tirar.setVisible(true);
+                Btn_tunel.setVisible(false);
+            }
+            if (movimiento_cliente == Posicion10){
+                double Pos1 = Casilla_10.getLayoutX();
+                double Pos2 = Casilla_10.getLayoutY();
+                Cliente_ficha.setCenterX(Pos1 - 250);
+                Cliente_ficha.setCenterY(Pos2-170);
+                posicion_cliente +=valor;
+                Posicion_Cliente.setText(String.valueOf(posicion_cliente));
+                turno.setText(String.valueOf(true));
+                Btn_Tirar.setVisible(true);
+                Btn_tunel.setVisible(false);
+            }
+            if (movimiento_cliente == Posicion11){
+                double Pos1 = Casilla_11.getLayoutX();
+                double Pos2 = Casilla_11.getLayoutY();
+                Cliente_ficha.setCenterX(Pos1 - 250);
+                Cliente_ficha.setCenterY(Pos2-170);
+                posicion_cliente +=valor;
+                Posicion_Cliente.setText(String.valueOf(posicion_cliente));
+                turno.setText(String.valueOf(true));
+                Btn_Tirar.setVisible(true);
+                Btn_tunel.setVisible(false);
+            }
+            if (movimiento_cliente == Posicion12){
+                double Pos1 = Casilla_12.getLayoutX();
+                double Pos2 = Casilla_12.getLayoutY();
+                Cliente_ficha.setCenterX(Pos1 - 250);
+                Cliente_ficha.setCenterY(Pos2-170);
+                posicion_cliente +=valor;
+                Posicion_Cliente.setText(String.valueOf(posicion_cliente));
+                turno.setText(String.valueOf(true));
+                Btn_Tirar.setVisible(true);
+                Btn_tunel.setVisible(false);
+            }
+            if (movimiento_cliente == Posicion13){
+                double Pos1 = Casilla_13.getLayoutX();
+                double Pos2 = Casilla_13.getLayoutY();
+                Cliente_ficha.setCenterX(Pos1 - 250);
+                Cliente_ficha.setCenterY(Pos2-170);
+                posicion_cliente +=valor;
+                Posicion_Cliente.setText(String.valueOf(posicion_cliente));
+                turno.setText(String.valueOf(true));
+                Btn_Tirar.setVisible(true);
+                Btn_tunel.setVisible(false);
+            }
+            if (movimiento_cliente == Posicion14) {
+                double Pos1 = Casilla_14.getLayoutX();
+                double Pos2 = Casilla_14.getLayoutY();
+                Cliente_ficha.setCenterX(Pos1 - 250);
+                Cliente_ficha.setCenterY(Pos2 - 170);
+                posicion_cliente += valor;
+                Posicion_Cliente.setText(String.valueOf(posicion_cliente));
+                turno.setText(String.valueOf(true));
+                Btn_Tirar.setVisible(true);
+                Btn_tunel.setVisible(false);
+            }
+
+            if (movimiento_cliente > Posicion14){
+                double Pos1 = Casilla_Final.getLayoutX();
+                double Pos2 = Casilla_Final.getLayoutY();
+                Cliente_ficha.setCenterX(Pos1 - 250);
+                Cliente_ficha.setCenterY(Pos2 - 170);
+                posicion_cliente += valor;
+                Posicion_Cliente.setText(String.valueOf(posicion_cliente));
+                turno.setText(String.valueOf(true));
+                System.out.println("El Cliente gana!");
+                Btn_Tirar.setVisible(false);
+                Btn_trampa.setVisible(false);
+                Btn_tunel.setVisible(false);
+
+            }
+        }
+    }
+
+    @FXML
+    void Tirar_3(MouseEvent event) {
+        //SE EJECUTA SI CAE EN CASILLAS TRAMPA
+        //Valores de movimiento
+
+        int valor = (int) (Math.random() * 3 + 1);
+        int posicion_server = Integer.parseInt(Posicion_Server.getText());
+        int posicion_cliente = Integer.parseInt(Posicion_Cliente.getText());
+        int movimiento_server = posicion_server - valor;
+        int movimiento_cliente = posicion_cliente - valor;
+        this.Resul_Dado.setText(String.valueOf(valor));
+        Btn_trampa.setVisible(true);
+
+
+        //ID de las casillas para saber donde mover la ficha
+        int Posicion1 = Integer.parseInt((Casilla_1.getId()));
+        int Posicion2 = Integer.parseInt((Casilla_2.getId()));
+        int Posicion3 = Integer.parseInt((Casilla_3.getId()));
+        int Posicion4 = Integer.parseInt((Casilla_4.getId()));
+        int Posicion5 = Integer.parseInt((Casilla_5.getId()));
+        int Posicion6 = Integer.parseInt((Casilla_6.getId()));
+        int Posicion7 = Integer.parseInt((Casilla_7.getId()));
+        int Posicion8 = Integer.parseInt((Casilla_8.getId()));
+        int Posicion9 = Integer.parseInt((Casilla_9.getId()));
+        int Posicion10 = Integer.parseInt((Casilla_10.getId()));
+        int Posicion11 = Integer.parseInt((Casilla_11.getId()));
+        int Posicion12 = Integer.parseInt((Casilla_12.getId()));
+        int Posicion13 = Integer.parseInt((Casilla_13.getId()));
+        int Posicion14 = Integer.parseInt((Casilla_14.getId()));
+
+        boolean Turno = Boolean.parseBoolean(turno.getText());
+        /*
+        True = turno del server
+        False = turno del cliente
+         */
+
+        System.out.println("Turno de: " + turno.getText());
+
+        if (Turno) {
+            if (movimiento_server < Posicion1) {
+                double Pos1 = Inicio_txt.getLayoutX();
+                double Pos2 = Inicio_txt.getLayoutY();
+                Server_ficha.setCenterX(Pos1 - 182);
+                Server_ficha.setCenterY(Pos2 - 170);
+                posicion_server = 0;
+                Posicion_Server.setText(String.valueOf(posicion_server));
+                turno.setText(String.valueOf(false));
+                Btn_Tirar.setVisible(true);
+                Btn_trampa.setVisible(false);
+            }
+            if (movimiento_server == Posicion1) {
+                double Pos1 = Casilla_1.getLayoutX();
+                double Pos2 = Casilla_1.getLayoutY();
+                Server_ficha.setCenterX(Pos1 - 182);
+                Server_ficha.setCenterY(Pos2 - 170);
+                posicion_server -= valor;
+                Posicion_Server.setText(String.valueOf(posicion_server));
+                turno.setText(String.valueOf(false));
+                Btn_Tirar.setVisible(true);
+                Btn_trampa.setVisible(false);
+            }
+            if (movimiento_server == Posicion2) {
+                double Pos1 = Casilla_2.getLayoutX();
+                double Pos2 = Casilla_2.getLayoutY();
+                Server_ficha.setCenterX(Pos1 - 182);
+                Server_ficha.setCenterY(Pos2 - 170);
+                posicion_server -= valor;
+                Posicion_Server.setText(String.valueOf(posicion_server));
+                turno.setText(String.valueOf(false));
+                Btn_Tirar.setVisible(true);
+                Btn_trampa.setVisible(false);
+            }
+            if (movimiento_server == Posicion3) {
+                double Pos1 = Casilla_3.getLayoutX();
+                double Pos2 = Casilla_3.getLayoutY();
+                Server_ficha.setCenterX(Pos1 - 182);
+                Server_ficha.setCenterY(Pos2 - 170);
+                posicion_server -= valor;
+                Posicion_Server.setText(String.valueOf(posicion_server));
+                turno.setText(String.valueOf(false));
+                Btn_Tirar.setVisible(true);
+                Btn_trampa.setVisible(false);
+            }
+            if (movimiento_server == Posicion4) {
+                double Pos1 = Casilla_4.getLayoutX();
+                double Pos2 = Casilla_4.getLayoutY();
+                Server_ficha.setCenterX(Pos1 - 182);
+                Server_ficha.setCenterY(Pos2 - 170);
+                posicion_server -= valor;
+                Posicion_Server.setText(String.valueOf(posicion_server));
+                turno.setText(String.valueOf(false));
+                Btn_Tirar.setVisible(true);
+                Btn_trampa.setVisible(false);
+            }
+            if (movimiento_server == Posicion5) {
+                double Pos1 = Casilla_5.getLayoutX();
+                double Pos2 = Casilla_5.getLayoutY();
+                Server_ficha.setCenterX(Pos1 - 150);
+                Server_ficha.setCenterY(Pos2 - 170);
+                posicion_server -= valor;
+                Posicion_Server.setText(String.valueOf(posicion_server));
+                turno.setText(String.valueOf(false));
+                Btn_Tirar.setVisible(true);
+                Btn_trampa.setVisible(false);
+            }
+            if (movimiento_server == Posicion6) {
+                double Pos1 = Casilla_6.getLayoutX();
+                double Pos2 = Casilla_6.getLayoutY();
+                Server_ficha.setCenterX(Pos1 - 182);
+                Server_ficha.setCenterY(Pos2 - 170);
+                posicion_server -= valor;
+                Posicion_Server.setText(String.valueOf(posicion_server));
+                turno.setText(String.valueOf(false));
+                Btn_Tirar.setVisible(true);
+                Btn_trampa.setVisible(false);
+            }
+            if (movimiento_server == Posicion7) {
+                double Pos1 = Casilla_7.getLayoutX();
+                double Pos2 = Casilla_7.getLayoutY();
+                Server_ficha.setCenterX(Pos1 - 182);
+                Server_ficha.setCenterY(Pos2 - 170);
+                posicion_server -= valor;
+                Posicion_Server.setText(String.valueOf(posicion_server));
+                turno.setText(String.valueOf(false));
+                Btn_Tirar.setVisible(true);
+                Btn_trampa.setVisible(false);
+            }
+            if (movimiento_server == Posicion8) {
+                double Pos1 = Casilla_8.getLayoutX();
+                double Pos2 = Casilla_8.getLayoutY();
+                Server_ficha.setCenterX(Pos1 - 182);
+                Server_ficha.setCenterY(Pos2 - 170);
+                posicion_server -= valor;
+                Posicion_Server.setText(String.valueOf(posicion_server));
+                turno.setText(String.valueOf(false));
+                Btn_Tirar.setVisible(true);
+                Btn_trampa.setVisible(false);
+            }
+            if (movimiento_server == Posicion9) {
+                double Pos1 = Casilla_9.getLayoutX();
+                double Pos2 = Casilla_9.getLayoutY();
+                Server_ficha.setCenterX(Pos1 - 182);
+                Server_ficha.setCenterY(Pos2 - 170);
+                posicion_server -= valor;
+                Posicion_Server.setText(String.valueOf(posicion_server));
+                turno.setText(String.valueOf(false));
+                Btn_Tirar.setVisible(true);
+                Btn_trampa.setVisible(false);
+            }
+            if (movimiento_server == Posicion10) {
+                double Pos1 = Casilla_10.getLayoutX();
+                double Pos2 = Casilla_10.getLayoutY();
+                Server_ficha.setCenterX(Pos1 - 182);
+                Server_ficha.setCenterY(Pos2 - 170);
+                posicion_server -= valor;
+                Posicion_Server.setText(String.valueOf(posicion_server));
+                turno.setText(String.valueOf(false));
+                Btn_Tirar.setVisible(true);
+                Btn_trampa.setVisible(false);
+            }
+            if (movimiento_server == Posicion11) {
+                double Pos1 = Casilla_11.getLayoutX();
+                double Pos2 = Casilla_11.getLayoutY();
+                Server_ficha.setCenterX(Pos1 - 182);
+                Server_ficha.setCenterY(Pos2 - 170);
+                posicion_server -= valor;
+                Posicion_Server.setText(String.valueOf(posicion_server));
+                turno.setText(String.valueOf(false));
+                Btn_Tirar.setVisible(true);
+                Btn_trampa.setVisible(false);
+            }
+            if (movimiento_server == Posicion12) {
+                double Pos1 = Casilla_12.getLayoutX();
+                double Pos2 = Casilla_12.getLayoutY();
+                Server_ficha.setCenterX(Pos1 - 182);
+                Server_ficha.setCenterY(Pos2 - 170);
+                posicion_server -= valor;
+                Posicion_Server.setText(String.valueOf(posicion_server));
+                turno.setText(String.valueOf(false));
+                Btn_Tirar.setVisible(true);
+                Btn_trampa.setVisible(false);
+            }
+            if (movimiento_server == Posicion13) {
+                double Pos1 = Casilla_13.getLayoutX();
+                double Pos2 = Casilla_13.getLayoutY();
+                Server_ficha.setCenterX(Pos1 - 182);
+                Server_ficha.setCenterY(Pos2 - 170);
+                posicion_server -= valor;
+                Posicion_Server.setText(String.valueOf(posicion_server));
+                turno.setText(String.valueOf(false));
+                Btn_Tirar.setVisible(true);
+                Btn_trampa.setVisible(false);
+            }
+            if (movimiento_server == Posicion14) {
+                double Pos1 = Casilla_14.getLayoutX();
+                double Pos2 = Casilla_14.getLayoutY();
+                Server_ficha.setCenterX(Pos1 - 182);
+                Server_ficha.setCenterY(Pos2 - 170);
+                posicion_server -= valor;
+                Posicion_Server.setText(String.valueOf(posicion_server));
+                turno.setText(String.valueOf(false));
+                Btn_Tirar.setVisible(true);
+                Btn_trampa.setVisible(false);
+            }
+            if (movimiento_server > Posicion14) {
+                double Pos1 = Casilla_Final.getLayoutX();
+                double Pos2 = Casilla_Final.getLayoutY();
+                Server_ficha.setCenterX(Pos1 - 250);
+                Server_ficha.setCenterY(Pos2 - 170);
+                posicion_server -= valor;
+                Posicion_Server.setText(String.valueOf(posicion_server));
+                turno.setText(String.valueOf(false));
+                System.out.println("El Cliente gana!");
+                Btn_Tirar.setVisible(false);
+                Btn_Tirar.setVisible(true);
+                Btn_trampa.setVisible(false);
+            }
+        }
+            else {
+            if (movimiento_cliente < Posicion1) {
+                double Pos1 = Inicio_txt.getLayoutX();
+                double Pos2 = Inicio_txt.getLayoutY();
+                Cliente_ficha.setCenterX(Pos1 - 182);
+                Cliente_ficha.setCenterY(Pos2 - 170);
+                posicion_cliente = 0;
+                Posicion_Cliente.setText(String.valueOf(posicion_server));
+                turno.setText(String.valueOf(true));
+                Btn_Tirar.setVisible(true);
+                Btn_trampa.setVisible(false);
+            }
+            if (movimiento_cliente == Posicion1) {
+                double Pos1 = Casilla_1.getLayoutX();
+                double Pos2 = Casilla_1.getLayoutY();
+                Cliente_ficha.setCenterX(Pos1 - 250);
+                Cliente_ficha.setCenterY(Pos2 - 170);
+                posicion_cliente -= valor;
+                Posicion_Cliente.setText(String.valueOf(posicion_cliente));
+                turno.setText(String.valueOf(true));
+                Btn_Tirar.setVisible(true);
+                Btn_trampa.setVisible(false);
+            }
+            if (movimiento_cliente == Posicion2) {
+                double Pos1 = Casilla_2.getLayoutX();
+                double Pos2 = Casilla_2.getLayoutY();
+                Cliente_ficha.setCenterX(Pos1 - 250);
+                Cliente_ficha.setCenterY(Pos2 - 170);
+                posicion_cliente -= valor;
+                Posicion_Cliente.setText(String.valueOf(posicion_cliente));
+                turno.setText(String.valueOf(true));
+                Btn_Tirar.setVisible(true);
+                Btn_trampa.setVisible(false);
+            }
+            if (movimiento_cliente == Posicion3) {
+                double Pos1 = Casilla_3.getLayoutX();
+                double Pos2 = Casilla_3.getLayoutY();
+                Cliente_ficha.setCenterX(Pos1 - 250);
+                Cliente_ficha.setCenterY(Pos2 - 170);
+                posicion_cliente -= valor;
+                Posicion_Cliente.setText(String.valueOf(posicion_cliente));
+                turno.setText(String.valueOf(true));
+                Btn_Tirar.setVisible(true);
+                Btn_trampa.setVisible(false);
+            }
+            if (movimiento_cliente == Posicion4) {
+                double Pos1 = Casilla_4.getLayoutX();
+                double Pos2 = Casilla_4.getLayoutY();
+                Cliente_ficha.setCenterX(Pos1 - 250);
+                Cliente_ficha.setCenterY(Pos2 - 170);
+                posicion_cliente -= valor;
+                Posicion_Cliente.setText(String.valueOf(posicion_cliente));
+                turno.setText(String.valueOf(true));
+                Btn_Tirar.setVisible(true);
+                Btn_trampa.setVisible(false);
+            }
+            if (movimiento_cliente == Posicion6) {
+                double Pos1 = Casilla_6.getLayoutX();
+                double Pos2 = Casilla_6.getLayoutY();
+                Cliente_ficha.setCenterX(Pos1 - 250);
+                Cliente_ficha.setCenterY(Pos2 - 170);
+                posicion_cliente -= valor;
+                Posicion_Cliente.setText(String.valueOf(posicion_cliente));
+                turno.setText(String.valueOf(true));
+                Btn_Tirar.setVisible(true);
+                Btn_trampa.setVisible(false);
+            }
+            if (movimiento_cliente == Posicion8) {
+                double Pos1 = Casilla_8.getLayoutX();
+                double Pos2 = Casilla_8.getLayoutY();
+                Cliente_ficha.setCenterX(Pos1 - 250);
+                Cliente_ficha.setCenterY(Pos2 - 170);
+                posicion_cliente -= valor;
+                Posicion_Cliente.setText(String.valueOf(posicion_cliente));
+                turno.setText(String.valueOf(true));
+                Btn_Tirar.setVisible(true);
+                Btn_trampa.setVisible(false);
+            }
+            if (movimiento_cliente == Posicion9) {
+                double Pos1 = Casilla_9.getLayoutX();
+                double Pos2 = Casilla_9.getLayoutY();
+                Cliente_ficha.setCenterX(Pos1 - 250);
+                Cliente_ficha.setCenterY(Pos2 - 170);
+                posicion_cliente -= valor;
+                Posicion_Cliente.setText(String.valueOf(posicion_cliente));
+                turno.setText(String.valueOf(true));
+                Btn_Tirar.setVisible(true);
+                Btn_trampa.setVisible(false);
+            }
+            if (movimiento_cliente == Posicion10) {
+                double Pos1 = Casilla_10.getLayoutX();
+                double Pos2 = Casilla_10.getLayoutY();
+                Cliente_ficha.setCenterX(Pos1 - 250);
+                Cliente_ficha.setCenterY(Pos2 - 170);
+                posicion_cliente -= valor;
+                Posicion_Cliente.setText(String.valueOf(posicion_cliente));
+                turno.setText(String.valueOf(true));
+                Btn_Tirar.setVisible(true);
+                Btn_trampa.setVisible(false);
+            }
+            if (movimiento_cliente == Posicion11) {
+                double Pos1 = Casilla_11.getLayoutX();
+                double Pos2 = Casilla_11.getLayoutY();
+                Cliente_ficha.setCenterX(Pos1 - 250);
+                Cliente_ficha.setCenterY(Pos2 - 170);
+                posicion_cliente -= valor;
+                Posicion_Cliente.setText(String.valueOf(posicion_cliente));
+                turno.setText(String.valueOf(true));
+                Btn_Tirar.setVisible(true);
+                Btn_trampa.setVisible(false);
+            }
+            if (movimiento_cliente == Posicion12) {
+                double Pos1 = Casilla_12.getLayoutX();
+                double Pos2 = Casilla_12.getLayoutY();
+                Cliente_ficha.setCenterX(Pos1 - 250);
+                Cliente_ficha.setCenterY(Pos2 - 170);
+                posicion_cliente -= valor;
+                Posicion_Cliente.setText(String.valueOf(posicion_cliente));
+                turno.setText(String.valueOf(true));
+                Btn_Tirar.setVisible(true);
+                Btn_trampa.setVisible(false);
+            }
+            if (movimiento_cliente == Posicion13) {
+                double Pos1 = Casilla_13.getLayoutX();
+                double Pos2 = Casilla_13.getLayoutY();
+                Cliente_ficha.setCenterX(Pos1 - 250);
+                Cliente_ficha.setCenterY(Pos2 - 170);
+                posicion_cliente -= valor;
+                Posicion_Cliente.setText(String.valueOf(posicion_cliente));
+                turno.setText(String.valueOf(true));
+                Btn_Tirar.setVisible(true);
+                Btn_trampa.setVisible(false);
+            }
+            if (movimiento_cliente == Posicion14) {
+                double Pos1 = Casilla_14.getLayoutX();
+                double Pos2 = Casilla_14.getLayoutY();
+                Cliente_ficha.setCenterX(Pos1 - 250);
+                Cliente_ficha.setCenterY(Pos2 - 170);
+                posicion_cliente -= valor;
+                Posicion_Cliente.setText(String.valueOf(posicion_cliente));
+                turno.setText(String.valueOf(true));
+                Btn_Tirar.setVisible(true);
+                Btn_trampa.setVisible(false);
+            }
+
+            if (movimiento_cliente > Posicion14) {
+                double Pos1 = Casilla_Final.getLayoutX();
+                double Pos2 = Casilla_Final.getLayoutY();
+                Cliente_ficha.setCenterX(Pos1 - 250);
+                Cliente_ficha.setCenterY(Pos2 - 170);
+                posicion_cliente -= valor;
+                Posicion_Cliente.setText(String.valueOf(posicion_cliente));
+                turno.setText(String.valueOf(true));
+                System.out.println("El Cliente gana!");
+                Btn_Tirar.setVisible(false);
+                Btn_trampa.setVisible(false);
+                Btn_tunel.setVisible(false);
+
+            }
+        }
+    }
 }
 
 

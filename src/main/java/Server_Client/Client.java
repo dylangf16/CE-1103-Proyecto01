@@ -22,7 +22,7 @@ public class Client  extends IOException {
 
             String entrada = in.readUTF();
             System.out.println(entrada);
-            out.writeUTF("[Client]:" + respuesta);
+            out.writeUTF(respuesta);
 
             //sc.close();
             System.out.println("CLiente cerrado");
@@ -33,7 +33,7 @@ public class Client  extends IOException {
             System.out.println("Conexion establecida");
             String entrada = in.readUTF();
             System.out.println(entrada);
-            out.writeUTF("[Client]:" + respuesta);
+            out.writeUTF(respuesta);
 
             //sc.close();
             System.out.println("CLiente cerrado");

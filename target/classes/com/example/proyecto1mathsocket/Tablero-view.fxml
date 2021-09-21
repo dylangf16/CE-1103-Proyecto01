@@ -11,6 +11,7 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="696.0" prefWidth="1102.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto1mathsocket.Tablero_Controller">
    <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="763.0" layoutX="-33.0" layoutY="-42.0" stroke="WHITE" strokeType="INSIDE" width="1166.0" />
       <Text layoutX="443.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Math Socket">
          <font>
             <Font size="39.0" />
@@ -27,13 +28,13 @@
             <Font size="20.0" />
          </font>
       </Text>
-      <Text fx:id="num1" layoutX="194.0" layoutY="653.0" strokeType="OUTSIDE" strokeWidth="0.0" text="50">
+      <Text fx:id="num1" layoutX="194.0" layoutY="653.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
          <font>
             <Font size="23.0" />
          </font>
       </Text>
       <TextField fx:id="Respuesta_out" layoutX="477.0" layoutY="613.0" text="0" />
-      <Text fx:id="Respuesta_in" layoutX="748.0" layoutY="664.0" strokeType="OUTSIDE" strokeWidth="0.0" text="null">
+      <Text fx:id="Respuesta_in" layoutX="748.0" layoutY="664.0" strokeType="OUTSIDE" strokeWidth="0.0">
          <font>
             <Font size="23.0" />
          </font>
@@ -76,7 +77,7 @@
             <Font size="25.0" />
          </font>
       </Text>
-      <Text layoutX="196.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inicio">
+      <Text fx:id="Inicio_txt" layoutX="196.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inicio">
          <font>
             <Font size="20.0" />
          </font>
@@ -188,31 +189,33 @@
       </Text>
       <Circle fx:id="Server_ficha" fill="#ff1f1f" layoutX="185.0" layoutY="161.0" radius="29.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fx:id="Cliente_ficha" layoutX="254.0" layoutY="161.0" radius="29.0" stroke="BLACK" strokeType="INSIDE" />
-      <Text fx:id="Posicion_Cliente" layoutX="28.0" layoutY="418.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+      <Text fx:id="Posicion_Cliente" layoutX="23.0" layoutY="519.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
          <font>
             <Font size="20.0" />
          </font>
       </Text>
-      <Text fx:id="Posicion_Server" layoutX="28.0" layoutY="385.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+      <Text fx:id="Posicion_Server" layoutX="23.0" layoutY="496.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
          <font>
             <Font size="20.0" />
          </font>
       </Text>
-      <Text fx:id="turno" layoutX="28.0" layoutY="443.0" strokeType="OUTSIDE" strokeWidth="0.0" text="true">
+      <Text fx:id="turno" layoutX="21.0" layoutY="544.0" strokeType="OUTSIDE" strokeWidth="0.0" text="true">
          <font>
             <Font size="20.0" />
          </font>
       </Text>
-      <Button layoutX="525.0" layoutY="657.0" mnemonicParsing="false" onMouseClicked="#Enviar_server" text="Enviar" />
+      <Button fx:id="Btn_Enviar" layoutX="525.0" layoutY="657.0" mnemonicParsing="false" onMouseClicked="#Enviar_server" text="Enviar" visible="false" />
       <Text fx:id="Operación" layoutX="251.0" layoutY="652.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x">
          <font>
             <Font size="23.0" />
          </font>
       </Text>
-      <Text fx:id="num2" layoutX="301.0" layoutY="653.0" strokeType="OUTSIDE" strokeWidth="0.0" text="50">
+      <Text fx:id="num2" layoutX="301.0" layoutY="653.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
          <font>
             <Font size="23.0" />
          </font>
       </Text>
+      <Button fx:id="Btn_tunel" layoutX="1001.0" layoutY="257.0" mnemonicParsing="false" onMouseClicked="#Tirar_2" text="Tirar2" visible="false" />
+      <Button fx:id="Btn_trampa" layoutX="1001.0" layoutY="256.0" mnemonicParsing="false" onMouseClicked="#Tirar_3" text="Tirar3" visible="false" />
    </children>
 </Pane>
