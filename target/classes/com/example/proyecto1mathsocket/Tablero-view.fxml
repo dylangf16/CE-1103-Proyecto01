@@ -217,5 +217,6 @@
       </Text>
       <Button fx:id="Btn_tunel" layoutX="1001.0" layoutY="257.0" mnemonicParsing="false" onMouseClicked="#Tirar_2" text="Tirar2" visible="false" />
       <Button fx:id="Btn_trampa" layoutX="1001.0" layoutY="256.0" mnemonicParsing="false" onMouseClicked="#Tirar_3" text="Tirar3" visible="false" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="176.0" layoutX="12.0" layoutY="373.0" stroke="WHITE" strokeType="INSIDE" width="90.0" />
    </children>
 </Pane>
