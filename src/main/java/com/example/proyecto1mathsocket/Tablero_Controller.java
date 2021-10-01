@@ -15,6 +15,7 @@ import java.io.IOException;
 /*
 Esta clase es la encargada de toda la programación interna de la ventana "Tablero"
  */
+
 public class Tablero_Controller {
 
     @FXML
@@ -107,7 +108,7 @@ public class Tablero_Controller {
     private Text turno;
 
     @FXML
-    private Text Operación;
+    private Text Operacion;
 
     @FXML
     private Text num2;
@@ -182,16 +183,16 @@ public class Tablero_Controller {
                     num2.setText(String.valueOf((int)(Math.random()*50+1)));
 
                     if (simbolo == 1){ //Suma
-                        Operación.setText("+");
+                        Operacion.setText("+");
                     }
                     if (simbolo == 2){ //Resta
-                        Operación.setText("-");
+                        Operacion.setText("-");
                     }
                     if (simbolo == 3){ //Multiplicación
-                        Operación.setText("*");
+                        Operacion.setText("*");
                     }
                     if (simbolo == 4){ //División
-                        Operación.setText("/");
+                        Operacion.setText("/");
                     }
                 }
                 if (Casilla_1.getText().equalsIgnoreCase("U")) { //Condición para ejecutar mecánica "Túnel"
@@ -221,16 +222,16 @@ public class Tablero_Controller {
                     num2.setText(String.valueOf((int)(Math.random()*50+1)));
 
                     if (simbolo == 1){ //Suma
-                        Operación.setText("+");
+                        Operacion.setText("+");
                     }
                     if (simbolo == 2){ //Resta
-                        Operación.setText("-");
+                        Operacion.setText("-");
                     }
                     if (simbolo == 3){ //Multiplicación
-                        Operación.setText("*");
+                        Operacion.setText("*");
                     }
                     if (simbolo == 4){ //División
-                        Operación.setText("/");
+                        Operacion.setText("/");
                     }
                 }
                 if (Casilla_2.getText().equalsIgnoreCase("U")) { //Condición para ejecutar mecánica "Túnel"
@@ -260,16 +261,16 @@ public class Tablero_Controller {
                     num2.setText(String.valueOf((int)(Math.random()*50+1)));
 
                     if (simbolo == 1){ //Suma
-                        Operación.setText("+");
+                        Operacion.setText("+");
                     }
                     if (simbolo == 2){ //Resta
-                        Operación.setText("-");
+                        Operacion.setText("-");
                     }
                     if (simbolo == 3){ //Multiplicación
-                        Operación.setText("*");
+                        Operacion.setText("*");
                     }
                     if (simbolo == 4){ //División
-                        Operación.setText("/");
+                        Operacion.setText("/");
                     }
                 }
                 if (Casilla_3.getText().equalsIgnoreCase("U")) { //Condición para ejecutar mecánica "Túnel"
@@ -299,16 +300,16 @@ public class Tablero_Controller {
                     num2.setText(String.valueOf((int)(Math.random()*50+1)));
 
                     if (simbolo == 1){ //Suma
-                        Operación.setText("+");
+                        Operacion.setText("+");
                     }
                     if (simbolo == 2){ //Resta
-                        Operación.setText("-");
+                        Operacion.setText("-");
                     }
                     if (simbolo == 3){ //Multiplicación
-                        Operación.setText("*");
+                        Operacion.setText("*");
                     }
                     if (simbolo == 4){ //División
-                        Operación.setText("/");
+                        Operacion.setText("/");
                     }
                 }
                 if (Casilla_4.getText().equalsIgnoreCase("U")) { //Condición para ejecutar mecánica "Túnel"
@@ -338,16 +339,16 @@ public class Tablero_Controller {
                     num2.setText(String.valueOf((int)(Math.random()*50+1)));
 
                     if (simbolo == 1){ //Suma
-                        Operación.setText("+");
+                        Operacion.setText("+");
                     }
                     if (simbolo == 2){ //Resta
-                        Operación.setText("-");
+                        Operacion.setText("-");
                     }
                     if (simbolo == 3){ //Multiplicación
-                        Operación.setText("*");
+                        Operacion.setText("*");
                     }
                     if (simbolo == 4){ //División
-                        Operación.setText("/");
+                        Operacion.setText("/");
                     }
                 }
                 if (Casilla_5.getText().equalsIgnoreCase("U")) { //Condición para ejecutar mecánica "Túnel"
@@ -377,16 +378,16 @@ public class Tablero_Controller {
                     num2.setText(String.valueOf((int)(Math.random()*50+1)));
 
                     if (simbolo == 1){ //Suma
-                        Operación.setText("+");
+                        Operacion.setText("+");
                     }
                     if (simbolo == 2){ //Resta
-                        Operación.setText("-");
+                        Operacion.setText("-");
                     }
                     if (simbolo == 3){ //Multiplicación
-                        Operación.setText("*");
+                        Operacion.setText("*");
                     }
                     if (simbolo == 4){ //División
-                        Operación.setText("/");
+                        Operacion.setText("/");
                     }
                 }
                 if (Casilla_6.getText().equalsIgnoreCase("U")) { //Condición para ejecutar mecánica "Túnel"
@@ -416,16 +417,16 @@ public class Tablero_Controller {
                     num2.setText(String.valueOf((int)(Math.random()*50+1)));
 
                     if (simbolo == 1){ //Suma
-                        Operación.setText("+");
+                        Operacion.setText("+");
                     }
                     if (simbolo == 2){ //Resta
-                        Operación.setText("-");
+                        Operacion.setText("-");
                     }
                     if (simbolo == 3){ //Multiplicación
-                        Operación.setText("*");
+                        Operacion.setText("*");
                     }
                     if (simbolo == 4){ //División
-                        Operación.setText("/");
+                        Operacion.setText("/");
                     }
                 }
                 if (Casilla_7.getText().equalsIgnoreCase("U")) { //Condición para ejecutar mecánica "Túnel"
@@ -455,16 +456,16 @@ public class Tablero_Controller {
                     num2.setText(String.valueOf((int)(Math.random()*50+1)));
 
                     if (simbolo == 1){ //Suma
-                        Operación.setText("+");
+                        Operacion.setText("+");
                     }
                     if (simbolo == 2){ //Resta
-                        Operación.setText("-");
+                        Operacion.setText("-");
                     }
                     if (simbolo == 3){ //Multiplicación
-                        Operación.setText("*");
+                        Operacion.setText("*");
                     }
                     if (simbolo == 4){ //División
-                        Operación.setText("/");
+                        Operacion.setText("/");
                     }
                 }
                 if (Casilla_8.getText().equalsIgnoreCase("U")) { //Condición para ejecutar mecánica "Túnel"
@@ -494,16 +495,16 @@ public class Tablero_Controller {
                     num2.setText(String.valueOf((int)(Math.random()*50+1)));
 
                     if (simbolo == 1){ //Suma
-                        Operación.setText("+");
+                        Operacion.setText("+");
                     }
                     if (simbolo == 2){ //Resta
-                        Operación.setText("-");
+                        Operacion.setText("-");
                     }
                     if (simbolo == 3){ //Multiplicación
-                        Operación.setText("*");
+                        Operacion.setText("*");
                     }
                     if (simbolo == 4){ //División
-                        Operación.setText("/");
+                        Operacion.setText("/");
                     }
                 }
                 if (Casilla_9.getText().equalsIgnoreCase("U")) { //Condición para ejecutar mecánica "Túnel"
@@ -533,16 +534,16 @@ public class Tablero_Controller {
                     num2.setText(String.valueOf((int)(Math.random()*50+1)));
 
                     if (simbolo == 1){ //Suma
-                        Operación.setText("+");
+                        Operacion.setText("+");
                     }
                     if (simbolo == 2){ //Resta
-                        Operación.setText("-");
+                        Operacion.setText("-");
                     }
                     if (simbolo == 3){ //Multiplicación
-                        Operación.setText("*");
+                        Operacion.setText("*");
                     }
                     if (simbolo == 4){ //División
-                        Operación.setText("/");
+                        Operacion.setText("/");
                     }
                 }
                 if (Casilla_10.getText().equalsIgnoreCase("U")) { //Condición para ejecutar mecánica "Túnel"
@@ -572,16 +573,16 @@ public class Tablero_Controller {
                     num2.setText(String.valueOf((int)(Math.random()*50+1)));
 
                     if (simbolo == 1){ //Suma
-                        Operación.setText("+");
+                        Operacion.setText("+");
                     }
                     if (simbolo == 2){ //Resta
-                        Operación.setText("-");
+                        Operacion.setText("-");
                     }
                     if (simbolo == 3){ //Multiplicación
-                        Operación.setText("*");
+                        Operacion.setText("*");
                     }
                     if (simbolo == 4){ //División
-                        Operación.setText("/");
+                        Operacion.setText("/");
                     }
                 }
                 if (Casilla_11.getText().equalsIgnoreCase("U")) { //Condición para ejecutar mecánica "Túnel"
@@ -611,16 +612,16 @@ public class Tablero_Controller {
                     num2.setText(String.valueOf((int)(Math.random()*50+1)));
 
                     if (simbolo == 1){ //Suma
-                        Operación.setText("+");
+                        Operacion.setText("+");
                     }
                     if (simbolo == 2){ //Resta
-                        Operación.setText("-");
+                        Operacion.setText("-");
                     }
                     if (simbolo == 3){ //Multiplicación
-                        Operación.setText("*");
+                        Operacion.setText("*");
                     }
                     if (simbolo == 4){ //División
-                        Operación.setText("/");
+                        Operacion.setText("/");
                     }
                 }
                 if (Casilla_12.getText().equalsIgnoreCase("U")) { //Condición para ejecutar mecánica "Túnel"
@@ -650,16 +651,16 @@ public class Tablero_Controller {
                     num2.setText(String.valueOf((int)(Math.random()*50+1)));
 
                     if (simbolo == 1){ //Suma
-                        Operación.setText("+");
+                        Operacion.setText("+");
                     }
                     if (simbolo == 2){ //Resta
-                        Operación.setText("-");
+                        Operacion.setText("-");
                     }
                     if (simbolo == 3){ //Multiplicación
-                        Operación.setText("*");
+                        Operacion.setText("*");
                     }
                     if (simbolo == 4){ //División
-                        Operación.setText("/");
+                        Operacion.setText("/");
                     }
                 }
                 if (Casilla_13.getText().equalsIgnoreCase("U")) { //Condición para ejecutar mecánica "Túnel"
@@ -689,16 +690,16 @@ public class Tablero_Controller {
                     num2.setText(String.valueOf((int)(Math.random()*50+1)));
 
                     if (simbolo == 1){ //Suma
-                        Operación.setText("+");
+                        Operacion.setText("+");
                     }
                     if (simbolo == 2){ //Resta
-                        Operación.setText("-");
+                        Operacion.setText("-");
                     }
                     if (simbolo == 3){ //Multiplicación
-                        Operación.setText("*");
+                        Operacion.setText("*");
                     }
                     if (simbolo == 4){ //División
-                        Operación.setText("/");
+                        Operacion.setText("/");
                     }
                 }
                 if (Casilla_14.getText().equalsIgnoreCase("U")) { //Condición para ejecutar mecánica "Túnel"
@@ -749,16 +750,16 @@ public class Tablero_Controller {
                     num2.setText(String.valueOf((int)(Math.random()*50+1)));
 
                     if (simbolo == 1){ //Suma
-                        Operación.setText("+");
+                        Operacion.setText("+");
                     }
                     if (simbolo == 2){ //Resta
-                        Operación.setText("-");
+                        Operacion.setText("-");
                     }
                     if (simbolo == 3){ //Multiplicación
-                        Operación.setText("*");
+                        Operacion.setText("*");
                     }
                     if (simbolo == 4){ //División
-                        Operación.setText("/");
+                        Operacion.setText("/");
                     }
                 }
                 if (Casilla_1.getText().equalsIgnoreCase("U")) {
@@ -788,16 +789,16 @@ public class Tablero_Controller {
                     num2.setText(String.valueOf((int)(Math.random()*50+1)));
 
                     if (simbolo == 1){ //Suma
-                        Operación.setText("+");
+                        Operacion.setText("+");
                     }
                     if (simbolo == 2){ //Resta
-                        Operación.setText("-");
+                        Operacion.setText("-");
                     }
                     if (simbolo == 3){ //Multiplicación
-                        Operación.setText("*");
+                        Operacion.setText("*");
                     }
                     if (simbolo == 4){ //División
-                        Operación.setText("/");
+                        Operacion.setText("/");
                     }
                 }
                 if (Casilla_2.getText().equalsIgnoreCase("U")) {
@@ -826,16 +827,16 @@ public class Tablero_Controller {
                     num2.setText(String.valueOf((int)(Math.random()*50+1)));
 
                     if (simbolo == 1){ //Suma
-                        Operación.setText("+");
+                        Operacion.setText("+");
                     }
                     if (simbolo == 2){ //Resta
-                        Operación.setText("-");
+                        Operacion.setText("-");
                     }
                     if (simbolo == 3){ //Multiplicación
-                        Operación.setText("*");
+                        Operacion.setText("*");
                     }
                     if (simbolo == 4){ //División
-                        Operación.setText("/");
+                        Operacion.setText("/");
                     }
                 }
                 if (Casilla_3.getText().equalsIgnoreCase("U")) {
@@ -865,16 +866,16 @@ public class Tablero_Controller {
                     num2.setText(String.valueOf((int)(Math.random()*50+1)));
 
                     if (simbolo == 1){ //Suma
-                        Operación.setText("+");
+                        Operacion.setText("+");
                     }
                     if (simbolo == 2){ //Resta
-                        Operación.setText("-");
+                        Operacion.setText("-");
                     }
                     if (simbolo == 3){ //Multiplicación
-                        Operación.setText("*");
+                        Operacion.setText("*");
                     }
                     if (simbolo == 4){ //División
-                        Operación.setText("/");
+                        Operacion.setText("/");
                     }
                 }
                 if (Casilla_4.getText().equalsIgnoreCase("U")) {
@@ -903,16 +904,16 @@ public class Tablero_Controller {
                     Btn_Tirar.setVisible(false);
 
                     if (simbolo == 1){ //Suma
-                        Operación.setText("+");
+                        Operacion.setText("+");
                     }
                     if (simbolo == 2){ //Resta
-                        Operación.setText("-");
+                        Operacion.setText("-");
                     }
                     if (simbolo == 3){ //Multiplicación
-                        Operación.setText("*");
+                        Operacion.setText("*");
                     }
                     if (simbolo == 4){ //División
-                        Operación.setText("/");
+                        Operacion.setText("/");
                     }
                 }
                 if (Casilla_5.getText().equalsIgnoreCase("U")) {
@@ -942,16 +943,16 @@ public class Tablero_Controller {
                     Btn_Tirar.setVisible(false);
 
                     if (simbolo == 1){ //Suma
-                        Operación.setText("+");
+                        Operacion.setText("+");
                     }
                     if (simbolo == 2){ //Resta
-                        Operación.setText("-");
+                        Operacion.setText("-");
                     }
                     if (simbolo == 3){ //Multiplicación
-                        Operación.setText("*");
+                        Operacion.setText("*");
                     }
                     if (simbolo == 4){ //División
-                        Operación.setText("/");
+                        Operacion.setText("/");
                     }
                 }
                 if (Casilla_6.getText().equalsIgnoreCase("U")) {
@@ -980,16 +981,16 @@ public class Tablero_Controller {
                     Btn_Tirar.setVisible(false);
 
                     if (simbolo == 1){ //Suma
-                        Operación.setText("+");
+                        Operacion.setText("+");
                     }
                     if (simbolo == 2){ //Resta
-                        Operación.setText("-");
+                        Operacion.setText("-");
                     }
                     if (simbolo == 3){ //Multiplicación
-                        Operación.setText("*");
+                        Operacion.setText("*");
                     }
                     if (simbolo == 4){ //División
-                        Operación.setText("/");
+                        Operacion.setText("/");
                     }
                 }
                 if (Casilla_7.getText().equalsIgnoreCase("U")) {
@@ -1018,16 +1019,16 @@ public class Tablero_Controller {
                     Btn_Tirar.setVisible(false);
 
                     if (simbolo == 1){ //Suma
-                        Operación.setText("+");
+                        Operacion.setText("+");
                     }
                     if (simbolo == 2){ //Resta
-                        Operación.setText("-");
+                        Operacion.setText("-");
                     }
                     if (simbolo == 3){ //Multiplicación
-                        Operación.setText("*");
+                        Operacion.setText("*");
                     }
                     if (simbolo == 4){ //División
-                        Operación.setText("/");
+                        Operacion.setText("/");
                     }
                 }
                 if (Casilla_8.getText().equalsIgnoreCase("U")) {
@@ -1056,16 +1057,16 @@ public class Tablero_Controller {
                     Btn_Tirar.setVisible(false);
 
                     if (simbolo == 1){ //Suma
-                        Operación.setText("+");
+                        Operacion.setText("+");
                     }
                     if (simbolo == 2){ //Resta
-                        Operación.setText("-");
+                        Operacion.setText("-");
                     }
                     if (simbolo == 3){ //Multiplicación
-                        Operación.setText("*");
+                        Operacion.setText("*");
                     }
                     if (simbolo == 4){ //División
-                        Operación.setText("/");
+                        Operacion.setText("/");
                     }
                 }
                 if (Casilla_9.getText().equalsIgnoreCase("U")) {
@@ -1094,16 +1095,16 @@ public class Tablero_Controller {
                     Btn_Tirar.setVisible(false);
 
                     if (simbolo == 1){ //Suma
-                        Operación.setText("+");
+                        Operacion.setText("+");
                     }
                     if (simbolo == 2){ //Resta
-                        Operación.setText("-");
+                        Operacion.setText("-");
                     }
                     if (simbolo == 3){ //Multiplicación
-                        Operación.setText("*");
+                        Operacion.setText("*");
                     }
                     if (simbolo == 4){ //División
-                        Operación.setText("/");
+                        Operacion.setText("/");
                     }
                 }
                 if (Casilla_10.getText().equalsIgnoreCase("U")) {
@@ -1132,16 +1133,16 @@ public class Tablero_Controller {
                     Btn_Tirar.setVisible(false);
 
                     if (simbolo == 1){ //Suma
-                        Operación.setText("+");
+                        Operacion.setText("+");
                     }
                     if (simbolo == 2){ //Resta
-                        Operación.setText("-");
+                        Operacion.setText("-");
                     }
                     if (simbolo == 3){ //Multiplicación
-                        Operación.setText("*");
+                        Operacion.setText("*");
                     }
                     if (simbolo == 4){ //División
-                        Operación.setText("/");
+                        Operacion.setText("/");
                     }
                 }
                 if (Casilla_11.getText().equalsIgnoreCase("U")) {
@@ -1171,16 +1172,16 @@ public class Tablero_Controller {
 
 
                     if (simbolo == 1){ //Suma
-                        Operación.setText("+");
+                        Operacion.setText("+");
                     }
                     if (simbolo == 2){ //Resta
-                        Operación.setText("-");
+                        Operacion.setText("-");
                     }
                     if (simbolo == 3){ //Multiplicación
-                        Operación.setText("*");
+                        Operacion.setText("*");
                     }
                     if (simbolo == 4){ //División
-                        Operación.setText("/");
+                        Operacion.setText("/");
                     }
                 }
                 if (Casilla_12.getText().equalsIgnoreCase("U")) {
@@ -1209,16 +1210,16 @@ public class Tablero_Controller {
                     Btn_Tirar.setVisible(false);
 
                     if (simbolo == 1){ //Suma
-                        Operación.setText("+");
+                        Operacion.setText("+");
                     }
                     if (simbolo == 2){ //Resta
-                        Operación.setText("-");
+                        Operacion.setText("-");
                     }
                     if (simbolo == 3){ //Multiplicación
-                        Operación.setText("*");
+                        Operacion.setText("*");
                     }
                     if (simbolo == 4){ //División
-                        Operación.setText("/");
+                        Operacion.setText("/");
                     }
                 }
                 if (Casilla_13.getText().equalsIgnoreCase("U")) {
@@ -1249,16 +1250,16 @@ public class Tablero_Controller {
                     Btn_Tirar.setVisible(false);
 
                     if (simbolo == 1){ //Suma
-                        Operación.setText("+");
+                        Operacion.setText("+");
                     }
                     if (simbolo == 2){ //Resta
-                        Operación.setText("-");
+                        Operacion.setText("-");
                     }
                     if (simbolo == 3){ //Multiplicación
-                        Operación.setText("*");
+                        Operacion.setText("*");
                     }
                     if (simbolo == 4){ //División
-                        Operación.setText("/");
+                        Operacion.setText("/");
                     }
                 }
                 if (Casilla_14.getText().equalsIgnoreCase("U")) {
